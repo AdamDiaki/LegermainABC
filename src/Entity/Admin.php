@@ -4,9 +4,17 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AdminRepository")
+ *  @UniqueEntity(
+ *     fields={"username","email","number"},
+ *     errorPath="email",
+ *     message="This email is already use",
+ *     errorPath= "number",
+ *     message ="This number is already use"
+ * )
  */
 class Admin implements UserInterface
 {
@@ -19,21 +27,26 @@ class Admin implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="2",minMessage="le nom doit comporter aumoins deux caractères")
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *  @Assert\Length(min="8",minMessage="Le mot de passe doit comporter 8 caractères")
+     *
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(max="8",min="8",minMessage="le numéro doit contenir 8 caractères",maxMessage="le numéro doit contenir 8 caractères")
      */
     private $number;
 

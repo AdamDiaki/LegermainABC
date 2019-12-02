@@ -3,9 +3,16 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity(
+ *     fields={"number","email"},
+ *     errorPath="email",
+ *     message="This email is already use"
+ * )
  */
 class User
 {
@@ -18,26 +25,31 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     *@Assert\Length(min="2",minMessage="le prénom doit comporter aumoins deux caractères")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="2",minMessage="le nom doit comporter aumoins deux caractères")
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="8",minMessage="Le mot de passe doit comporter 8 caractères")
      */
     private $number;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
      */
     private $address;
 
