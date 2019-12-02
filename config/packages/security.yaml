@@ -1,6 +1,6 @@
 security:
     encoders:
-        App\entity\User:
+        App\entity\Admin:
             algorithm: bcrypt
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
