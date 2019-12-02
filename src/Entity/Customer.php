@@ -28,21 +28,34 @@ class Customer
      */
     private $requestProjects;
 
+    /**
+     * Customer constructor.
+     */
     public function __construct()
     {
         $this->requestProjects = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return User|null
+     */
     public function getUser(): ?User
     {
         return $this->user;
     }
 
+    /**
+     * @param User|null $user
+     * @return $this
+     */
     public function setUser(?User $user): self
     {
         $this->user = $user;
@@ -58,6 +71,10 @@ class Customer
         return $this->requestProjects;
     }
 
+    /**
+     * @param RequestProject $requestProject
+     * @return $this
+     */
     public function addRequestProject(RequestProject $requestProject): self
     {
         if (!$this->requestProjects->contains($requestProject)) {
@@ -68,6 +85,10 @@ class Customer
         return $this;
     }
 
+    /**
+     * @param RequestProject $requestProject
+     * @return $this
+     */
     public function removeRequestProject(RequestProject $requestProject): self
     {
         if ($this->requestProjects->contains($requestProject)) {

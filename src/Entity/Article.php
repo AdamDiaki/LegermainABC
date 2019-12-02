@@ -43,21 +43,34 @@ class Article
      */
     private $images;
 
+    /**
+     * Article constructor.
+     */
     public function __construct()
     {
         $this->images = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     * @return $this
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -65,11 +78,18 @@ class Article
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getContent(): ?string
     {
         return $this->content;
     }
 
+    /**
+     * @param string $content
+     * @return $this
+     */
     public function setContent(string $content): self
     {
         $this->content = $content;
@@ -77,11 +97,18 @@ class Article
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->CreatedAt;
     }
 
+    /**
+     * @param \DateTimeInterface $CreatedAt
+     * @return $this
+     */
     public function setCreatedAt(\DateTimeInterface $CreatedAt): self
     {
         $this->CreatedAt = $CreatedAt;
@@ -89,11 +116,18 @@ class Article
         return $this;
     }
 
+    /**
+     * @return Category|null
+     */
     public function getCategory(): ?Category
     {
         return $this->category;
     }
 
+    /**
+     * @param Category|null $category
+     * @return $this
+     */
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
@@ -109,6 +143,10 @@ class Article
         return $this->images;
     }
 
+    /**
+     * @param Image $image
+     * @return $this
+     */
     public function addImage(Image $image): self
     {
         if (!$this->images->contains($image)) {
@@ -119,6 +157,10 @@ class Article
         return $this;
     }
 
+    /**
+     * @param Image $image
+     * @return $this
+     */
     public function removeImage(Image $image): self
     {
         if ($this->images->contains($image)) {

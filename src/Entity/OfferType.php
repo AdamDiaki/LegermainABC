@@ -28,21 +28,34 @@ class OfferType
      */
     private $offers;
 
+    /**
+     * OfferType constructor.
+     */
     public function __construct()
     {
         $this->offers = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     * @return $this
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -58,6 +71,10 @@ class OfferType
         return $this->offers;
     }
 
+    /**
+     * @param Offer $offer
+     * @return $this
+     */
     public function addOffer(Offer $offer): self
     {
         if (!$this->offers->contains($offer)) {
@@ -68,6 +85,10 @@ class OfferType
         return $this;
     }
 
+    /**
+     * @param Offer $offer
+     * @return $this
+     */
     public function removeOffer(Offer $offer): self
     {
         if ($this->offers->contains($offer)) {

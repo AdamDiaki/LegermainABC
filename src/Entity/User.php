@@ -41,16 +41,26 @@ class User
      */
     private $address;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
+    /**
+     * @param string $name
+     * @return $this
+     */
     public function setName(string $name): self
     {
         $this->name = $name;
@@ -58,11 +68,18 @@ class User
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getFirstname(): ?string
     {
         return $this->firstname;
     }
 
+    /**
+     * @param string $firstname
+     * @return $this
+     */
     public function setFirstname(string $firstname): self
     {
         $this->firstname = $firstname;
@@ -70,11 +87,18 @@ class User
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
+    /**
+     * @param string $email
+     * @return $this
+     */
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -82,11 +106,18 @@ class User
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getNumber(): ?string
     {
         return $this->number;
     }
 
+    /**
+     * @param string $number
+     * @return $this
+     */
     public function setNumber(string $number): self
     {
         $this->number = $number;
@@ -94,11 +125,18 @@ class User
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getAddress(): ?string
     {
         return $this->address;
     }
 
+    /**
+     * @param string $address
+     * @return $this
+     */
     public function setAddress(string $address): self
     {
         $this->address = $address;

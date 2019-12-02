@@ -31,16 +31,26 @@ class Image
      */
     private $article;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getLink(): ?string
     {
         return $this->link;
     }
 
+    /**
+     * @param string $link
+     * @return $this
+     */
     public function setLink(string $link): self
     {
         $this->link = $link;
@@ -48,11 +58,18 @@ class Image
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getUpdatedAt(): ?\DateTimeInterface
     {
         return $this->updatedAt;
     }
 
+    /**
+     * @param \DateTimeInterface $updatedAt
+     * @return $this
+     */
     public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
@@ -60,11 +77,18 @@ class Image
         return $this;
     }
 
+    /**
+     * @return Article|null
+     */
     public function getArticle(): ?Article
     {
         return $this->article;
     }
 
+    /**
+     * @param Article|null $article
+     * @return $this
+     */
     public function setArticle(?Article $article): self
     {
         $this->article = $article;

@@ -63,21 +63,34 @@ class Offer
      */
     private $offerType;
 
+    /**
+     * Offer constructor.
+     */
     public function __construct()
     {
         $this->applications = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     * @return $this
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -85,11 +98,18 @@ class Offer
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getContent(): ?string
     {
         return $this->content;
     }
 
+    /**
+     * @param string $content
+     * @return $this
+     */
     public function setContent(string $content): self
     {
         $this->content = $content;
@@ -97,11 +117,18 @@ class Offer
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getBeginAt(): ?\DateTimeInterface
     {
         return $this->beginAt;
     }
 
+    /**
+     * @param \DateTimeInterface $beginAt
+     * @return $this
+     */
     public function setBeginAt(\DateTimeInterface $beginAt): self
     {
         $this->beginAt = $beginAt;
@@ -109,11 +136,18 @@ class Offer
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getEndAt(): ?\DateTimeInterface
     {
         return $this->endAt;
     }
 
+    /**
+     * @param \DateTimeInterface $endAt
+     * @return $this
+     */
     public function setEndAt(\DateTimeInterface $endAt): self
     {
         $this->endAt = $endAt;
@@ -121,11 +155,18 @@ class Offer
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
+    /**
+     * @param \DateTimeInterface $createdAt
+     * @return $this
+     */
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
@@ -133,11 +174,18 @@ class Offer
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getHourlyWage(): ?string
     {
         return $this->hourlyWage;
     }
 
+    /**
+     * @param string $hourlyWage
+     * @return $this
+     */
     public function setHourlyWage(string $hourlyWage): self
     {
         $this->hourlyWage = $hourlyWage;
@@ -145,11 +193,18 @@ class Offer
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getAddress(): ?string
     {
         return $this->address;
     }
 
+    /**
+     * @param string $address
+     * @return $this
+     */
     public function setAddress(string $address): self
     {
         $this->address = $address;
@@ -165,6 +220,10 @@ class Offer
         return $this->applications;
     }
 
+    /**
+     * @param Application $application
+     * @return $this
+     */
     public function addApplication(Application $application): self
     {
         if (!$this->applications->contains($application)) {
@@ -175,6 +234,10 @@ class Offer
         return $this;
     }
 
+    /**
+     * @param Application $application
+     * @return $this
+     */
     public function removeApplication(Application $application): self
     {
         if ($this->applications->contains($application)) {
@@ -188,11 +251,18 @@ class Offer
         return $this;
     }
 
+    /**
+     * @return OfferType|null
+     */
     public function getOfferType(): ?OfferType
     {
         return $this->offerType;
     }
 
+    /**
+     * @param OfferType|null $offerType
+     * @return $this
+     */
     public function setOfferType(?OfferType $offerType): self
     {
         $this->offerType = $offerType;

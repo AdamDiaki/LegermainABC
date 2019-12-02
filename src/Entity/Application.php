@@ -36,16 +36,26 @@ class Application
      */
     private $offer;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getLinkCV(): ?string
     {
         return $this->linkCV;
     }
 
+    /**
+     * @param string $linkCV
+     * @return $this
+     */
     public function setLinkCV(string $linkCV): self
     {
         $this->linkCV = $linkCV;
@@ -53,11 +63,18 @@ class Application
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getLinkResume(): ?string
     {
         return $this->LinkResume;
     }
 
+    /**
+     * @param string $LinkResume
+     * @return $this
+     */
     public function setLinkResume(string $LinkResume): self
     {
         $this->LinkResume = $LinkResume;
@@ -65,11 +82,18 @@ class Application
         return $this;
     }
 
+    /**
+     * @return Applicant|null
+     */
     public function getApplicant(): ?Applicant
     {
         return $this->applicant;
     }
 
+    /**
+     * @param Applicant|null $applicant
+     * @return $this
+     */
     public function setApplicant(?Applicant $applicant): self
     {
         $this->applicant = $applicant;
@@ -77,11 +101,18 @@ class Application
         return $this;
     }
 
+    /**
+     * @return Offer|null
+     */
     public function getOffer(): ?Offer
     {
         return $this->offer;
     }
 
+    /**
+     * @param Offer|null $offer
+     * @return $this
+     */
     public function setOffer(?Offer $offer): self
     {
         $this->offer = $offer;

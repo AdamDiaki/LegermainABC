@@ -38,22 +38,35 @@ class Category
      */
     private $articles;
 
+    /**
+     * Category constructor.
+     */
     public function __construct()
     {
         $this->requestProjects = new ArrayCollection();
         $this->articles = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     * @return $this
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -61,11 +74,18 @@ class Category
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getContent(): ?string
     {
         return $this->content;
     }
 
+    /**
+     * @param string $content
+     * @return $this
+     */
     public function setContent(string $content): self
     {
         $this->content = $content;
@@ -81,6 +101,10 @@ class Category
         return $this->requestProjects;
     }
 
+    /**
+     * @param RequestProject $requestProject
+     * @return $this
+     */
     public function addRequestProject(RequestProject $requestProject): self
     {
         if (!$this->requestProjects->contains($requestProject)) {
@@ -91,6 +115,10 @@ class Category
         return $this;
     }
 
+    /**
+     * @param RequestProject $requestProject
+     * @return $this
+     */
     public function removeRequestProject(RequestProject $requestProject): self
     {
         if ($this->requestProjects->contains($requestProject)) {
@@ -112,6 +140,10 @@ class Category
         return $this->articles;
     }
 
+    /**
+     * @param Article $article
+     * @return $this
+     */
     public function addArticle(Article $article): self
     {
         if (!$this->articles->contains($article)) {
@@ -122,6 +154,10 @@ class Category
         return $this;
     }
 
+    /**
+     * @param Article $article
+     * @return $this
+     */
     public function removeArticle(Article $article): self
     {
         if ($this->articles->contains($article)) {

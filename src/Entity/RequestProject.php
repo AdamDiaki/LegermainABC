@@ -41,16 +41,26 @@ class RequestProject
      */
     private $category;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     * @return $this
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -58,11 +68,18 @@ class RequestProject
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getContent(): ?string
     {
         return $this->content;
     }
 
+    /**
+     * @param string $content
+     * @return $this
+     */
     public function setContent(string $content): self
     {
         $this->content = $content;
@@ -70,11 +87,18 @@ class RequestProject
         return $this;
     }
 
+    /**
+     * @return Customer|null
+     */
     public function getCustomer(): ?Customer
     {
         return $this->customer;
     }
 
+    /**
+     * @param Customer|null $customer
+     * @return $this
+     */
     public function setCustomer(?Customer $customer): self
     {
         $this->customer = $customer;
@@ -82,11 +106,18 @@ class RequestProject
         return $this;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getContacted(): ?bool
     {
         return $this->contacted;
     }
 
+    /**
+     * @param bool $contacted
+     * @return $this
+     */
     public function setContacted(bool $contacted): self
     {
         $this->contacted = $contacted;
@@ -94,11 +125,18 @@ class RequestProject
         return $this;
     }
 
+    /**
+     * @return Category|null
+     */
     public function getCategory(): ?Category
     {
         return $this->category;
     }
 
+    /**
+     * @param Category|null $category
+     * @return $this
+     */
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
