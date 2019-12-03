@@ -64,6 +64,11 @@ class Offer
     private $offerType;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $Accepted;
+
+    /**
      * Offer constructor.
      */
     public function __construct()
@@ -266,6 +271,18 @@ class Offer
     public function setOfferType(?OfferType $offerType): self
     {
         $this->offerType = $offerType;
+
+        return $this;
+    }
+
+    public function getAccepted(): ?bool
+    {
+        return $this->Accepted;
+    }
+
+    public function setAccepted(bool $Accepted): self
+    {
+        $this->Accepted = $Accepted;
 
         return $this;
     }
