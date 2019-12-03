@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Offer;
+use App\Entity\Offre;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
@@ -17,6 +18,18 @@ class OfferRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Offer::class);
+    }
+
+
+    /**
+     * @return Offer[]
+     */
+    public function findAllNt () : array
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.trouver = false')
+            ->getQuery()
+            ->getResult();
     }
 
     // /**

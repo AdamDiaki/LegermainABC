@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Nos Offres' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+    <h1>Nos Offres</h1>
+
+    <div class="container">
+        <h2>Les Offres toujours d'actualités</h2>
+    </div>
+    <div class="row flex">
+    {% for offre in offres %}
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="#"> {{ offre.title }}</a>
+                </h5>
+                <p class="card-text">{{ offre.content }} </p>
+                <div class="text-primary">{{ offre.created_at|date('d/m/Y') }}</div>
+                <a href="#" class="btn btn-primary">Postuler</a>
+            </div>
+        </div>
+        {% endfor %}
+{% endblock %}
