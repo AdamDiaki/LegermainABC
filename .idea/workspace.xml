@@ -7,6 +7,7 @@
       <change afterPath="$PROJECT_DIR$/src/Controller/RequestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,25 +211,15 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1575286233276">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="416" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1575286233276" />
-    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575288563441">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575288563441" />
-    <state x="391" y="172" key="FileChooserDialogImpl" timestamp="1575357288275">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1575357288275" />
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1575357271028">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1575357271028" />
-    <state x="281" y="87" width="700" height="530" key="recent.locations.popup" timestamp="1575365008921">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" timestamp="1575365008921" />
+    <state x="416" y="133" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="416" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" />
+    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" />
+    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" />
+    <state x="391" y="172" key="FileChooserDialogImpl" />
+    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" />
+    <state x="281" y="87" width="700" height="530" key="recent.locations.popup" />
+    <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" />
   </component>
 </project>
