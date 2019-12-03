@@ -20,6 +20,16 @@
                 <p class="card-text">{{ offre.content }} </p>
                 <div class="text-primary">{{ offre.created_at|date('d/m/Y') }}</div>
                 <a href="#" class="btn btn-primary">Postuler</a>
+                <button id="BtnInfo">Lire plus</button>
+                <div id="OfferModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times</span>
+                        <p>Du texte</p>
+                    </div>
+                </div>
+                <script>
+
+                </script>
             </div>
         </div>
         {% endfor %}

@@ -163,7 +163,7 @@ class Offer
     /**
      * @return \DateTimeInterface|null
      */
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreated_At(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -172,7 +172,7 @@ class Offer
      * @param \DateTimeInterface $createdAt
      * @return $this
      */
-    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    public function setCreated_At(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
 

@@ -27,7 +27,7 @@ class OfferRepository extends ServiceEntityRepository
     public function findAllNt () : array
     {
         return $this->createQueryBuilder('p')
-            ->where('p.trouver = false')
+            ->where('p.Accepted = false')
             ->getQuery()
             ->getResult();
     }
