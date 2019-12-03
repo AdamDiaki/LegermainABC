@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/sign.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/sign.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +179,8 @@
       <option name="presentableId" value="Default" />
       <updated>1575274393341</updated>
       <workItem from="1575274476836" duration="12352000" />
-      <workItem from="1575357269461" duration="6580000" />
+      <workItem from="1575357269461" duration="10282000" />
+      <workItem from="1575409582755" duration="2102000" />
     </task>
     <servers />
   </component>
@@ -203,21 +208,29 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="416" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1575286233276" />
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575371192229">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1575371192229" />
     <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575288563441">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575288563441" />
-    <state x="391" y="172" key="FileChooserDialogImpl" timestamp="1575357288275">
+    <state x="391" y="172" key="FileChooserDialogImpl" timestamp="1575404201068">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1575357288275" />
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1575357271028">
+    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1575404201068" />
+    <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1575410129065">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1575357271028" />
-    <state x="281" y="87" width="700" height="530" key="recent.locations.popup" timestamp="1575365008921">
+    <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575410129065" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1575409677324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" timestamp="1575365008921" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1575409677324" />
+    <state x="281" y="87" width="700" height="530" key="recent.locations.popup" timestamp="1575411601943">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" timestamp="1575411601943" />
   </component>
 </project>

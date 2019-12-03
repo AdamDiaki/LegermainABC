@@ -11,7 +11,7 @@ class SecurityController extends AbstractController
     /**
      * artisan login function
      *
-     * @Route("/connexion",name = "security_login")
+     * @Route("/login",name = "security_login")
      */
     public function login(AuthenticationUtils $authenticationUtils)
     {
@@ -22,7 +22,7 @@ class SecurityController extends AbstractController
 
     /**
      * artisan logout function
-     * @Route("/deconnexion",name = "security_logout")
+     * @Route("/logout",name = "security_logout")
      */
     public function logout()
     {

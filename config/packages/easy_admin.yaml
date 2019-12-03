@@ -1,13 +1,27 @@
 easy_admin:
     entities:
         # List the entity class name you want to manage
-        - App\Entity\Article
-        - App\Entity\Category
-        - App\Entity\Image
-        - App\Entity\User
-        - App\Entity\Applicant
-        - App\Entity\Application
-        - App\Entity\Offer
-        - App\Entity\OfferType
-        - App\Entity\Customer
-        - App\Entity\RequestProject
+        Article:
+            class: App\Entity\Article
+        Category:
+            class : App\Entity\Category
+        Image:
+            class:  App\Entity\Image
+        User:
+            class : App\Entity\User
+        Applicant:
+            class: App\Entity\Applicant
+
+        Application:
+           class: App\Entity\Application
+        OfferType:
+           class: App\Entity\OfferType
+
+        Offer:
+           class: App\Entity\Offer
+
+        Customer:
+           class: App\Entity\Customer
+        RequestProject:
+           class: App\Entity\RequestProject
+
