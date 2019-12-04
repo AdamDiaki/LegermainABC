@@ -66,7 +66,7 @@ class Offer
     /**
      * @ORM\Column(type="boolean")
      */
-    private $Accepted;
+    private $accepted;
 
     /**
      * Offer constructor.
@@ -277,12 +277,12 @@ class Offer
 
     public function getAccepted(): ?bool
     {
-        return $this->Accepted;
+        return $this->accepted;
     }
 
-    public function setAccepted(bool $Accepted): self
+    public function setAccepted(bool $accepted): self
     {
-        $this->Accepted = $Accepted;
+        $this->accepted = $accepted;
 
         return $this;
     }
