@@ -11,26 +11,68 @@
     </div>
     <div class="row flex">
     {% for offre in offres %}
-    <div class="col-3">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <a href="#"> {{ offre.title }}</a>
-                </h5>
-                <p class="card-text">{{ offre.content }} </p>
-                <div class="text-primary">{{ offre.created_at|date('d/m/Y') }}</div>
-                <a href="#" class="btn btn-primary">Postuler</a>
-                <button id="BtnInfo">Lire plus</button>
-                <div id="OfferModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times</span>
-                        <p>Du texte</p>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="#"> {{ offre.title }}</a>
+                    </h5>
+                    <p class="card-text" >{{ offre.content }} </p>
+                    <div class="text-primary">{{ offre.created_at|date('d/m/Y') }}</div>
+                    <a href="#" class="btn btn-primary">Postuler</a>
+                    <button id="BtnInfo">Lire plus</button>
+                    <div id="OfferModal" class="modal" style="
+                        display: none;
+                        position: fixed;
+                        z-index: 1;
+                        left: 0;
+                        top: 0;
+                        width: 100%; /* Full width */
+                        height: 100%; /* Full height */
+                        overflow: auto; /* Enable scroll if needed */
+                        background-color: rgb(0,0,0); /* Fallback color */
+                        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */">
+                        <div class="modal-content" style="
+                              background-color: #fefefe;
+                              margin: 15% auto; /* 15% from the top and centered */
+                              padding: 20px;
+                              border: 1px solid #888;
+                              width: 80%; /* Could be more or less, depending on screen size */">
+                            <span class="close" id="close" style="
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;"></span>
+                            <h1> {{ offre.title }}</h1>
+                            <p>{{ offre.content}}</p>
+                            <p>{{ offre.begin_at | date('d/m/Y')}}</p>
+                            <p>{{ offre.end_at | date('d/m/Y') }}</p>
+                            <p>{{ offre.created_at | date('d/m/Y') }}</p>
+                        </div>
                     </div>
                 </div>
-                <script>
-
-                </script>
             </div>
         </div>
-        {% endfor %}
+        </div>
+        </div>
+    {% endfor %}
+    {% block javascripts %}
+        <script>
+            var modal = document.getElementById("OfferModal");
+            var btn = document.getElementById("BtnInfo");
+            var span = document.getElementById("close");
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            span.onclick=function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if(event.target === modal){
+                    modal.style.display ="none";
+                }
+            }
+        </script>
+    {% endblock %}
 {% endblock %}
