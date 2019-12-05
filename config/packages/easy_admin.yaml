@@ -7,6 +7,40 @@ easy_admin:
 
     design:
       brand_color: '#1ABC9C'
+      menu:
+
+        - {label: 'Home', icon: 'home'}
+
+        -  label: 'Articles'
+           icon : 'newspaper-o'
+           children:
+              - { entity: 'Article', icon : 'newspaper-o'}
+              - { entity: 'Image', icon : 'images'}
+              - { entity: 'Category', icon : 'tag'}
+
+        -  label: 'Utilisateurs'
+           icon :  'address-book'
+           children:
+             - { entity: 'User', icon : 'users' }
+
+        -  label: 'Demandes de devis'
+           icon : 'envelope-square'
+           children:
+              - { entity: 'RequestProject', icon : 'envelope-open-text'}
+              - { entity: 'Customer', icon : 'user-tag'}
+
+        -  label: 'Carrières'
+           icon : 'briefcase'
+           children:
+              - { entity: 'Offer', icon : 'business-time'}
+              - { entity: 'OfferType', icon : 'tag'}
+              - { entity: 'Applicant', icon : 'user-tag'}
+
+
+
+
+
+
 
     user:
       display_name: true
@@ -27,6 +61,8 @@ easy_admin:
                 - content
                 - createdAt
                 - category
+
+
 
         Category:
             class : App\Entity\Category
