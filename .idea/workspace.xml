@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5dea2a76bf5be189702990.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +198,7 @@
       <workItem from="1575409582755" duration="2827000" />
       <workItem from="1575412929991" duration="2807000" />
       <workItem from="1575444342982" duration="31254000" />
-      <workItem from="1575619063984" duration="7460000" />
+      <workItem from="1575619063984" duration="8723000" />
     </task>
     <servers />
   </component>
@@ -230,10 +226,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="0" y="393" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1280.720@0.0.1280.720" timestamp="1575413064519" />
-    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1575624523624">
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1575630463265">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1575624523624" />
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1575630463265" />
     <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575575799418">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
