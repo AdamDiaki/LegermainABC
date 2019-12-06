@@ -9,7 +9,10 @@ easy_admin:
       brand_color: '#1ABC9C'
       menu:
 
-        - {label: 'Home', icon: 'home'}
+        - label: 'Home'
+          icon: 'home'
+          children:
+
 
         -  label: 'Articles'
            icon : 'newspaper-o'
@@ -54,20 +57,27 @@ easy_admin:
         # List the entity class name you want to manage
         Article:
             class: App\Entity\Article
-            list:
+            form:
               fields:
-                - id
-                - title
-                - content
-                - createdAt
-                - category
-
+                - { property: 'title'}
+                - { property: 'content'}
+                - { property: 'createdAt'}
+                - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
 
 
         Category:
             class : App\Entity\Category
+            form:
+              fields:
+                - { property: 'title'}
+                - { property: 'content'}
+
         Image:
             class:  App\Entity\Image
+            form:
+              fields:
+                - { property : 'imageFile', type: 'vich_image'}
+                - { property : 'article', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
         User:
             class : App\Entity\User
             label : 'Utilisateurs'
