@@ -17,8 +17,9 @@
                     <h5 class="card-title">
                         <a href="#"> {{ offre.title }}</a>
                     </h5>
-                    <p class="card-text" >{{ offre.content }} </p>
-                    <div class="text-primary">{{ offre.created_at|date('d/m/Y') }}</div>
+                    <p class="card-text" style="text-overflow: ellipsis;
+                           max-width: 500px; overflow: hidden; white-space: nowrap">{{ offre.content }} </p>
+                    <div class="text-primary" >{{ offre.created_at|date('d/m/Y') }}</div>
                     <a href="#" class="btn btn-primary">Postuler</a>
                     <button id="BtnInfo">Lire plus</button>
                     <div id="OfferModal" class="modal" style="
@@ -43,12 +44,24 @@
                                 text-decoration: none;
                                 cursor: pointer;"></span>
                             <h1> {{ offre.title }}</h1>
-                            <p>{{ offre.content}}</p>
-                            <p>{{ offre.begin_at | date('d/m/Y')}}</p>
-                            <p>{{ offre.end_at | date('d/m/Y') }}</p>
-                            <p>{{ offre.created_at | date('d/m/Y') }}</p>
+                            <p style="border-style: double; min-height: 500px;text-align: justify">{{ offre.content}}</p>
+                            <p align="left"> Du :{{ offre.begin_at | date('d/m/Y')}} au :{{ offre.end_at | date('d/m/Y') }}</p>
+                            <p align="left">Offre d'emploi créé le :{{ offre.created_at | date('d/m/Y') }}</p>
+                            <button id="BtnCandidate" style="width: 100px;">Postuler</button>
                         </div>
                     </div>
+
+                    <div id="CandidateModal" class="modal" style="
+                        display: none;
+                        position: fixed;
+                        z-index: 1;
+                        left: 0;
+                        top: 0;
+                        width: 100%; /* Full width */
+                        height: 100%; /* Full height */
+                        overflow: auto; /* Enable scroll if needed */
+                        background-color: rgb(0,0,0); /* Fallback color */
+                        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */">
                 </div>
             </div>
         </div>
