@@ -1,27 +1,107 @@
 easy_admin:
+
+    formats:
+      date:     'd/m/Y'
+      time:     'H:i'
+      datetime: 'd/m/Y H:i:s'
+
+    design:
+      brand_color: '#1ABC9C'
+      menu:
+
+        - label: 'Home'
+          icon: 'home'
+          children:
+
+
+        -  label: 'Articles'
+           icon : 'newspaper-o'
+           children:
+              - { entity: 'Article', icon : 'newspaper-o'}
+              - { entity: 'Image', icon : 'images'}
+              - { entity: 'Category', icon : 'tag'}
+
+        -  label: 'Utilisateurs'
+           icon :  'address-book'
+           children:
+             - { entity: 'User', icon : 'users' }
+
+        -  label: 'Demandes de devis'
+           icon : 'envelope-square'
+           children:
+              - { entity: 'RequestProject', icon : 'envelope-open-text'}
+              - { entity: 'Customer', icon : 'user-tag'}
+
+        -  label: 'Carrières'
+           icon : 'briefcase'
+           children:
+              - { entity: 'Offer', icon : 'business-time'}
+              - { entity: 'OfferType', icon : 'tag'}
+              - { entity: 'Applicant', icon : 'user-tag'}
+
+
+
+
+
+
+
+    user:
+      display_name: true
+      display_avatar: true
+      name_property_path: 'username'
+      avatar_property_path: 'gravatar'
+
+
+    site_name: 'ABC LEGERMAIN'
     entities:
         # List the entity class name you want to manage
         Article:
             class: App\Entity\Article
+            form:
+              fields:
+                - { property: 'title'}
+                - { property: 'content'}
+                - { property: 'createdAt'}
+                - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
+
+
         Category:
             class : App\Entity\Category
+            form:
+              fields:
+                - { property: 'title'}
+                - { property: 'content'}
+
         Image:
             class:  App\Entity\Image
+            form:
+              fields:
+                - { property : 'imageFile', type: 'vich_image'}
+                - { property : 'article', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
         User:
             class : App\Entity\User
+            label : 'Utilisateurs'
         Applicant:
             class: App\Entity\Applicant
+            label: 'Postulants'
 
         Application:
            class: App\Entity\Application
+           label: 'Candidature'
         OfferType:
            class: App\Entity\OfferType
+           label: 'Type offre'
 
         Offer:
            class: App\Entity\Offer
+           label: 'Offre'
 
         Customer:
            class: App\Entity\Customer
+           label: 'Clients'
+
+
         RequestProject:
            class: App\Entity\RequestProject
+           label: 'Demande de devis'
 

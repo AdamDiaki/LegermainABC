@@ -108,7 +108,7 @@ class Image
     /**
      * @return File
      */
-    public function getImageFile(): File
+    public function getImageFile(): ?File
     {
         return $this->imageFile;
     }
@@ -116,7 +116,7 @@ class Image
     /**
      * @param File $imageFile
      */
-    public function setImageFile(File $imageFile): void
+    public function setImageFile(?File $imageFile): void
     {
         $this->imageFile = $imageFile;
         if ($imageFile) {
