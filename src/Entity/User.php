@@ -156,4 +156,15 @@ class User
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id.' : '.$this->firstname.' '.$this->name;
+
+    }
+
+
 }

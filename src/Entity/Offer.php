@@ -284,6 +284,6 @@ class Offer
     {
         $this->accepted = $accepted;
 
-        return $this;
+        return $this->id.' : '.$this->title;
     }
 }

@@ -63,6 +63,7 @@ easy_admin:
                 - { property: 'content'}
                 - { property: 'createdAt'}
                 - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
+                - { property: 'images'}
 
 
         Category:
@@ -81,6 +82,7 @@ easy_admin:
         User:
             class : App\Entity\User
             label : 'Utilisateurs'
+
         Applicant:
             class: App\Entity\Applicant
             label: 'Postulants'
@@ -99,9 +101,20 @@ easy_admin:
         Customer:
            class: App\Entity\Customer
            label: 'Clients'
+           form:
+             fields:
+               - { property: 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
 
 
         RequestProject:
            class: App\Entity\RequestProject
            label: 'Demande de devis'
+           form:
+             fields:
+               - { property : 'tilte'}
+               - { property : 'content'}
+               - { property : 'customer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+               - { property : 'contacted'}
+               - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
+
 
