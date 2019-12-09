@@ -18,7 +18,8 @@
                         <a href="#"> {{ offre.title }}</a>
                     </h5>
                     <p class="card-text" style="text-overflow: ellipsis;
-                           max-width: 500px; overflow: hidden; white-space: nowrap">{{ offre.content }} </p>
+                           overflow: hidden; white-space: nowrap;
+                            ">{{ offre.content }} </p>
                     <div class="text-primary" >{{ offre.created_at|date('d/m/Y') }}</div>
                     <a href="#" class="btn btn-primary">Postuler</a>
                     <button id="BtnInfo">Lire plus</button>
@@ -28,11 +29,11 @@
                         z-index: 1;
                         left: 0;
                         top: 0;
-                        width: 100%; /* Full width */
-                        height: 100%; /* Full height */
-                        overflow: auto; /* Enable scroll if needed */
-                        background-color: rgb(0,0,0); /* Fallback color */
-                        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */">
+                        width: 100%;
+                        height: 100%;
+                        overflow: auto;
+                        background-color: rgb(0,0,0);
+                        background-color: rgba(0,0,0,0.4);">
                         <div class="modal-content" style="
                               background-color: #fefefe;
                               margin: 15% auto; /* 15% from the top and centered */
@@ -50,7 +51,29 @@
                             <button id="BtnCandidate" style="width: 100px;">Postuler</button>
                         </div>
                     </div>
-
+                    <div id="CandidateModal" class="modal" style="
+                        display: none;
+                        position: fixed;
+                        z-index: 1;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: auto;
+                        background-color: rgb(0,0,0);
+                        background-color: rgba(0,0,0,0.4);">"
+                    <div class="modal-content" style="
+                                background-color: #fefefe;
+                              margin: 15% auto; /* 15% from the top and centered */
+                              padding: 20px;
+                              border: 1px solid #888;
+                              width: 80%; /* Could be more or less, depending on screen size */">"
+                    <h2> Remplissez le formulaire !</h2>
+                        {{ form_start(CandidateForm) }}
+                        <button type="submit" class="btn btn-primary">Postuler</button>
+                        {{ form_end(CandidateForm) }}
+                    </div>
+                    </div>
                     <div id="CandidateModal" class="modal" style="
                         display: none;
                         position: fixed;
@@ -73,6 +96,8 @@
             var modal = document.getElementById("OfferModal");
             var btn = document.getElementById("BtnInfo");
             var span = document.getElementById("close");
+            var btnCandidate = document.getElementById("BtnCandidate");
+            var modalCandidate = document.getElementById("CandidateModal");
             btn.onclick = function () {
                 modal.style.display = "block";
             }
@@ -86,6 +111,12 @@
                     modal.style.display ="none";
                 }
             }
+
+            btnCandidate.onclick = function () {
+                modal.style.display = "none";
+                modalCandidate.style.display = "block";
+            }
+
         </script>
     {% endblock %}
 {% endblock %}
