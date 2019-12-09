@@ -79,6 +79,7 @@ easy_admin:
               fields:
                 - { property : 'imageFile', type: 'vich_image'}
                 - { property : 'article', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+                - { property: 'mainImage'}
         User:
             class : App\Entity\User
             label : 'Utilisateurs'
