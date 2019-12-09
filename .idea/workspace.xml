@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/5dee5a35defe3226423551.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/applications/resume/5dee5a35e680b920065558.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +198,7 @@
       <workItem from="1575444342982" duration="31254000" />
       <workItem from="1575619063984" duration="10696000" />
       <workItem from="1575841554327" duration="4359000" />
-      <workItem from="1575875608974" duration="10444000" />
+      <workItem from="1575875608974" duration="11290000" />
     </task>
     <servers />
   </component>
@@ -257,10 +254,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1575875631516" />
-    <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575452643887">
+    <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575902630529">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1575452643887" />
+    <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1575902630529" />
     <state x="281" y="87" width="700" height="530" key="recent.locations.popup" timestamp="1575411601943">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
