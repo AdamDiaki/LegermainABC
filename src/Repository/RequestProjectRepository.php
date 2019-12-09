@@ -16,7 +16,7 @@ class RequestProjectRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, RequestProject::class);
+        parent::__construct( $registry, RequestProject::class );
     }
 
     // /**

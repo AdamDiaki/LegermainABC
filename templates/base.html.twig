@@ -18,28 +18,20 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="">REALISATION</a>
+                <a class="nav-link" href="">Charpente</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">OFFRES</a>
+                <a class="nav-link" href="">Couverture</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Demandes</a>
+                <a class="nav-link" href="">Ouvrages spécifiques</a>
             </li>
-            {% if not app.user %}
-                <li class="nav-item">
-                    <a href="{{ path('security_login') }}" class="nav-link">Connexion</a>
-                </li>
-            {% else %}
-                <li class="nav-item">
-                    <a href="{{ path('security_logout') }}" class="nav-link">Deconnexion</a>
-                </li>
-            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="">Devis</a>
+            </li>
+
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+
     </div>
 </nav>
 <div class="Container">

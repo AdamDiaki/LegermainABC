@@ -63,6 +63,7 @@ easy_admin:
                 - { property: 'content'}
                 - { property: 'createdAt'}
                 - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
+                - { property: 'images'}
 
 
         Category:
@@ -78,9 +79,11 @@ easy_admin:
               fields:
                 - { property : 'imageFile', type: 'vich_image'}
                 - { property : 'article', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+                - { property: 'mainImage'}
         User:
             class : App\Entity\User
             label : 'Utilisateurs'
+
         Applicant:
             class: App\Entity\Applicant
             label: 'Postulants'
@@ -90,18 +93,38 @@ easy_admin:
            label: 'Candidature'
         OfferType:
            class: App\Entity\OfferType
-           label: 'Type offre'
+           label: "Type de l'offre"
 
         Offer:
            class: App\Entity\Offer
            label: 'Offre'
+           form:
+             fields:
+               - { property: 'title'}
+               - { property: 'content'}
+               - { property: 'beginAt'}
+               - { property: 'endAt'}
+               - { property: 'createdAt'}
+               - { property: 'hourlyWage'}
+               - { property: 'address'}
+
 
         Customer:
            class: App\Entity\Customer
            label: 'Clients'
+           form:
+             fields:
+               - { property: 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
 
 
         RequestProject:
            class: App\Entity\RequestProject
            label: 'Demande de devis'
+           form:
+             fields:
+               - { property : 'title'}
+               - { property : 'content'}
+               - { property : 'customer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+               - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
+
 

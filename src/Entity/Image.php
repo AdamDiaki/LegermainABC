@@ -39,6 +39,11 @@ class Image
      */
     private $article;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $mainImage;
+
 
     /**
      * @return int|null
@@ -46,25 +51,6 @@ class Image
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getLink(): ?string
-    {
-        return $this->link;
-    }
-
-    /**
-     * @param string $link
-     * @return $this
-     */
-    public function setLink(string $link): self
-    {
-        $this->link = $link;
-
-        return $this;
     }
 
     /**
@@ -123,6 +109,45 @@ class Image
             // if 'updatedAt' is not defined in your entity, use another property
             $this->updatedAt = new \DateTime( 'now' );
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id . ' : ' . $this->getLink();
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    /**
+     * @param string $link
+     * @return $this
+     */
+    public function setLink(string $link): self
+    {
+        $this->link = $link;
+
+        return $this;
+    }
+
+    public function getMainImage(): ?bool
+    {
+        return $this->mainImage;
+    }
+
+    public function setMainImage(bool $mainImage): self
+    {
+        $this->mainImage = $mainImage;
+
+        return $this;
     }
 
 

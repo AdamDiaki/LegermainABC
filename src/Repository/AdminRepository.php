@@ -16,7 +16,7 @@ class AdminRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Admin::class);
+        parent::__construct( $registry, Admin::class );
     }
 
     // /**

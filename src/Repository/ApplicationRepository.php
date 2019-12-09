@@ -16,7 +16,7 @@ class ApplicationRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Application::class);
+        parent::__construct( $registry, Application::class );
     }
 
     // /**

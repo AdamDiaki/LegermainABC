@@ -16,7 +16,7 @@ class ApplicantRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Applicant::class);
+        parent::__construct( $registry, Applicant::class );
     }
 
     // /**
