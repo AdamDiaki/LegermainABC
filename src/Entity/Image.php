@@ -49,25 +49,6 @@ class Image
     }
 
     /**
-     * @return string|null
-     */
-    public function getLink(): ?string
-    {
-        return $this->link;
-    }
-
-    /**
-     * @param string $link
-     * @return $this
-     */
-    public function setLink(string $link): self
-    {
-        $this->link = $link;
-
-        return $this;
-    }
-
-    /**
      * @return \DateTimeInterface|null
      */
     public function getUpdatedAt(): ?\DateTimeInterface
@@ -130,7 +111,26 @@ class Image
      */
     public function __toString()
     {
-        return $this->id.' : '.$this->getLink();
+        return $this->id . ' : ' . $this->getLink();
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    /**
+     * @param string $link
+     * @return $this
+     */
+    public function setLink(string $link): self
+    {
+        $this->link = $link;
+
+        return $this;
     }
 
 

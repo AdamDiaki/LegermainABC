@@ -77,9 +77,9 @@ class Customer
      */
     public function addRequestProject(RequestProject $requestProject): self
     {
-        if (!$this->requestProjects->contains($requestProject)) {
+        if (!$this->requestProjects->contains( $requestProject )) {
             $this->requestProjects[] = $requestProject;
-            $requestProject->setCustomer($this);
+            $requestProject->setCustomer( $this );
         }
 
         return $this;
@@ -91,11 +91,11 @@ class Customer
      */
     public function removeRequestProject(RequestProject $requestProject): self
     {
-        if ($this->requestProjects->contains($requestProject)) {
-            $this->requestProjects->removeElement($requestProject);
+        if ($this->requestProjects->contains( $requestProject )) {
+            $this->requestProjects->removeElement( $requestProject );
             // set the owning side to null (unless already changed)
             if ($requestProject->getCustomer() === $this) {
-                $requestProject->setCustomer(null);
+                $requestProject->setCustomer( null );
             }
         }
 
@@ -107,7 +107,7 @@ class Customer
      */
     public function __toString()
     {
-        return $this->user.'';
+        return $this->user . '';
     }
 
 }

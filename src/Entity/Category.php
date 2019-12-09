@@ -107,9 +107,9 @@ class Category
      */
     public function addRequestProject(RequestProject $requestProject): self
     {
-        if (!$this->requestProjects->contains($requestProject)) {
+        if (!$this->requestProjects->contains( $requestProject )) {
             $this->requestProjects[] = $requestProject;
-            $requestProject->setCategory($this);
+            $requestProject->setCategory( $this );
         }
 
         return $this;
@@ -121,11 +121,11 @@ class Category
      */
     public function removeRequestProject(RequestProject $requestProject): self
     {
-        if ($this->requestProjects->contains($requestProject)) {
-            $this->requestProjects->removeElement($requestProject);
+        if ($this->requestProjects->contains( $requestProject )) {
+            $this->requestProjects->removeElement( $requestProject );
             // set the owning side to null (unless already changed)
             if ($requestProject->getCategory() === $this) {
-                $requestProject->setCategory(null);
+                $requestProject->setCategory( null );
             }
         }
 
@@ -146,9 +146,9 @@ class Category
      */
     public function addArticle(Article $article): self
     {
-        if (!$this->articles->contains($article)) {
+        if (!$this->articles->contains( $article )) {
             $this->articles[] = $article;
-            $article->setCategory($this);
+            $article->setCategory( $this );
         }
 
         return $this;
@@ -160,11 +160,11 @@ class Category
      */
     public function removeArticle(Article $article): self
     {
-        if ($this->articles->contains($article)) {
-            $this->articles->removeElement($article);
+        if ($this->articles->contains( $article )) {
+            $this->articles->removeElement( $article );
             // set the owning side to null (unless already changed)
             if ($article->getCategory() === $this) {
-                $article->setCategory(null);
+                $article->setCategory( null );
             }
         }
 
@@ -176,7 +176,7 @@ class Category
      */
     public function __toString()
     {
-        return $this->id.' : '.$this->title;
+        return $this->id . ' : ' . $this->title;
     }
 
 

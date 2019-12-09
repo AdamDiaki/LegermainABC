@@ -16,7 +16,7 @@ class OfferRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Offer::class);
+        parent::__construct( $registry, Offer::class );
     }
 
     // /**

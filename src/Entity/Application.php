@@ -125,7 +125,7 @@ class Application
      */
     public function __toString()
     {
-        return $this->id.' : '.$this->offer.' : '.$this->applicant;
+        return $this->id . ' : ' . $this->offer . ' : ' . $this->applicant;
     }
 
 

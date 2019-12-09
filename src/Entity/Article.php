@@ -149,9 +149,9 @@ class Article
      */
     public function addImage(Image $image): self
     {
-        if (!$this->images->contains($image)) {
+        if (!$this->images->contains( $image )) {
             $this->images[] = $image;
-            $image->setArticle($this);
+            $image->setArticle( $this );
         }
 
         return $this;
@@ -163,11 +163,11 @@ class Article
      */
     public function removeImage(Image $image): self
     {
-        if ($this->images->contains($image)) {
-            $this->images->removeElement($image);
+        if ($this->images->contains( $image )) {
+            $this->images->removeElement( $image );
             // set the owning side to null (unless already changed)
             if ($image->getArticle() === $this) {
-                $image->setArticle(null);
+                $image->setArticle( null );
             }
         }
 
@@ -179,6 +179,6 @@ class Article
      */
     public function __toString()
     {
-        return $this->id.' : '.$this->title;
+        return $this->id . ' : ' . $this->title;
     }
 }

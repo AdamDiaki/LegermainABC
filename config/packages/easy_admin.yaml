@@ -111,7 +111,7 @@ easy_admin:
            label: 'Demande de devis'
            form:
              fields:
-               - { property : 'tilte'}
+               - { property : 'title'}
                - { property : 'content'}
                - { property : 'customer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
                - { property : 'contacted'}

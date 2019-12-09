@@ -231,9 +231,9 @@ class Offer
      */
     public function addApplication(Application $application): self
     {
-        if (!$this->applications->contains($application)) {
+        if (!$this->applications->contains( $application )) {
             $this->applications[] = $application;
-            $application->setOffer($this);
+            $application->setOffer( $this );
         }
 
         return $this;
@@ -245,11 +245,11 @@ class Offer
      */
     public function removeApplication(Application $application): self
     {
-        if ($this->applications->contains($application)) {
-            $this->applications->removeElement($application);
+        if ($this->applications->contains( $application )) {
+            $this->applications->removeElement( $application );
             // set the owning side to null (unless already changed)
             if ($application->getOffer() === $this) {
-                $application->setOffer(null);
+                $application->setOffer( null );
             }
         }
 
@@ -284,6 +284,18 @@ class Offer
     {
         $this->accepted = $accepted;
 
-        return $this->id.' : '.$this->title;
+        return $this;
+
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id . ' : ' . $this->title;
+
+    }
+
+
 }
