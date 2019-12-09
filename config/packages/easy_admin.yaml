@@ -93,11 +93,21 @@ easy_admin:
            label: 'Candidature'
         OfferType:
            class: App\Entity\OfferType
-           label: 'Type offre'
+           label: "Type de l'offre"
 
         Offer:
            class: App\Entity\Offer
            label: 'Offre'
+           form:
+             fields:
+               - { property: 'title'}
+               - { property: 'content'}
+               - { property: 'beginAt'}
+               - { property: 'endAt'}
+               - { property: 'createdAt'}
+               - { property: 'hourlyWage'}
+               - { property: 'address'}
+
 
         Customer:
            class: App\Entity\Customer
@@ -115,7 +125,6 @@ easy_admin:
                - { property : 'title'}
                - { property : 'content'}
                - { property : 'customer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
-               - { property : 'contacted'}
                - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
 
 
