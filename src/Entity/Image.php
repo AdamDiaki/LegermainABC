@@ -39,6 +39,11 @@ class Image
      */
     private $article;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $mainImage;
+
 
     /**
      * @return int|null
@@ -129,6 +134,18 @@ class Image
     public function setLink(string $link): self
     {
         $this->link = $link;
+
+        return $this;
+    }
+
+    public function getMainImage(): ?bool
+    {
+        return $this->mainImage;
+    }
+
+    public function setMainImage(bool $mainImage): self
+    {
+        $this->mainImage = $mainImage;
 
         return $this;
     }
