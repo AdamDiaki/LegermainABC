@@ -38,6 +38,7 @@ easy_admin:
               - { entity: 'Offer', icon : 'business-time'}
               - { entity: 'OfferType', icon : 'tag'}
               - { entity: 'Applicant', icon : 'user-tag'}
+              - { entity: 'Application', icon : 'business-time'}
 
 
 
@@ -91,6 +92,14 @@ easy_admin:
         Application:
            class: App\Entity\Application
            label: 'Candidature'
+           form:
+             fields:
+              - { property : 'cvFile', type: 'vich_file' }
+              - { property : 'resumeFile', type: 'vich_file'}
+              - { property : 'offer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+              - { property : 'applicant', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+
+
         OfferType:
            class: App\Entity\OfferType
            label: "Type de l'offre"
