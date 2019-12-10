@@ -1,13 +1,139 @@
 easy_admin:
+
+    formats:
+      date:     'd/m/Y'
+      time:     'H:i'
+      datetime: 'd/m/Y H:i:s'
+
+    design:
+      brand_color: '#1ABC9C'
+      menu:
+
+        - label: 'Home'
+          icon: 'home'
+          children:
+
+
+        -  label: 'Articles'
+           icon : 'newspaper-o'
+           children:
+              - { entity: 'Article', icon : 'newspaper-o'}
+              - { entity: 'Image', icon : 'images'}
+              - { entity: 'Category', icon : 'tag'}
+
+        -  label: 'Utilisateurs'
+           icon :  'address-book'
+           children:
+             - { entity: 'User', icon : 'users' }
+
+        -  label: 'Demandes de devis'
+           icon : 'envelope-square'
+           children:
+              - { entity: 'RequestProject', icon : 'envelope-open-text'}
+              - { entity: 'Customer', icon : 'user-tag'}
+
+        -  label: 'Carrières'
+           icon : 'briefcase'
+           children:
+              - { entity: 'Offer', icon : 'business-time'}
+              - { entity: 'OfferType', icon : 'tag'}
+              - { entity: 'Applicant', icon : 'user-tag'}
+              - { entity: 'Application', icon : 'business-time'}
+
+
+
+
+
+
+
+    user:
+      display_name: true
+      display_avatar: true
+      name_property_path: 'username'
+      avatar_property_path: 'gravatar'
+
+
+    site_name: 'ABC LEGERMAIN'
     entities:
         # List the entity class name you want to manage
-        - App\Entity\Article
-        - App\Entity\Category
-        - App\Entity\Image
-        - App\Entity\User
-        - App\Entity\Applicant
-        - App\Entity\Application
-        - App\Entity\Offer
-        - App\Entity\OfferType
-        - App\Entity\Customer
-        - App\Entity\RequestProject
+        Article:
+            class: App\Entity\Article
+            form:
+              fields:
+                - { property: 'title'}
+                - { property: 'content'}
+                - { property: 'createdAt'}
+                - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
+                - { property: 'images'}
+
+
+        Category:
+            class : App\Entity\Category
+            form:
+              fields:
+                - { property: 'title'}
+                - { property: 'content'}
+
+        Image:
+            class:  App\Entity\Image
+            form:
+              fields:
+                - { property : 'imageFile', type: 'vich_image'}
+                - { property : 'article', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+                - { property: 'mainImage'}
+        User:
+            class : App\Entity\User
+            label : 'Utilisateurs'
+
+        Applicant:
+            class: App\Entity\Applicant
+            label: 'Postulants'
+
+        Application:
+           class: App\Entity\Application
+           label: 'Candidature'
+           form:
+             fields:
+              - { property : 'cvFile', type: 'vich_file' }
+              - { property : 'resumeFile', type: 'vich_file'}
+              - { property : 'offer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+              - { property : 'applicant', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+
+
+        OfferType:
+           class: App\Entity\OfferType
+           label: "Type de l'offre"
+
+        Offer:
+           class: App\Entity\Offer
+           label: 'Offre'
+           form:
+             fields:
+               - { property: 'title'}
+               - { property: 'content'}
+               - { property: 'beginAt'}
+               - { property: 'endAt'}
+               - { property: 'createdAt'}
+               - { property: 'hourlyWage'}
+               - { property: 'address'}
+
+
+        Customer:
+           class: App\Entity\Customer
+           label: 'Clients'
+           form:
+             fields:
+               - { property: 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+
+
+        RequestProject:
+           class: App\Entity\RequestProject
+           label: 'Demande de devis'
+           form:
+             fields:
+               - { property : 'title'}
+               - { property : 'content'}
+               - { property : 'customer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+               - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
+
+

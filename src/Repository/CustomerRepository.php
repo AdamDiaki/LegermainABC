@@ -16,7 +16,7 @@ class CustomerRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Customer::class);
+        parent::__construct( $registry, Customer::class );
     }
 
     // /**

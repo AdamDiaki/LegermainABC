@@ -34,10 +34,10 @@ class AdminFixtures extends Fixture
 
 
         $user = new Admin();
-        $user->setUsername( "Christian" )
-            ->setEmail( "christianmadambari@yahoo.fr" )
-            ->setNumber( "0607213520" )
-            ->setPassword( $this->encoder->encodePassword( $user, "azertyui2019" ) );;
+        $user->setUsername( "Delal" )
+            ->setEmail( "delalsel@hotmail.fr" )
+            ->setNumber( "0695624036" )
+            ->setPassword( $this->encoder->encodePassword( $user, "motdepasse" ) );;
         $manager->persist( $user );
 
         $manager->flush();

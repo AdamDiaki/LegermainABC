@@ -77,9 +77,9 @@ class OfferType
      */
     public function addOffer(Offer $offer): self
     {
-        if (!$this->offers->contains($offer)) {
+        if (!$this->offers->contains( $offer )) {
             $this->offers[] = $offer;
-            $offer->setOfferType($this);
+            $offer->setOfferType( $this );
         }
 
         return $this;
@@ -91,14 +91,22 @@ class OfferType
      */
     public function removeOffer(Offer $offer): self
     {
-        if ($this->offers->contains($offer)) {
-            $this->offers->removeElement($offer);
+        if ($this->offers->contains( $offer )) {
+            $this->offers->removeElement( $offer );
             // set the owning side to null (unless already changed)
             if ($offer->getOfferType() === $this) {
-                $offer->setOfferType(null);
+                $offer->setOfferType( null );
             }
         }
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id . ' : ' . $this->title;
     }
 }

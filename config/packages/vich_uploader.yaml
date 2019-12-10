@@ -6,7 +6,17 @@ vich_uploader:
     #        uri_prefix: /images/products
     #        upload_destination: '%kernel.project_dir%/public/images/products'
     mappings:
-        Article_images:
+        article_images:
             uri_prefix: '%app.path.article_images%'
             upload_destination: '%kernel.project_dir%/public%app.path.article_images%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+        application_cv:
+            uri_prefix: '%app.path.application_cv%'
+            upload_destination: '%kernel.project_dir%/public%app.path.application_cv%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+        application_resume:
+            uri_prefix: '%app.path.application_resume%'
+            upload_destination: '%kernel.project_dir%/public%app.path.application_resume%'
             namer: Vich\UploaderBundle\Naming\UniqidNamer

@@ -24,14 +24,14 @@ class Article
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $content;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $CreatedAt;
+    private $createdAt;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
@@ -102,16 +102,16 @@ class Article
      */
     public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->CreatedAt;
+        return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $CreatedAt
+     * @param \DateTimeInterface $createdAt
      * @return $this
      */
-    public function setCreatedAt(\DateTimeInterface $CreatedAt): self
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
-        $this->CreatedAt = $CreatedAt;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
@@ -149,9 +149,9 @@ class Article
      */
     public function addImage(Image $image): self
     {
-        if (!$this->images->contains($image)) {
+        if (!$this->images->contains( $image )) {
             $this->images[] = $image;
-            $image->setArticle($this);
+            $image->setArticle( $this );
         }
 
         return $this;
@@ -163,14 +163,22 @@ class Article
      */
     public function removeImage(Image $image): self
     {
-        if ($this->images->contains($image)) {
-            $this->images->removeElement($image);
+        if ($this->images->contains( $image )) {
+            $this->images->removeElement( $image );
             // set the owning side to null (unless already changed)
             if ($image->getArticle() === $this) {
-                $image->setArticle(null);
+                $image->setArticle( null );
             }
         }
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id . ' : ' . $this->title;
     }
 }

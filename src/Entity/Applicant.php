@@ -77,9 +77,9 @@ class Applicant
      */
     public function addApplication(Application $application): self
     {
-        if (!$this->applications->contains($application)) {
+        if (!$this->applications->contains( $application )) {
             $this->applications[] = $application;
-            $application->setApplicant($this);
+            $application->setApplicant( $this );
         }
 
         return $this;
@@ -91,14 +91,22 @@ class Applicant
      */
     public function removeApplication(Application $application): self
     {
-        if ($this->applications->contains($application)) {
-            $this->applications->removeElement($application);
+        if ($this->applications->contains( $application )) {
+            $this->applications->removeElement( $application );
             // set the owning side to null (unless already changed)
             if ($application->getApplicant() === $this) {
-                $application->setApplicant(null);
+                $application->setApplicant( null );
             }
         }
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->user . '';
     }
 }

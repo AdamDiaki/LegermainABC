@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="v1.5">
-      <change afterPath="$PROJECT_DIR$/templates/form/form_div_layout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/form/foundation_5_layout.html.twig" afterDir="false" />
+    <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5deec3eddfb5e439230997.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/articles/couverture.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RequestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/OfferInfo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Offer_Modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OfferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OfferController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/index.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form/requestForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form/requestForm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/offer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/offer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/index.html.twig" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,35 +44,10 @@
     <select />
   </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/Sidney" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3.10">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
@@ -183,32 +166,32 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1UQ2FN5sZwC5RRkzK3IA9f5cqzG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\sidne\PhpstormProjects\ABC_Legermain\templates\form" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -223,14 +206,15 @@
       <option name="presentableId" value="Default" />
       <updated>1575274393341</updated>
       <workItem from="1575274476836" duration="12352000" />
-      <workItem from="1575357269461" duration="5284000" />
-      <workItem from="1575443328869" duration="1969000" />
-      <workItem from="1575445375371" duration="992000" />
-      <workItem from="1575446392805" duration="6068000" />
-      <workItem from="1575624669850" duration="3980000" />
-      <workItem from="1575733363075" duration="5114000" />
-      <workItem from="1575807118035" duration="1300000" />
-      <workItem from="1575969589253" duration="2016000" />
+      <workItem from="1575357269461" duration="10282000" />
+      <workItem from="1575409582755" duration="2827000" />
+      <workItem from="1575412929991" duration="2807000" />
+      <workItem from="1575444342982" duration="31254000" />
+      <workItem from="1575619063984" duration="10696000" />
+      <workItem from="1575841554327" duration="4359000" />
+      <workItem from="1575875608974" duration="12813000" />
+      <workItem from="1575921231317" duration="8859000" />
+      <workItem from="1575972137727" duration="330000" />
     </task>
     <servers />
   </component>
@@ -250,16 +234,49 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="133" key="#com.intellij.ide.util.MemberChooser" />
-    <state x="416" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" />
-    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" />
-    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" />
-    <state x="391" y="172" key="FileChooserDialogImpl" />
-    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" />
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" />
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" />
-    <state x="281" y="87" width="700" height="530" key="recent.locations.popup" />
-    <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" />
+    <state x="0" y="393" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1575413064519">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="0" y="393" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1280.720@0.0.1280.720" timestamp="1575413064519" />
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1575881870880">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1575881870880" />
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575881455953">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1575881455953" />
+    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575925572766">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575925572766" />
+    <state x="391" y="172" key="FileChooserDialogImpl" timestamp="1575925509765">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1575925509765" />
+    <state width="746" height="446" key="SwitcherDM" timestamp="1575415048823">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="746" height="446" key="SwitcherDM/0.0.1280.720@0.0.1280.720" timestamp="1575415048823" />
+    <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1575410129065">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575410129065" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1575921260941">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1575921260941" />
+    <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575902973096">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1575902973096" />
+    <state x="281" y="87" width="700" height="530" key="recent.locations.popup" timestamp="1575411601943">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" timestamp="1575411601943" />
   </component>
 </project>

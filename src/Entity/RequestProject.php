@@ -22,7 +22,7 @@ class RequestProject
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $content;
 
@@ -143,4 +143,14 @@ class RequestProject
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id . ' : ' . $this->title;
+    }
+
+
 }

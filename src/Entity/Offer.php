@@ -24,7 +24,7 @@ class Offer
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $content;
 
@@ -62,6 +62,11 @@ class Offer
      * @ORM\ManyToOne(targetEntity="App\Entity\OfferType", inversedBy="offers")
      */
     private $offerType;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $accepted;
 
     /**
      * Offer constructor.
@@ -226,9 +231,9 @@ class Offer
      */
     public function addApplication(Application $application): self
     {
-        if (!$this->applications->contains($application)) {
+        if (!$this->applications->contains( $application )) {
             $this->applications[] = $application;
-            $application->setOffer($this);
+            $application->setOffer( $this );
         }
 
         return $this;
@@ -240,11 +245,11 @@ class Offer
      */
     public function removeApplication(Application $application): self
     {
-        if ($this->applications->contains($application)) {
-            $this->applications->removeElement($application);
+        if ($this->applications->contains( $application )) {
+            $this->applications->removeElement( $application );
             // set the owning side to null (unless already changed)
             if ($application->getOffer() === $this) {
-                $application->setOffer(null);
+                $application->setOffer( null );
             }
         }
 
@@ -269,4 +274,28 @@ class Offer
 
         return $this;
     }
+
+    public function getAccepted(): ?bool
+    {
+        return $this->accepted;
+    }
+
+    public function setAccepted(bool $accepted): self
+    {
+        $this->accepted = $accepted;
+
+        return $this;
+
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id . ' : ' . $this->title;
+
+    }
+
+
 }

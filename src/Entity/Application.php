@@ -3,9 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ApplicationRepository")
+ * @Vich\Uploadable
  */
 class Application
 {
@@ -24,7 +28,19 @@ class Application
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $LinkResume;
+    private $linkResume;
+
+    /**
+     * @Vich\UploadableField(mapping="application_cv", fileNameProperty="linkCV")
+     * @var File
+     */
+    private $cvFile;
+
+    /**
+     * @Vich\UploadableField(mapping="application_resume", fileNameProperty="linkResume")
+     * @var File
+     */
+    private $resumeFile;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Applicant", inversedBy="applications")
@@ -35,6 +51,11 @@ class Application
      * @ORM\ManyToOne(targetEntity="App\Entity\Offer", inversedBy="applications")
      */
     private $offer;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $applicationAt;
 
     /**
      * @return int|null
@@ -68,16 +89,16 @@ class Application
      */
     public function getLinkResume(): ?string
     {
-        return $this->LinkResume;
+        return $this->linkResume;
     }
 
     /**
-     * @param string $LinkResume
+     * @param string $linkResume
      * @return $this
      */
-    public function setLinkResume(string $LinkResume): self
+    public function setLinkResume(string $linkResume): self
     {
-        $this->LinkResume = $LinkResume;
+        $this->linkResume = $linkResume;
 
         return $this;
     }
@@ -119,4 +140,68 @@ class Application
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id . ' : ' . $this->offer . ' : ' . $this->applicant;
+    }
+
+    public function getApplicationAt(): ?\DateTimeInterface
+    {
+        return $this->applicationAt;
+    }
+
+    public function setApplicationAt(\DateTimeInterface $applicationAt): self
+    {
+        $this->applicationAt = $applicationAt;
+
+        return $this;
+    }
+
+    /**
+     * @return File
+     */
+    public function getCvFile(): ?File
+    {
+        return $this->cvFile;
+    }
+
+    /**
+     * @param File $cvFile
+     */
+    public function setCvFile(?File $cvFile): void
+    {
+        $this->cvFile = $cvFile;
+        if ($cvFile) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->applicationAt = new \DateTime( 'now' );
+        }
+    }
+
+    /**
+     * @return File
+     */
+    public function getResumeFile(): ?File
+    {
+        return $this->resumeFile;
+    }
+
+    /**
+     * @param File $resumeFile
+     */
+    public function setResumeFile(?File $resumeFile): void
+    {
+        $this->resumeFile = $resumeFile;
+        if ($resumeFile) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->applicationAt = new \DateTime( 'now' );
+        }
+    }
+
+
+
+
 }
