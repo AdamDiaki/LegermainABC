@@ -1,7 +1,12 @@
+{%  extends 'base.html.twig' %}
 
+{% block body %}
 
-<h3>Demandes</h3>
+    <h3>Demandes</h3>
 
-<div class="formm">
-    {{ form(form) }}
-</div>
+    {{ form_start(formReq) }}
+
+    {{ form_end(formReq) }}
+
+{% endblock %}
+

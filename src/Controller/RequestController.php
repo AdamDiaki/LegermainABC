@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Entity\RequestProject;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -19,7 +20,7 @@ class RequestController extends AbstractController
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function addAction(Request $request)
+    public function buildForm(Request $request)
     {
         $User = new User();
         $RequestProject = new RequestProject();
@@ -28,18 +29,18 @@ class RequestController extends AbstractController
 
         $form = $this->createFormBuilder($RequestProject)
 
-            ->add('name', TextType::class)
-            ->add('firstname', TextType::class)
-            ->add('email', TextType::class)
-            ->add('Demande', TextType::class) //title
-            ->add('content', TextType::class) //content
+            //->add('name', TextType::class)
+            //->add('firstname', TextType::class)
+            //->add('email', TextType::class)
+            ->add('title', TextType::class) //title
+            ->add('content', TextareaType::class) //content
             ->add('category', TextType::class)
             ->add('submit', SubmitType::class, ['label' => 'Create Task'])
             ->getForm();
 
 
         return $this->render('/form/requestForm.html.twig', array(
-            'form' => $form->createView(),
+            'formReq' => $form->createView(),
         ));
     }
 }
