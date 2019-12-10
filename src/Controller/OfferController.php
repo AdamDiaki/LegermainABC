@@ -16,7 +16,7 @@ class OfferController extends AbstractController
 
 
     /**
-     * @Route("/Offre",name="offre")
+     * @Route("/offre",name="offre")
      * @param OfferRepository $repository
      * @return Response
      */

@@ -125,7 +125,7 @@ class Offer
     /**
      * @return \DateTimeInterface|null
      */
-    public function getBegin_At(): ?\DateTimeInterface
+    public function getBeginAt(): ?\DateTimeInterface
     {
         return $this->beginAt;
     }
@@ -134,7 +134,7 @@ class Offer
      * @param \DateTimeInterface $beginAt
      * @return $this
      */
-    public function setBegin_At(\DateTimeInterface $beginAt): self
+    public function setBeginAt(\DateTimeInterface $beginAt): self
     {
         $this->beginAt = $beginAt;
 
@@ -144,7 +144,7 @@ class Offer
     /**
      * @return \DateTimeInterface|null
      */
-    public function getEnd_At(): ?\DateTimeInterface
+    public function getEndAt(): ?\DateTimeInterface
     {
         return $this->endAt;
     }
@@ -153,7 +153,7 @@ class Offer
      * @param \DateTimeInterface $endAt
      * @return $this
      */
-    public function setEnd_At(\DateTimeInterface $endAt): self
+    public function setEndAt(\DateTimeInterface $endAt): self
     {
         $this->endAt = $endAt;
 
@@ -163,7 +163,7 @@ class Offer
     /**
      * @return \DateTimeInterface|null
      */
-    public function getCreated_At(): ?\DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -172,7 +172,7 @@ class Offer
      * @param \DateTimeInterface $createdAt
      * @return $this
      */
-    public function setCreated_At(\DateTimeInterface $createdAt): self
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
 
