@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5deec3eddfb5e439230997.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/articles/couverture.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/OfferInfo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Offer_Modal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/OfferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OfferController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/articles/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/offer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/offer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/index.html.twig" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,8 +34,34 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abc_legermain@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abc_legermain@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abc_legermain@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="abc_legermain: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abc_legermain@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="abc_legermain: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="offer: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+    </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ABC_Legermain" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,15 +203,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -215,6 +235,9 @@
       <workItem from="1575875608974" duration="12813000" />
       <workItem from="1575921231317" duration="8859000" />
       <workItem from="1575972137727" duration="330000" />
+      <workItem from="1575980289168" duration="1403000" />
+      <workItem from="1576051327862" duration="1973000" />
+      <workItem from="1576053326679" duration="5452000" />
     </task>
     <servers />
   </component>
@@ -278,5 +301,16 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" timestamp="1575411601943" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/pages/offer.html.twig</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -23,8 +23,7 @@ class OfferController extends AbstractController
     public function Offer(OfferRepository $repository): Response
     {
         $form = $this->createForm(OfferFormType::class);
-
-        $offres = $repository->findAllNt();
+        $offres = $repository->findBy(['accepted' => false]);
         return $this->render('pages/offer.html.twig', [
             'offres' => $offres,
             'CandidateForm' => $form->createView()
