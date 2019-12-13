@@ -1,85 +1,60 @@
 {% extends 'base.html.twig' %}
-
+{% form_theme CandidateForm 'bootstrap_4_layout.html.twig' %}
+{% form_theme ApplicationForm 'bootstrap_4_layout.html.twig' %}
 {% block title 'Nos Offres' %}
 
 {% block body %}
+
+{{ encore_entry_link_tags('offer') }}
+
+
 
     <div class="jumbotron text-center">
         <h1>Nos Offres</h1>
         <h2>Les Offres toujours d'actualités</h2>
         <div class="row flex">
             {% for offre in offres %}
-                <div class="col-3" style="margin-bottom: 50px;">
+                <div class="col-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a href="#"> {{ offre.title }}</a>
+                                <a href="#">{{ offre.title }}</a>
                             </h5>
-                            <p class="card-text" align="justify" style="text-overflow: ellipsis;
-                           overflow: hidden; display: -webkit-box; -webkit-line-clamp:6;-webkit-box-orient: vertical;
-                            ">{{ offre.content }} </p>
+                            <p class="card-text">{{ offre.content }} </p>
                             <div class="text-primary">{{ offre.createdAt|date('d/m/Y') }}</div>
                             <button id="BtnInfo{{ loop.index }}" class="btn btn-success">Lire plus</button>
-                            <div id="OfferModal{{ loop.index }}" class="modal" style="
-                        display: none;
-                        position: fixed;
-                        z-index: 1;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        overflow: auto;
-                        background-color: rgb(0,0,0);
-                        background-color: rgba(0,0,0,0.4);">
-                                <div class="modal-content" style="
-                              top: -200px;
-                              background-color: #fefefe;
-                              margin: 15% auto; /* 15% from the top and centered */
-                              padding: 20px;
-                              border: 1px solid #888;
-                              width: 80%; /* Could be more or less, depending on screen size */">
+                            <div id="OfferModal{{ loop.index }}" class="modal">
+                                <div class="modal-content">
                                     <h1> {{ offre.title }}</h1>
-                                    <div class="card" style="min-height: auto;text-align: justify">{{ offre.content}}</div>
+                                    <div id="OfferContent" class="card">{{ offre.content}}</div>
                                     <br/>
                                     <p align="left"> Du :{{ offre.beginAt | date('d/m/Y')}} au :{{ offre.endAt | date('d/m/Y') }}</p>
                                     <p align="left">Offre d'emploi créé le :{{ offre.createdAt | date('d/m/Y') }}</p>
-                                    <button id="BtnCandidate{{ loop.index }}" style="width: 100px;">Postuler</button>
+                                    <button id="BtnCandidate{{ loop.index }}" class="btn btn-success">Postuler</button>
                                 </div>
                             </div>
-
 
                         </div>
                     </div>
                 </div>
 
             {% endfor %}
-            <div id="CandidateModal" class="modal" style="
-                        display: none;
-                        position: fixed;
-                        z-index: 1;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        overflow: auto;
-                        background-color: rgb(0,0,0);
-                        background-color: rgba(0,0,0,0.4);">
-                <div class="modal-content" style="
-                                background-color: #fefefe;
-                              margin: 15% auto; /* 15% from the top and centered */
-                              padding: 20px;
-                              border: 1px solid #888;
-                              width: 80%; /* Could be more or less, depending on screen size */">
+            <div id="CandidateModal" class="modal">
+                <div class="modal-content">
                     <h2 id="CandidateTitle"> Remplissez le formulaire pour l'offre !</h2>
                     {{ form_start(CandidateForm) }}
+
                     {{ form_end(CandidateForm) }}
-                    <button type="submit" class="btn btn-primary">Postuler</button>
-                    <p id="id"><small></small></p>
+                    {{ form_start(ApplicationForm) }}
+                    {{ form_end(ApplicationForm) }}
+                    <button type="submit" class="btn btn-success">Postuler</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
-        <div id="map" style="height: 400px; width: 400px;margin: 0 auto"></div>
+        <div id="map"></div>
 
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ekYuDesZlOCLckgm8uZ9WH96ZtXQsA&callback=initMap">
@@ -89,6 +64,8 @@
 {% endblock %}
 
  {% block javascripts %}
+     {{ encore_entry_script_tags('offer') }}
+
      <script>
 
          window.onload = function initMap() {
@@ -127,7 +104,7 @@
              }
              if(event.target === modalCandidate) {
                  modalCandidate.style.display = "none";
-             }
+             }z
          };
 
 
@@ -135,4 +112,5 @@
          {% endfor %}
 
      </script>
+
  {% endblock %}

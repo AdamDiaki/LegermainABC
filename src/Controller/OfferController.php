@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 
+use App\Form\ApplicationType;
 use App\Form\OfferFormType;
 use App\Repository\OfferRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -23,10 +24,12 @@ class OfferController extends AbstractController
     public function Offer(OfferRepository $repository): Response
     {
         $form = $this->createForm(OfferFormType::class);
+        $formApplication = $this->createForm(ApplicationType::class);
         $offres = $repository->findBy(['accepted' => false]);
         return $this->render('pages/offer.html.twig', [
             'offres' => $offres,
-            'CandidateForm' => $form->createView()
+            'CandidateForm' => $form->createView(),
+            'ApplicationForm' => $formApplication->createView()
         ]);
     }
 }

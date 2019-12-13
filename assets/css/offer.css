@@ -1,0 +1,70 @@
+.col-3{
+    margin-bottom: 50px;
+}
+
+.card-text{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+
+
+.modal-content {
+    top: -200px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.card{
+    min-height: auto;
+    text-align: center;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+#BtnInfo\{\{\ loop\.index\ \}\}{
+
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#map{
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+button{
+    width: 100px;
+}
+
+#OfferContent{
+    text-align: justify;
+}
