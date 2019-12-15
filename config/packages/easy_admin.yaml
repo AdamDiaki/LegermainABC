@@ -53,7 +53,7 @@ easy_admin:
       avatar_property_path: 'gravatar'
 
 
-    site_name: 'ABC LEGERMAIN'
+    site_name: 'ABC Legermain'
     entities:
         # List the entity class name you want to manage
         Article:
@@ -135,5 +135,6 @@ easy_admin:
                - { property : 'content'}
                - { property : 'customer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
                - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
+             title : 'Lire'
 
 

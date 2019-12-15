@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/charpente.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/charpente.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/charpente.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5defa890cba9e807815543.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logos/Logocomplet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logos/Logocourt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logos/labels/fondation-du-patrimoine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logos/labels/logo-maitreartisan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logos/labels/logo_qualibat.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/charpente.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/charpente.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,10 +173,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cakephp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/logos/labels" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos\labels" />
+      <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -219,7 +219,8 @@
       <workItem from="1575981496547" duration="4827000" />
       <workItem from="1576064212671" duration="16255000" />
       <workItem from="1576140307043" duration="22356000" />
-      <workItem from="1576221459673" duration="8684000" />
+      <workItem from="1576221459673" duration="9668000" />
+      <workItem from="1576433426448" duration="5348000" />
     </task>
     <servers />
   </component>
@@ -303,6 +304,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="746" height="446" key="SwitcherDM/0.0.1280.720@0.0.1280.720" timestamp="1575415048823" />
+    <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1576438940010">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="233" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1576438940010" />
     <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1575410129065">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

@@ -3,6 +3,8 @@ require('util')
 require('bootstrap')
 require('../css/charpente.css')
 
+
+
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0): carousel.js
@@ -518,4 +520,3 @@ const Carousel = (($) => {
 })($)
 
 export default Carousel
-
