@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entity/Actuality.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191216091509.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Applicant.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/RequestProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RequestProject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191205201134.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191209075719.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191209085716.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ApplicantRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ActualityRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191216090755.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +215,7 @@
       <workItem from="1576140307043" duration="22356000" />
       <workItem from="1576221459673" duration="9668000" />
       <workItem from="1576433426448" duration="8753000" />
-      <workItem from="1576481342445" duration="5390000" />
+      <workItem from="1576481342445" duration="6494000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>
