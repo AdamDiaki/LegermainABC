@@ -42,10 +42,7 @@ class Application
      */
     private $resumeFile;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Applicant", inversedBy="applications")
-     */
-    private $applicant;
+
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Offer", inversedBy="applications")
@@ -56,6 +53,11 @@ class Application
      * @ORM\Column(type="datetime")
      */
     private $applicationAt;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="applications")
+     */
+    private $user;
 
     /**
      * @return int|null
@@ -103,24 +105,7 @@ class Application
         return $this;
     }
 
-    /**
-     * @return Applicant|null
-     */
-    public function getApplicant(): ?Applicant
-    {
-        return $this->applicant;
-    }
 
-    /**
-     * @param Applicant|null $applicant
-     * @return $this
-     */
-    public function setApplicant(?Applicant $applicant): self
-    {
-        $this->applicant = $applicant;
-
-        return $this;
-    }
 
     /**
      * @return Offer|null
@@ -199,6 +184,18 @@ class Application
             // if 'updatedAt' is not defined in your entity, use another property
             $this->applicationAt = new \DateTime( 'now' );
         }
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 
 

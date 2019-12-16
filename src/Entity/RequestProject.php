@@ -26,10 +26,7 @@ class RequestProject
      */
     private $content;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Customer", inversedBy="requestProjects")
-     */
-    private $customer;
+
 
     /**
      * @ORM\Column(type="boolean")
@@ -40,6 +37,11 @@ class RequestProject
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="requestProjects")
      */
     private $category;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="requestProjects")
+     */
+    private $user;
 
     /**
      * @return int|null
@@ -87,24 +89,7 @@ class RequestProject
         return $this;
     }
 
-    /**
-     * @return Customer|null
-     */
-    public function getCustomer(): ?Customer
-    {
-        return $this->customer;
-    }
 
-    /**
-     * @param Customer|null $customer
-     * @return $this
-     */
-    public function setCustomer(?Customer $customer): self
-    {
-        $this->customer = $customer;
-
-        return $this;
-    }
 
     /**
      * @return bool|null
@@ -150,6 +135,18 @@ class RequestProject
     public function __toString()
     {
         return $this->id . ' : ' . $this->title;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 
 
