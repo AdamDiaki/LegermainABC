@@ -39,12 +39,18 @@ class Category
     private $articles;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\BackgroundImage", mappedBy="category")
+     */
+    private $backgroundImages;
+
+    /**
      * Category constructor.
      */
     public function __construct()
     {
         $this->requestProjects = new ArrayCollection();
         $this->articles = new ArrayCollection();
+        $this->backgroundImages = new ArrayCollection();
     }
 
     /**
@@ -177,6 +183,37 @@ class Category
     public function __toString()
     {
         return $this->id . ' : ' . $this->title;
+    }
+
+    /**
+     * @return Collection|BackgroundImage[]
+     */
+    public function getBackgroundImages(): Collection
+    {
+        return $this->backgroundImages;
+    }
+
+    public function addBackgroundImage(BackgroundImage $backgroundImage): self
+    {
+        if (!$this->backgroundImages->contains($backgroundImage)) {
+            $this->backgroundImages[] = $backgroundImage;
+            $backgroundImage->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBackgroundImage(BackgroundImage $backgroundImage): self
+    {
+        if ($this->backgroundImages->contains($backgroundImage)) {
+            $this->backgroundImages->removeElement($backgroundImage);
+            // set the owning side to null (unless already changed)
+            if ($backgroundImage->getCategory() === $this) {
+                $backgroundImage->setCategory(null);
+            }
+        }
+
+        return $this;
     }
 
 
