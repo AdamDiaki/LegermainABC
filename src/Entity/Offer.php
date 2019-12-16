@@ -11,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Offer
 {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -296,6 +297,5 @@ class Offer
         return $this->id . ' : ' . $this->title;
 
     }
-
 
 }

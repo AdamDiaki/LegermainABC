@@ -7,8 +7,6 @@
 
 {{ encore_entry_link_tags('offer') }}
 
-
-
     <div class="jumbotron text-center">
         <h1>Nos Offres</h1>
         <h2>Les Offres toujours d'actualités</h2>
@@ -39,15 +37,18 @@
                 </div>
 
             {% endfor %}
+
             <div id="CandidateModal" class="modal">
                 <div class="modal-content">
-                    <h2 id="CandidateTitle"> Remplissez le formulaire pour l'offre !</h2>
+                    <h2 id="CandidateTitle" align="center"> Remplissez le formulaire pour l'offre !</h2>
                     {{ form_start(CandidateForm) }}
+                    {{ form_start(ApplicationForm) }}
+                        {{ form_widget(CandidateForm) }}
+                        {{ form_widget(ApplicationForm) }}
+                        <button type="submit" class="btn btn-success">Postuler</button>
 
                     {{ form_end(CandidateForm) }}
-                    {{ form_start(ApplicationForm) }}
                     {{ form_end(ApplicationForm) }}
-                    <button type="submit" class="btn btn-success">Postuler</button>
                         </div>
                     </div>
                 </div>
@@ -98,13 +99,21 @@
              document.getElementById("CandidateTitle").innerHTML="Remplissez le formulaire pour l'offre {{ offre.id }} !";
          };
 
+         document.onkeydown = function(event){
+             console.log(event.key);
+             if(event.key === "Escape"){
+                 openModal.style.display = "none";
+                 modalCandidate.style.display = "none";
+             }
+         }
+
          window.onclick = function(event) {
              if (event.target === openModal) {
                  openModal.style.display = "none";
              }
              if(event.target === modalCandidate) {
                  modalCandidate.style.display = "none";
-             }z
+             }
          };
 
 
