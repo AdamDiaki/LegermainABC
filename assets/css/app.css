@@ -1,1 +1,22 @@
 
+
+.card footer, nav
+{
+    background-image: linear-gradient(#352F2A, #4C3D34);
+
+    /* Obligatoire si on veut "voir" le dégradé */
+    width: auto;
+    height: auto;
+
+}
+
+.footer-copyright{
+    background-color: black;
+    width: auto;
+    height: auto;
+}
+
+p, h5,a{
+    color: white;
+}
+
