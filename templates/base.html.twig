@@ -6,6 +6,8 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}
         <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
@@ -34,7 +36,7 @@
 
     </div>
 </nav>
-
+<div class="sidebarre"></div>
 
 
 
@@ -47,6 +49,7 @@
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
 <div class="card">
+    <div class="sidebarre"></div>
     <!-- Footer -->
     <footer class="page-footer font-small stylish-color-dark pt-4 ">
 
@@ -60,10 +63,19 @@
                 <div class="col-md-4 mx-auto">
 
                     <!-- Content -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-                    <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipisicing elit.</p>
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Nous trouver!</h5>
+                    <p class="lead">
+
+                    <div class="mapouter" width="100%" position="right">
+                        <div class="gmap_canvas"><iframe width="500" height="400" id="gmap_canvas " position="center"
+                                                         src="https://maps.google.com/maps?q=Universit%C3%A9%20de%20Tours&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                                         frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" marginleft="50">
+                            </iframe><a href="https://www.couponflat.com"></a></div>
+                        <style>.mapouter{position:relative;text-align:left;height:400px;width:400px;}
+                            .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+                        </style>
+                    </div>
+                    </p>
 
                 </div>
                 <!-- Grid column -->
@@ -78,7 +90,7 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">Link 1</a>
+                            <img src="{{ asset('uploads/images/logos/labels/logo-maitreartisan.png') }}" alt="">
                         </li>
                         <li>
                             <a href="#!">Link 2</a>
@@ -156,38 +168,42 @@
         <hr>
 
         <!-- Social buttons -->
-        <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-                <a class="btn-floating btn-fb mx-1">
-                    <i class="fab fa-facebook-f"> </i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="btn-floating btn-tw mx-1">
-                    <i class="fab fa-twitter"> </i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="btn-floating btn-gplus mx-1">
-                    <i class="fab fa-google-plus-g"> </i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="btn-floating btn-li mx-1">
-                    <i class="fab fa-linkedin-in"> </i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="btn-floating btn-dribbble mx-1">
-                    <i class="fab fa-dribbble"> </i>
-                </a>
-            </li>
-        </ul>
+        <!-- Social buttons -->
+        <div class="social" align="center"style="font-size: 40px">
+
+            <a class="social-icon mx-1" data-tooltip="email@gmail.com" href="mailto:email@gmail.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+
+            <a class="social-icon mx-1" data-tooltip="GitHub" href="https://github.com/puikinsh">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+
+            <a class="social-icon mx-1" data-tooltip="LinkedIn" href="https://www.linkedin.com/company/colorlib">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+
+            <a class="social-icon mx-1" data-tooltip="Twitter" href="https://twitter.com/colorlib">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+
+            <a class="social-icon mx-1" data-tooltip="Facebook" href="https://www.facebook.com/colorlib">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+
+            <a class="social-icon mx-1" data-tooltip="YouTube" href="https://www.youtube.com/c/Colorlib">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="social-icon mx-1" data-tooltip="YouTube" href="https://instagram.com/Colorlib">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+
+        </div>
         <!-- Social buttons -->
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            <p>Développé par : Adam Diakité, Delal Seletli, Christian Mada-Mbari et Sidney Sargent</p>
         </div>
         <!-- Copyright -->
 

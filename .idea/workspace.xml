@@ -2,24 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
-      <change afterPath="$PROJECT_DIR$/assets/css/couverture.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/couverture.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/OfferCategoryFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191218135209.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191218144258.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/charpente.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/charpente.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/charpente.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/charpente.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/charpente.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/charpente.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191216091509.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20191216105555.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/Logocomplet.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/Logocomplet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/Logocourt.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/Logocourt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/labels/fondation-du-patrimoine.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/labels/fondation-du-patrimoine.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/labels/logo-maitreartisan.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/labels/logo-maitreartisan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logos/labels/logo_qualibat.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/labels/logo_qualibat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/AccueilImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AccueilImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Actuality.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Actuality.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/BackgroundImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/BackgroundImage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/articles/couverture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/couverture.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +198,9 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\public\uploads\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos\labels" />
       <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos" />
@@ -241,7 +245,8 @@
       <workItem from="1576433426448" duration="8753000" />
       <workItem from="1576481342445" duration="15603000" />
       <workItem from="1576568774958" duration="8300000" />
-      <workItem from="1576614021120" duration="7766000" />
+      <workItem from="1576614021120" duration="7828000" />
+      <workItem from="1576655843822" duration="21407000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>
@@ -288,10 +293,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="420" y="85" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.720@0.0.1280.720" timestamp="1576223107470" />
-    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1575881870880">
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1576678736528">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1575881870880" />
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1576678736528" />
     <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575881455953">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -312,10 +317,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="309" y="139" width="661" height="481" key="EditFileWatcherDialog/0.0.1280.720@0.0.1280.720" timestamp="1576223885489" />
-    <state x="391" y="172" key="FileChooserDialogImpl" timestamp="1576512786292">
+    <state x="391" y="172" key="FileChooserDialogImpl" timestamp="1576656302155">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1576512786292" />
+    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1576656302155" />
     <state width="1237" height="176" key="GridCell.Tab.0.bottom" timestamp="1576020460372">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -348,10 +353,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575410129065" />
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1576614031598">
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1576655848628">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1576614031598" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1576655848628" />
     <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575902973096">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -360,10 +365,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" timestamp="1575411601943" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1576511867048">
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1576678201156">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1576511867048" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1576678201156" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

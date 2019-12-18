@@ -11,7 +11,7 @@ easy_admin:
         - label: 'Home'
           icon: 'images'
 
-        - label: 'Gallerie'
+        - label: 'Galerie'
           icon: 'images'
           children:
             - { entity: 'Image', icon : 'images'}
@@ -130,7 +130,8 @@ easy_admin:
                - { property : 'content'}
                - { property : 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
                - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
-             title : 'Lire'
+               - {property : 'contacted'}
+
 
         AccueilImage:
           class: App\Entity\AccueilImage
