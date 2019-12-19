@@ -7,9 +7,22 @@
 
 {{ encore_entry_link_tags('offer') }}
 
-    <div class="jumbotron text-center">
-        <h1>Nos Offres</h1>
-        <h2>Les Offres toujours d'actualités</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="first-slide" style="width: 100%; height: 670px" src="{{ asset('http://www.gsfdcy.com/data/img/34/1510311-furniture-wallpaper.jpg') }}" alt="Offres d'emplois">
+                <div class="container">
+                    <div class="carousel-caption text-center" style="top : 110px;height: 60%;background-color: rgba(0,0,0,0.6)">
+                        <div>
+                            <h1 style="font-size: 150px;color: rgba(255,168,74,1)">Nos offres d'emplois</h1>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="jumbotron text-center" style="background-color: rgba(218,218,218,1)">
         <div class="row flex">
             {% for offre in offres %}
                 <div class="col-3">
@@ -45,8 +58,8 @@
                     {{ form_start(ApplicationForm) }}
                         {{ form_widget(CandidateForm) }}
                         {{ form_widget(ApplicationForm) }}
+                        {{ form_row(ApplicationForm.offer, {'id' : 'offre', 'attr': {'class':'custom-class'}})}}
                         <button type="submit" class="btn btn-success">Postuler</button>
-
                     {{ form_end(CandidateForm) }}
                     {{ form_end(ApplicationForm) }}
                         </div>
@@ -55,11 +68,6 @@
             </div>
 
         </div>
-        <div id="map"></div>
-
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw1ekYuDesZlOCLckgm8uZ9WH96ZtXQsA&callback=initMap">
-        </script>
     </div>
 
 {% endblock %}
@@ -69,16 +77,6 @@
 
      <script>
 
-         window.onload = function initMap() {
-             // The location of Uluru
-             var uluru = {lat: 48.144679, lng: -0.117047};
-             // The map, centered at Uluru
-             var map = new google.maps.Map(
-                 document.getElementById('map'), {zoom: 11, center: uluru});
-             // The marker, positioned at Uluru
-             var marker = new google.maps.Marker({position: uluru, map: map, title: "ABC Legermain"});
-         };
-
          var modalCandidate = document.getElementById("CandidateModal");
          {% for offre in offres %}
 
@@ -86,6 +84,7 @@
          var btn{{ loop.index }} = document.getElementById("BtnInfo{{ loop.index }}");
          var btnCandidate{{ loop.index }} = document.getElementById("BtnCandidate{{ loop.index }}");
          var openModal;
+
 
          btn{{ loop.index }}.onclick = function () {
             openModal = modal{{ loop.index }};
@@ -97,6 +96,10 @@
              modal{{ loop.index }}.style.display = "none";
              modalCandidate.style.display = "block";
              document.getElementById("CandidateTitle").innerHTML="Remplissez le formulaire pour l'offre {{ offre.id }} !";
+             var offre = document.getElementById("application_offer").value;
+             document.getElementById("application_offer").value = {{ offre.id }};
+             document.getElementById("application_offer").style.display = "none";
+             console.log(offre);
          };
 
          document.onkeydown = function(event){
@@ -121,5 +124,6 @@
          {% endfor %}
 
      </script>
+
 
  {% endblock %}

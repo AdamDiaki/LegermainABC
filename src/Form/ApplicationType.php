@@ -14,6 +14,10 @@ class ApplicationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('offer',null,array(
+                'label' => false,
+                'attr' => ['id' =>'offre']
+            ))
             ->add('cvFile',FileType::class, array(
                 'label' => 'CV',
                 'attr' => array('style' => 'size: 1px')
@@ -22,6 +26,7 @@ class ApplicationType extends AbstractType
                 'label' => 'Lettre de motivation',
                 'attr' => array('style' => 'width: 200px')
             ))
+
         ;
     }
 

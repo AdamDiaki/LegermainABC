@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/offer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/offer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/offer.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/offer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/OfferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OfferController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ApplicationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ApplicationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/OfferFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OfferFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/offer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/offer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +223,14 @@
       <workItem from="1576221459673" duration="9668000" />
       <workItem from="1576433426448" duration="8753000" />
       <workItem from="1576481342445" duration="6494000" />
-      <workItem from="1576488914395" duration="2107000" />
+      <workItem from="1576488914395" duration="6068000" />
+      <workItem from="1576498200817" duration="855000" />
+      <workItem from="1576500154655" duration="55000" />
+      <workItem from="1576524596792" duration="594000" />
+      <workItem from="1576568420074" duration="4666000" />
+      <workItem from="1576574762045" duration="5148000" />
+      <workItem from="1576656386473" duration="2588000" />
+      <workItem from="1576749826035" duration="2537000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>
@@ -239,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576484841550</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Mise en page du formulaire pour postuler">
+      <created>1576491057770</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576491057770</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +269,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="improve charpente.html.twig" />
     <MESSAGE value="improve charpente" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve charpente" />
+    <MESSAGE value="Mise en page du formulaire pour postuler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en page du formulaire pour postuler" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="19" key="#File_Watchers" timestamp="1576223887943">
