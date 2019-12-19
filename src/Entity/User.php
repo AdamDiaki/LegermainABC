@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -53,6 +55,22 @@ class User
      * @Assert\NotBlank
      */
     private $address;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Application", mappedBy="user")
+     */
+    private $applications;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\RequestProject", mappedBy="user")
+     */
+    private $requestProjects;
+
+    public function __construct()
+    {
+        $this->applications = new ArrayCollection();
+        $this->requestProjects = new ArrayCollection();
+    }
 
     /**
      * @return int|null
@@ -164,6 +182,68 @@ class User
     {
         return $this->id . ' : ' . $this->firstname . ' ' . $this->name;
 
+    }
+
+    /**
+     * @return Collection|Application[]
+     */
+    public function getApplications(): Collection
+    {
+        return $this->applications;
+    }
+
+    public function addApplication(Application $application): self
+    {
+        if (!$this->applications->contains($application)) {
+            $this->applications[] = $application;
+            $application->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeApplication(Application $application): self
+    {
+        if ($this->applications->contains($application)) {
+            $this->applications->removeElement($application);
+            // set the owning side to null (unless already changed)
+            if ($application->getUser() === $this) {
+                $application->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|RequestProject[]
+     */
+    public function getRequestProjects(): Collection
+    {
+        return $this->requestProjects;
+    }
+
+    public function addRequestProject(RequestProject $requestProject): self
+    {
+        if (!$this->requestProjects->contains($requestProject)) {
+            $this->requestProjects[] = $requestProject;
+            $requestProject->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRequestProject(RequestProject $requestProject): self
+    {
+        if ($this->requestProjects->contains($requestProject)) {
+            $this->requestProjects->removeElement($requestProject);
+            // set the owning side to null (unless already changed)
+            if ($requestProject->getUser() === $this) {
+                $requestProject->setUser(null);
+            }
+        }
+
+        return $this;
     }
 
 

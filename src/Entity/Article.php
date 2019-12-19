@@ -39,17 +39,12 @@ class Article
     private $category;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Image", mappedBy="article")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="articles")
      */
-    private $images;
+    private $image;
 
-    /**
-     * Article constructor.
-     */
-    public function __construct()
-    {
-        $this->images = new ArrayCollection();
-    }
+
+
 
     /**
      * @return int|null
@@ -135,44 +130,6 @@ class Article
         return $this;
     }
 
-    /**
-     * @return Collection|Image[]
-     */
-    public function getImages(): Collection
-    {
-        return $this->images;
-    }
-
-    /**
-     * @param Image $image
-     * @return $this
-     */
-    public function addImage(Image $image): self
-    {
-        if (!$this->images->contains( $image )) {
-            $this->images[] = $image;
-            $image->setArticle( $this );
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param Image $image
-     * @return $this
-     */
-    public function removeImage(Image $image): self
-    {
-        if ($this->images->contains( $image )) {
-            $this->images->removeElement( $image );
-            // set the owning side to null (unless already changed)
-            if ($image->getArticle() === $this) {
-                $image->setArticle( null );
-            }
-        }
-
-        return $this;
-    }
 
     /**
      * @return string
@@ -180,5 +137,17 @@ class Article
     public function __toString()
     {
         return $this->id . ' : ' . $this->title;
+    }
+
+    public function getImage(): ?Image
+    {
+        return $this->image;
+    }
+
+    public function setImage(?Image $image): self
+    {
+        $this->image = $image;
+
+        return $this;
     }
 }

@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -35,14 +37,26 @@ class Image
     private $updatedAt;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Article", inversedBy="images")
+     * @ORM\OneToMany(targetEntity="App\Entity\Actuality", mappedBy="image")
      */
-    private $article;
+    private $actualities;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\ManyToOne(targetEntity="App\Entity\BackgroundImage", inversedBy="images")
      */
-    private $mainImage;
+    private $backgroundImage;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="image")
+     */
+    private $articles;
+
+    public function __construct()
+    {
+        $this->actualities = new ArrayCollection();
+        $this->articles = new ArrayCollection();
+    }
+
 
 
     /**
@@ -72,24 +86,9 @@ class Image
         return $this;
     }
 
-    /**
-     * @return Article|null
-     */
-    public function getArticle(): ?Article
-    {
-        return $this->article;
-    }
 
-    /**
-     * @param Article|null $article
-     * @return $this
-     */
-    public function setArticle(?Article $article): self
-    {
-        $this->article = $article;
 
-        return $this;
-    }
+
 
     /**
      * @return File
@@ -138,17 +137,81 @@ class Image
         return $this;
     }
 
-    public function getMainImage(): ?bool
+    /**
+     * @return Collection|Actuality[]
+     */
+    public function getActualities(): Collection
     {
-        return $this->mainImage;
+        return $this->actualities;
     }
 
-    public function setMainImage(bool $mainImage): self
+    public function addActuality(Actuality $actuality): self
     {
-        $this->mainImage = $mainImage;
+        if (!$this->actualities->contains($actuality)) {
+            $this->actualities[] = $actuality;
+            $actuality->setImage($this);
+        }
 
         return $this;
     }
+
+    public function removeActuality(Actuality $actuality): self
+    {
+        if ($this->actualities->contains($actuality)) {
+            $this->actualities->removeElement($actuality);
+            // set the owning side to null (unless already changed)
+            if ($actuality->getImage() === $this) {
+                $actuality->setImage(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getBackgroundImage(): ?BackgroundImage
+    {
+        return $this->backgroundImage;
+    }
+
+    public function setBackgroundImage(?BackgroundImage $backgroundImage): self
+    {
+        $this->backgroundImage = $backgroundImage;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Article[]
+     */
+    public function getArticles(): Collection
+    {
+        return $this->articles;
+    }
+
+    public function addArticle(Article $article): self
+    {
+        if (!$this->articles->contains($article)) {
+            $this->articles[] = $article;
+            $article->setImage($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArticle(Article $article): self
+    {
+        if ($this->articles->contains($article)) {
+            $this->articles->removeElement($article);
+            // set the owning side to null (unless already changed)
+            if ($article->getImage() === $this) {
+                $article->setImage(null);
+            }
+        }
+
+        return $this;
+    }
+
+
 
 
 }
