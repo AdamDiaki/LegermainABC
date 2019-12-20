@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.12.0",
         "@symfony/webpack-encore": "^0.28.0",
         "bootstrap": "^4.4.1",
         "core-js": "^3.0.0",
@@ -19,7 +20,12 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "carousel": "^0.0.3",
+        "carousel-3d": "^0.2.3",
+        "child_process": "^1.0.2",
         "flexslider": "^2.7.2",
+        "mdb": "^0.1.0",
+        "mdbootstrap": "^4.10.1",
         "modal": "^1.2.0",
         "util": "^0.12.1"
     }

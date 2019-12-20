@@ -2,6 +2,7 @@ import $ from 'jquery'
 require('util')
 require('bootstrap')
 require('../css/charpente.css')
+require('@fortawesome/fontawesome-free')
 
 
 
