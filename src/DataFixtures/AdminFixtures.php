@@ -34,9 +34,9 @@ class AdminFixtures extends Fixture
 
 
         $user = new Admin();
-        $user->setUsername( "Delal" )
-            ->setEmail( "delalsel@hotmail.fr" )
-            ->setNumber( "0695624036" )
+        $user->setUsername( "Sidney" )
+            ->setEmail( "sidney.sargent@hotmail.fr" )
+            ->setNumber( "0695624037" )
             ->setPassword( $this->encoder->encodePassword( $user, "motdepasse" ) );;
         $manager->persist( $user );
 

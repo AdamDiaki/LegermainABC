@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191218135209.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191218144258.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RequestForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RequestType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/charpente.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/charpente.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/charpente.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/charpente.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/charpente.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/charpente.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logos/Logocomplet.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/Logocomplet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logos/Logocourt.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/Logocourt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logos/labels/fondation-du-patrimoine.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/labels/fondation-du-patrimoine.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logos/labels/logo-maitreartisan.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/labels/logo-maitreartisan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logos/labels/logo_qualibat.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/images/logos/labels/logo_qualibat.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/AccueilImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AccueilImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Actuality.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Actuality.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/BackgroundImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/BackgroundImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RequestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AdminFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AdminFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form/requestForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form/requestForm.html.twig" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -206,15 +196,15 @@
       <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -247,6 +237,7 @@
       <workItem from="1576568774958" duration="8300000" />
       <workItem from="1576614021120" duration="7828000" />
       <workItem from="1576655843822" duration="21407000" />
+      <workItem from="1576775257294" duration="8518000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>
