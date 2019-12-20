@@ -9,15 +9,19 @@
             </div>
         {% endif %}
         <div class="cold md-4">
-            <div class="card mb-4  mx-auto">
-                <div class="card-body ">
+            <div class="card mb-4  mx-auto" >
+                <div class="card-title">
                     <h1>Connexion</h1>
+                </div>
+                <div class="card-body mb-4" align="center">
+
+
 
                     <form action=" {{ path('security_login') }}" method="post">
 
-                        <div class="row mb-4">
-                            <div class="col-md-4 ">
-                                <div class="form_group mb-4">
+                        <div class="row mb-4" align="center">
+                            <div class="col-md-4 " align="center">
+                                <div class="form_group mb-4" >
                                     <input placeholder="Adresse email" required name="_username" type="text" class="form-control" value="{{ lastUsername }}">
                                 </div>
                                 <div class="form_group mb-4">
