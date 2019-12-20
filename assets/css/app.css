@@ -9,7 +9,7 @@
     height: auto;
 
 }
-.card{
+#card{
     position: relative;
     top: 4em;
     text-align: center;
@@ -27,13 +27,11 @@
 }
 
 p, h5,a{
-    color: white;
+    color: #87724c;
     text-align: center;
 }
 
-p{
 
-}
 
 .sidebarre{
     background-color: #d98933;
