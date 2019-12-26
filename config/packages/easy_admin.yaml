@@ -118,6 +118,10 @@ easy_admin:
                - { property: 'hourlyWage'}
                - { property: 'address'}
 
+               - { property: 'offerType', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+
+
+
 
 
 
@@ -138,5 +142,5 @@ easy_admin:
 
 
         BackgroundImage:
-          class: App\Entity\BAckgroundImage
+          class: App\Entity\BackgroundImage
 

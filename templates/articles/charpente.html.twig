@@ -33,21 +33,36 @@
             <img class="first-slide" style="width: 100%; height: 453px" src="{{ asset('uploads/images/articles/5defa890cba9e807815543.png') }}" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-                <div class = "card" >
-                <h1>Charpentes</h1>
-                <p>Les charpentes ABC Legermain couvrent une large gamme de produits (du hangar agricole aux monuments historiques en passant bien sur par la charpente traditionnelle).</p>
-                </div>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Devis</a></p>
+                <div id= "card"  >
+                  <div class="card-body my-4">
+                    <div class="card-text">
+                      <h1>Charpentes</h1>
+                      <p>Les charpentes ABC Legermain couvrent une large gamme de produits (du hangar agricole aux monuments historiques en passant bien sur par la charpente traditionnelle).</p>
+                    </div>
+                    </div>
+                  </div>
+
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Lire plus</a></p>
               </div>
+
             </div>
           </div>
           <div class="carousel-item">
             <img class="second-slide" style="width: 100%; height: 453px" src="{{ asset('uploads/images/articles/5dea29602ec70224641221.jpg') }}" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Charpentes.</h1>
-                <p>Elles sont réalisées artisanalement en employant les assemblages traditionnels correspondant aux style et à l’époque de l’ouvrage (tenons mortaise, chevilles en bois...) </p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                <div id="card">
+                  <div class="card-body my-4">
+                    <div class="card-text">
+                      <h1>Charpentes.</h1>
+                      <p>Elles sont réalisées artisanalement en employant les assemblages traditionnels correspondant aux style et à l’époque de l’ouvrage (tenons mortaise, chevilles en bois...) </p>
+
+
+                    </div>
+                  </div>
+
+                </div>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Demander un devis</a></p>
               </div>
             </div>
           </div>
@@ -55,8 +70,16 @@
             <img class="third-slide" style="width: 100%; height: 453px" src="{{ asset('uploads/images/articles/5deec3eddfb5e439230997.jpg') }}" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Elles sont réalisées artisanalement en employant les assemblages traditionnels correspondant aux style et à l’époque de l’ouvrage (tenons mortaise, chevilles en bois...) </p>
+                <div id="card">
+                  <div class="card-body my-4">
+                    <div class="card-text">
+                      <h1>One more for good measure.</h1>
+                      <p>Elles sont réalisées artisanalement en employant les assemblages traditionnels correspondant aux style et à l’époque de l’ouvrage (tenons mortaise, chevilles en bois...) </p>
+
+                    </div>
+                  </div>
+
+                </div>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
               </div>
             </div>
@@ -74,50 +97,28 @@
 
 
 
-      <div class="container marketing">
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
+      {% for article in articles %}
+        <div class="container-fluid mt-4">
+          <div class="card mb-4"  style="width: auto; height: auto">
+            <div class="row no-gutters">
+              <div class="col-auto">
+                <img src="https://via.placeholder.com/300"  class="card-img-left featurette-image img-fluid mx-auto" alt="...">
+              </div>
+              <div class="col-9">
+                <div class="card-body px-2" >
 
-          <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="https://via.placeholder.com/220" alt="Generic placeholder image">
-          </div>
-        </div>
+                  <h2 class="card-title" style="text-align: center">{{article.title}}</h2>
+                  <p class="lead card-text"  style="text-align: justify">{{ article.content }}</p>
+                </div>
+              </div>
+            </div>
 
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="https://via.placeholder.com/220" alt="Generic placeholder image">
           </div>
         </div>
 
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto"src="https://via.placeholder.com/220" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-
-
-      </div>
+      {% endfor %}
 
 
 

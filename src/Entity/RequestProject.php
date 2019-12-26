@@ -31,7 +31,7 @@ class RequestProject
     /**
      * @ORM\Column(type="boolean")
      */
-    private $contacted;
+    private $contacted = false;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="requestProjects")

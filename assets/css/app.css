@@ -11,7 +11,8 @@
 }
 #card{
     position: relative;
-    top: 4em;
+    top: 20%;
+
     text-align: center;
     height:auto;
     width: auto;

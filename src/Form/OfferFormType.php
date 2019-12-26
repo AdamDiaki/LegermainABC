@@ -2,8 +2,8 @@
 
 namespace App\Form;
 
-use App\Entity\Applicant;
-use App\Entity\Application;
+
+
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

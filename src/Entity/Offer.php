@@ -60,14 +60,16 @@ class Offer
     private $applications;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $accepted = false;
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\OfferType", inversedBy="offers")
      */
     private $offerType;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $accepted;
+
 
     /**
      * Offer constructor.
