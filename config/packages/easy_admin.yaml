@@ -17,6 +17,7 @@ easy_admin:
             - { entity: 'Image', icon : 'images'}
             - {entity: 'AccueilImage', icon : 'image'}
             - {entity: 'BackgroundImage',icon : 'image'}
+            - {entity: 'ArticleImages',icon: 'image'}
 
         -  label: 'Articles'
            icon : 'newspaper-o'
@@ -133,3 +134,5 @@ easy_admin:
         BackgroundImage:
           class: App\Entity\BackgroundImage
 
+        ArticleImages:
+          class: App\Entity\ArticleImages

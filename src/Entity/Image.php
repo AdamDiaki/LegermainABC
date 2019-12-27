@@ -116,7 +116,7 @@ class Image
      */
     public function __toString()
     {
-        return $this->id . ' : ' . $this->getLink();
+        return  "uploads/images/articles/$this->link";
     }
 
     /**

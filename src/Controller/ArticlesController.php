@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\ArticleImages;
 use App\Repository\ArticleImagesRepository;
 use App\Repository\ArticleRepository;
 use App\Repository\ImageRepository;
@@ -17,18 +18,11 @@ class ArticlesController extends AbstractController
     public function charpente(ArticleRepository $repo,ImageRepository $repo1, ArticleImagesRepository $repo2)
     {
         $articles = $repo->findBy(['category' => 1]);
-        $list = new Array_();
-
-        foreach($articles as $article) {
-            $idImage = $repo2->findOneBy( ['article' => $article->getId()] );
-            array_push( $list, $idImage->getImage() );
-        }
-
 
 
 
         return $this->render( 'articles/charpente.html.twig', [
-            'controller_name' => 'ArticlesController',  'articles' =>$articles, 'images' => $list
+            'controller_name' => 'ArticlesController',  'articles' =>$articles,
         ] );
     }
     /**

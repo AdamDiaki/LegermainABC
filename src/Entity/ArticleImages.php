@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use App\Entity\Image;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -32,10 +33,7 @@ class ArticleImages
 
 
 
-    public function __construct()
-    {
-        $this->image = new ArrayCollection();
-    }
+
 
     public function getId(): ?int
     {
@@ -64,6 +62,14 @@ class ArticleImages
         $this->image = $image;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->image.'';
     }
 
 

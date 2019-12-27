@@ -6,6 +6,9 @@
 {% block body %}
 
 
+    {{ encore_entry_link_tags('charpente') }}
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -42,7 +45,7 @@
                     </div>
                   </div>
 
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Lire plus</a></p>
+                <p><a class="btn btn-lg btn-success" href="#" role="button">Lire plus</a></p>
               </div>
 
             </div>
@@ -62,7 +65,7 @@
                   </div>
 
                 </div>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Demander un devis</a></p>
+                <p><a class="btn btn-lg btn-success" href="#" role="button">Demander un devis</a></p>
               </div>
             </div>
           </div>
@@ -80,7 +83,7 @@
                   </div>
 
                 </div>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <p><a class="btn btn-lg btn-success" href="#" role="button">Browse gallery</a></p>
               </div>
             </div>
           </div>
@@ -97,20 +100,20 @@
 
 
 
-
-
       {% for article in articles %}
         <div class="container-fluid mt-4">
-          <div class="card mb-4"  style="width: auto; height: auto">
+          <div class="card mb-4"  style="width: auto; height: 302px">
             <div class="row no-gutters">
               <div class="col-auto">
-                <img src="https://via.placeholder.com/300"  class="card-img-left featurette-image img-fluid mx-auto" alt="...">
+                <img src="{{ article.articleImages[0] }}" style="height: 300px;width: 300px" class="card-img-left featurette-image img-fluid mx-auto" alt="...">
               </div>
               <div class="col-9">
-                <div class="card-body px-2" >
-
+                <div class="card-body px-2 py-2" >
                   <h2 class="card-title" style="text-align: center">{{article.title}}</h2>
-                  <p class="lead card-text"  style="text-align: justify">{{ article.content }}</p>
+                  <p class="lead card-text"  style="text-align: justify; overflow: hidden;text-overflow: ellipsis">{{ article.content }}</p>
+                  <div class="button">
+                    <a href="#"  class="btn btn-success">En savoir plus</a>
+                  </div>
                 </div>
               </div>
             </div>

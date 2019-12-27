@@ -143,7 +143,10 @@ class Article
      */
     public function __toString()
     {
-        return $this->id . ' : ' . $this->title;
+
+            return $this->id . ' : ' . $this->title.'';
+
+
     }
 
     /**
