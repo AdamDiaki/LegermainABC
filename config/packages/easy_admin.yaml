@@ -61,21 +61,10 @@ easy_admin:
         # List the entity class name you want to manage
         Article:
             class: App\Entity\Article
-            form:
-              fields:
-                - { property: 'title'}
-                - { property: 'content'}
-                - { property: 'createdAt'}
-                - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
-                - { property: 'image', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
 
 
         Category:
             class : App\Entity\Category
-            form:
-              fields:
-                - { property: 'title'}
-                - { property: 'content'}
 
         Image:
             class:  App\Entity\Image

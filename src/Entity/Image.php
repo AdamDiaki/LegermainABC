@@ -41,20 +41,21 @@ class Image
      */
     private $actualities;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\BackgroundImage", inversedBy="images")
-     */
-    private $backgroundImage;
+
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="image")
+     * @ORM\OneToMany(targetEntity="App\Entity\ArticleImages", mappedBy="image")
      */
-    private $articles;
+    private $articleImages;
+
+
+
 
     public function __construct()
     {
         $this->actualities = new ArrayCollection();
         $this->articles = new ArrayCollection();
+        $this->articleImages = new ArrayCollection();
     }
 
 
@@ -168,43 +169,33 @@ class Image
         return $this;
     }
 
-    public function getBackgroundImage(): ?BackgroundImage
-    {
-        return $this->backgroundImage;
-    }
 
-    public function setBackgroundImage(?BackgroundImage $backgroundImage): self
-    {
-        $this->backgroundImage = $backgroundImage;
-
-        return $this;
-    }
 
     /**
-     * @return Collection|Article[]
+     * @return Collection|ArticleImages[]
      */
-    public function getArticles(): Collection
+    public function getArticleImages(): Collection
     {
-        return $this->articles;
+        return $this->articleImages;
     }
 
-    public function addArticle(Article $article): self
+    public function addArticleImage(ArticleImages $articleImage): self
     {
-        if (!$this->articles->contains($article)) {
-            $this->articles[] = $article;
-            $article->setImage($this);
+        if (!$this->articleImages->contains($articleImage)) {
+            $this->articleImages[] = $articleImage;
+            $articleImage->setImage($this);
         }
 
         return $this;
     }
 
-    public function removeArticle(Article $article): self
+    public function removeArticleImage(ArticleImages $articleImage): self
     {
-        if ($this->articles->contains($article)) {
-            $this->articles->removeElement($article);
+        if ($this->articleImages->contains($articleImage)) {
+            $this->articleImages->removeElement($articleImage);
             // set the owning side to null (unless already changed)
-            if ($article->getImage() === $this) {
-                $article->setImage(null);
+            if ($articleImage->getImage() === $this) {
+                $articleImage->setImage(null);
             }
         }
 

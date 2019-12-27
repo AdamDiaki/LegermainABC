@@ -7,9 +7,9 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\BackgroundImageRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ArticleImagesRepository")
  */
-class BackgroundImage
+class ArticleImages
 {
     /**
      * @ORM\Id()
@@ -18,46 +18,40 @@ class BackgroundImage
      */
     private $id;
 
-
-
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="backgroundImages")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Article", inversedBy="articleImages")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $category;
+    private $article;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Image", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="articleImages")
      * @ORM\JoinColumn(nullable=false)
      */
     private $image;
 
 
 
+    public function __construct()
+    {
+        $this->image = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-
-
-    public function getCategory(): ?Category
+    public function getArticle(): ?Article
     {
-        return $this->category;
+        return $this->article;
     }
 
-    public function setCategory(?Category $category): self
+    public function setArticle(?Article $article): self
     {
-        $this->category = $category;
+        $this->article = $article;
 
         return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->id.'';
     }
 
     public function getImage(): ?Image
@@ -65,7 +59,7 @@ class BackgroundImage
         return $this->image;
     }
 
-    public function setImage(Image $image): self
+    public function setImage(?Image $image): self
     {
         $this->image = $image;
 

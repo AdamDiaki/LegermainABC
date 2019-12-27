@@ -2,7 +2,10 @@
 
 namespace App\Controller;
 
+use App\Repository\ArticleImagesRepository;
 use App\Repository\ArticleRepository;
+use App\Repository\ImageRepository;
+use phpDocumentor\Reflection\Types\Array_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -11,12 +14,21 @@ class ArticlesController extends AbstractController
     /**
      * @Route("/charpente", name="charpente")
      */
-    public function charpente(ArticleRepository $repo)
+    public function charpente(ArticleRepository $repo,ImageRepository $repo1, ArticleImagesRepository $repo2)
     {
-        $articles = $repo->findBy(['category' => 25]);
+        $articles = $repo->findBy(['category' => 1]);
+        $list = new Array_();
+
+        foreach($articles as $article) {
+            $idImage = $repo2->findOneBy( ['article' => $article->getId()] );
+            array_push( $list, $idImage->getImage() );
+        }
+
+
+
 
         return $this->render( 'articles/charpente.html.twig', [
-            'controller_name' => 'ArticlesController',  'articles' =>$articles,
+            'controller_name' => 'ArticlesController',  'articles' =>$articles, 'images' => $list
         ] );
     }
     /**

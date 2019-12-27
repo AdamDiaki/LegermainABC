@@ -2,22 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
-      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5dfc952b7b84f799504604.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/liip_imagine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/RequestProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RequestProject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/OfferFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OfferFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RequestType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RequestType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/BackgroundImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/BackgroundImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191216105555.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20191227190014.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191218135209.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191218144258.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +176,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
       <path value="$PROJECT_DIR$/vendor/captcha-com/captcha" />
       <path value="$PROJECT_DIR$/vendor/captcha-com/symfony-captcha-bundle" />
+      <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
+      <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UQ2FN5sZwC5RRkzK3IA9f5cqzG" />
@@ -249,7 +253,8 @@
       <workItem from="1576768051317" duration="6124000" />
       <workItem from="1576827908454" duration="7484000" />
       <workItem from="1576839333629" duration="829000" />
-      <workItem from="1577374046187" duration="8471000" />
+      <workItem from="1577374046187" duration="14235000" />
+      <workItem from="1577460168296" duration="3041000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>
@@ -312,6 +317,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575925572766" />
+    <state x="381" y="209" key="#com.jetbrains.php.refactoring.move.member.instance.PhpMoveInstanceMethodDialog#" timestamp="1577392706563">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="381" y="209" key="#com.jetbrains.php.refactoring.move.member.instance.PhpMoveInstanceMethodDialog#/0.0.1280.720@0.0.1280.720" timestamp="1577392706563" />
     <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1576488208215">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -356,10 +365,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575410129065" />
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1577374047433">
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1577469229780">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1577374047433" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1577469229780" />
     <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576828717885">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
