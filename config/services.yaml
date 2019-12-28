@@ -6,7 +6,7 @@
 parameters:
     app.path.article_images: /uploads/images/articles
     app.path.application_cv: /uploads/application/cv
-    app.path.application_resume: /uploads/applications/resume
+    app.path.application_resume: /uploads/application/resume
 
 
 services:
