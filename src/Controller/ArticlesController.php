@@ -21,7 +21,7 @@ class ArticlesController extends AbstractController
      */
     public function charpente(ArticleRepository $repo,ImageRepository $repo1, ArticleImagesRepository $repo2)
     {
-        $articles = $repo->findBy(['category' => 1]);
+        $articles = $repo->findBy(['category' => 1],array('id' => 'DEgSC'));
 
         return $this->render( 'articles/charpente.html.twig', [
             'controller_name' => 'ArticlesController',  'articles' =>$articles,
