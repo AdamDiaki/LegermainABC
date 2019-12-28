@@ -105,7 +105,7 @@
             <div class="card mb-4"  style="width: auto; height: 302px">
               <div class="row no-gutters">
                 <div class="col-auto">
-                  <a href="{{ path('charpente_show',{'id':article.id}) }}"><img src="{{ article.articleImages[0] }}" style="height: 300px;width: 300px" class="card-img-left featurette-image img-fluid mx-auto" alt="..."></a>
+                  <a href="{{ path('charpente_show',{'id':article.id}) }}"><img src="{{ article.articleImages[0] | imagine_filter('thumb') }}"  class="card-img-left featurette-image img-fluid mx-auto" alt="..."></a>
 
                 </div>
                 <div class="col">

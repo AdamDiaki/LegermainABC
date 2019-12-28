@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
+      <change afterPath="$PROJECT_DIR$/src/Listener/ImageCacheSubscriber.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/articles/charpente_show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente_show.html.twig" afterDir="false" />
     </list>
@@ -244,7 +243,7 @@
       <workItem from="1576839333629" duration="829000" />
       <workItem from="1577374046187" duration="14235000" />
       <workItem from="1577460168296" duration="23004000" />
-      <workItem from="1577535605050" duration="11179000" />
+      <workItem from="1577535605050" duration="18318000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>
@@ -291,10 +290,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="420" y="85" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.720@0.0.1280.720" timestamp="1576223107470" />
-    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1577476043537">
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1577571824664">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1577476043537" />
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1577571824664" />
     <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575881455953">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
