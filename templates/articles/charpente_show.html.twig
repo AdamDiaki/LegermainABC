@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ encore_entry_link_tags('charpente') }}
+
+    {% for image in article.articleImages %}
+      <p>{{ image }}</p>
+        <img style="height: 300px;width: 300px" src="{{ image }}" alt="">
+    {% endfor %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('charpente') }}
+    {% endblock %}
+
+
+
+{% endblock %}
