@@ -105,17 +105,17 @@
             <div class="card mb-4 embed-responsive "  style="width: auto; height: 302px">
               <div class="row no-gutters">
                 <div class="col-auto">
-                  <a href="{{ path('charpente_show',{'id':article.id}) }}"><img  src="{{ article.articleImages[0] | imagine_filter('thumb') }}"  class="card-img-left featurette-image img-fluid mx-auto embed-reponsive-item" alt="..."></a>
+                  <a href="{{ path('article_show',{'id':article.id}) }}"><img  src="{{ article.articleImages[0] | imagine_filter('thumb') }}"  class="card-img-left featurette-image img-fluid mx-auto embed-reponsive-item" alt="..."></a>
 
                 </div>
                 <div class="col">
                   <div class="card-body px-2 py-2" >
                     <h2 class="card-title" style="text-align: center">
-                      <a href="{{ path('charpente_show',{'id':article.id}) }}">{{article.title}}</a>
+                      <a href="{{ path('article_show',{'id':article.id}) }}">{{article.title}}</a>
                     </h2>
                     <p class="lead card-text"  style="text-align: justify">{{ article.content }}</p>
                     <div class="button">
-                      <a href="{{ path('charpente_show',{'id':article.id}) }}"  class="btn btn-success">En savoir plus</a>
+                      <a href="{{ path('article_show',{'id':article.id}) }}"  class="btn btn-success">En savoir plus</a>
                     </div>
                   </div>
                 </div>
