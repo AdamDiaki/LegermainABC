@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/charpente.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/realisation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/charpente.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/realisation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/couverture.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/charpente.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/realisation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/couverture.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/couverture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/couverture.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +248,7 @@
       <workItem from="1576839333629" duration="829000" />
       <workItem from="1577374046187" duration="14235000" />
       <workItem from="1577460168296" duration="23004000" />
-      <workItem from="1577535605050" duration="19986000" />
+      <workItem from="1577535605050" duration="23516000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>
@@ -339,10 +347,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="142" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1576222725934" />
-    <state width="746" height="446" key="SwitcherDM" timestamp="1577479587454">
+    <state width="746" height="446" key="SwitcherDM" timestamp="1577576553955">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="746" height="446" key="SwitcherDM/0.0.1280.720@0.0.1280.720" timestamp="1577479587454" />
+    <state width="746" height="446" key="SwitcherDM/0.0.1280.720@0.0.1280.720" timestamp="1577576553955" />
     <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1576488275883">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -359,6 +367,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1576828717885" />
+    <state x="0" y="0" width="742" height="720" key="find.popup" timestamp="1577578998592">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="0" y="0" width="742" height="720" key="find.popup/0.0.1280.720@0.0.1280.720" timestamp="1577578998592" />
     <state x="281" y="87" width="700" height="530" key="recent.locations.popup" timestamp="1577493591594">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
