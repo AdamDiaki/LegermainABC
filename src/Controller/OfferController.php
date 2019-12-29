@@ -26,14 +26,30 @@ class OfferController extends AbstractController
      * @param OfferRepository $repository
      * @return Response
      */
-    public function Offer(OfferRepository $repository, Request $request, EntityManagerInterface $em) : Response
+    public function Offer(OfferRepository $repository, Request $request) : Response
     {
 
         $form = $this->createForm(OfferFormType::class);
         $formApplication = $this->createForm(ApplicationType::class);
         $offres = $repository->findBy(['accepted' => false]);
+        $form->handleRequest($request);
+        $formApplication->handleRequest($request);
 
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $user = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($user);
+            $entityManager->flush();
+        }
 
+        if($formApplication->isSubmitted() && $formApplication->isValid())
+        {
+            $application = $formApplication->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($application);
+            $entityManager->flush();
+        }
 
         return $this->render('pages/offer.html.twig', [
             'offres' => $offres,
