@@ -39,8 +39,9 @@
                             <div id= "card"  >
                                 <div class="card-body my-4">
                                     <div class="card-text">
-                                        <h1>Charpentes</h1>
-                                        <p>Les charpentes ABC Legermain couvrent une large gamme de produits (du hangar agricole aux monuments historiques en passant bien sur par la charpente traditionnelle).</p>
+                                        <h1>Ouvrages Spécifiques</h1>
+                                        <p>Escaliers, rambardes et garde-corps, lucarnes et autres menuiseries artisanales…
+                                            Nous mettons notre maîtrise de l'ouvrage au service de vos attentes.</p>
                                     </div>
                                 </div>
                             </div>
@@ -57,8 +58,8 @@
                             <div id="card">
                                 <div class="card-body my-4">
                                     <div class="card-text">
-                                        <h1>Charpentes.</h1>
-                                        <p>Elles sont réalisées artisanalement en employant les assemblages traditionnels correspondant aux style et à l’époque de l’ouvrage (tenons mortaise, chevilles en bois...) </p>
+                                        <h1>Ouvrages Spécifiques.</h1>
+                                        <p>Sobre ou travaillé, d'un style rustique ou moderne, racontez-nous de votre projet et nous trouverons ensemble une réponse adaptée à votre budget et à votre demande.</p>
 
 
                                     </div>
@@ -105,17 +106,17 @@
                 <div class="card mb-4 embed-responsive "  style="width: auto; height: 302px">
                     <div class="row no-gutters">
                         <div class="col-auto">
-                            <a href="{{ path('charpente_show',{'id':article.id}) }}"><img  src="{{ article.articleImages[0] | imagine_filter('thumb') }}"  class="card-img-left featurette-image img-fluid mx-auto embed-reponsive-item" alt="..."></a>
+                            <a href="{{ path('article_show',{'id':article.id}) }}"><img  src="{{ article.articleImages[0] | imagine_filter('thumb') }}"  class="card-img-left featurette-image img-fluid mx-auto embed-reponsive-item" alt="..."></a>
 
                         </div>
                         <div class="col">
                             <div class="card-body px-2 py-2" >
                                 <h2 class="card-title" style="text-align: center">
-                                    <a href="{{ path('charpente_show',{'id':article.id}) }}">{{article.title}}</a>
+                                    <a href="{{ path('article_show',{'id':article.id}) }}">{{article.title}}</a>
                                 </h2>
                                 <p class="lead card-text"  style="text-align: justify">{{ article.content }}</p>
                                 <div class="button">
-                                    <a href="{{ path('charpente_show',{'id':article.id}) }}"  class="btn btn-success">En savoir plus</a>
+                                    <a href="{{ path('article_show',{'id':article.id}) }}"  class="btn btn-success">En savoir plus</a>
                                 </div>
                             </div>
                         </div>
@@ -143,4 +144,3 @@
 
 
 {% endblock %}
-%}

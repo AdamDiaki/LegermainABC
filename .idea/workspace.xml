@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/1efdce4ab7dfa3a5854916e6b5e8c5e2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/91dc7a7ed6da9ef478227b4547bc25e1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" afterDir="false" />
+    <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
+      <change afterPath="$PROJECT_DIR$/src/Controller/MailerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Listener/EasyAdminSuscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/mailer/mailer.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OfferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OfferController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ApplicationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ApplicationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/OfferFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OfferFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/OfferRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/OfferRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/offer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/offer.html.twig" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +30,23 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abc_legermain@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abc_legermain@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abc_legermain@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="abc_legermain: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -171,6 +181,8 @@
       <path value="$PROJECT_DIR$/vendor/captcha-com/symfony-captcha-bundle" />
       <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
       <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UQ2FN5sZwC5RRkzK3IA9f5cqzG" />
@@ -194,23 +206,23 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\public\uploads\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos\labels" />
       <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\public\uploads\images" />
-    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -248,10 +260,8 @@
       <workItem from="1576839333629" duration="829000" />
       <workItem from="1577374046187" duration="14235000" />
       <workItem from="1577460168296" duration="23004000" />
-      <workItem from="1577535605050" duration="23516000" />
-      <workItem from="1577638571210" duration="5175000" />
-      <workItem from="1577652247891" duration="4596000" />
-      <workItem from="1577707943677" duration="4334000" />
+      <workItem from="1577535605050" duration="23868000" />
+      <workItem from="1577633434299" duration="20686000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>
@@ -260,14 +270,7 @@
       <option name="project" value="LOCAL" />
       <updated>1576484841550</updated>
     </task>
-    <task id="LOCAL-00002" summary="Gestion add user">
-      <created>1577632958314</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1577632958314</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,8 +293,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="improve charpente.html.twig" />
     <MESSAGE value="improve charpente" />
-    <MESSAGE value="Gestion add user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestion add user" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve charpente" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="19" key="#File_Watchers" timestamp="1576223887943">
@@ -306,10 +308,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="420" y="85" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.720@0.0.1280.720" timestamp="1576223107470" />
-    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1577571824664">
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1577645647286">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1577571824664" />
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1577645647286" />
     <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575881455953">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -370,10 +372,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575410129065" />
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1577535607216">
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1577633435047">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1577535607216" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1577633435047" />
     <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576828717885">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -386,20 +388,13 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" timestamp="1577493591594" />
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1577377403596">
+    <state x="297" y="161" key="run.anything.popup" timestamp="1577646935327">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1577377403596" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Controller/OfferController.php</url>
-          <line>64</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="297" y="161" key="run.anything.popup/0.0.1280.720@0.0.1280.720" timestamp="1577646935327" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1577655673989">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1577655673989" />
   </component>
 </project>

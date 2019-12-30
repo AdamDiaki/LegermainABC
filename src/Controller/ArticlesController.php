@@ -32,12 +32,12 @@ class ArticlesController extends AbstractController
     }
 
     /**
-     * @Route("/charpente{id}",name="charpente_show")
+     * @Route("/article{id}",name="article_show")
      *
      */
     public function show(Request $request,Article $article){
 
-        return $this->render('articles/charpente_show.html.twig',['controller_name' => 'ArticlesController','article' => $article
+        return $this->render( 'article_show.html.twig',['controller_name' => 'ArticlesController','article' => $article
 
         ]);
     }
