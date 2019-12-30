@@ -2,25 +2,24 @@
 
 {% block body %}
 
-    <div class="container mt-4 mx-auto">
+    <div align="center" class="container">
+
         {% if error %}
             <div class="alert alert-danger">
                 {{ error.messageKey | trans(error.messageData,'security') }}
             </div>
         {% endif %}
-        <div class="cold md-4">
-            <div class="card mb-4  mx-auto" >
-                <div class="card-title">
+
+            <div  style="width: 700px" class="card mb-4  mx-5 mt-4 py-2" >
+                <div align="center" class="card-title">
                     <h1>Connexion</h1>
                 </div>
                 <div class="card-body mb-4" align="center">
 
-
-
                     <form action=" {{ path('security_login') }}" method="post">
 
-                        <div class="row mb-4" align="center">
-                            <div class="col-md-4 " align="center">
+                        <div class="row-cols-1 " align="center">
+                            <div class="col-8" align="center">
                                 <div class="form_group mb-4" >
                                     <input placeholder="Adresse email" required name="_username" type="text" class="form-control" value="{{ lastUsername }}">
                                 </div>
@@ -42,7 +41,9 @@
                     </form>
                 </div>
             </div>
-        </div>
+
+
+
     </div>
 
 

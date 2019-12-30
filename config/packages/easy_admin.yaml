@@ -62,21 +62,89 @@ easy_admin:
         # List the entity class name you want to manage
         Article:
             class: App\Entity\Article
+            form:
+              fields:
+                - {type: 'group', icon: 'pencil', label: 'Editer les articles'}
+                - title
+                - {property: 'content', type: 'text-editor'}
+                - {type: 'group', icon: 'pencil', label: 'Autres informations'}
+                - category
+                -  {type: 'group', icon: 'pencil', label: 'Option automatique'}
+                - articleImages
+            list:
+              collapse_actions: true
+              actions: ['show', 'edit', 'delete']
+              filters: ['category','createdAt']
+              batch_actions: ['delete']
+
+            show:
+              fields:
+                - id
+                -  title
+                -  { property: 'content', type: 'raw'}
+                -  createdAt
+                -  category
+                -  articleImages
+
 
 
         Category:
             class : App\Entity\Category
+            form:
+              fields:
+                - {type: 'group', icon: 'pencil', label: 'Editer les catégories'}
+                - title
+                - {property: 'content', type: 'text-editor'}
+                - {type: 'group', icon: 'pencil', label: 'Options automatiques'}
+                - requestProjects
+                - articles
+                - backgroundImages
+            list:
+              collapse_actions: true
+              actions: ['show', 'edit', 'delete']
+              batch_actions: ['delete']
+            show:
+              fields:
+                - id
+                - title
+                - {property: 'content', type: 'raw'}
+                - requestProjects
+                - articles
+                - backgroundImages
+
 
         Image:
             class:  App\Entity\Image
             form:
               fields:
+                - {type: 'group', icon: 'pencil', label: 'Editer les images'}
                 - { property : 'imageFile', type: 'vich_image'}
+            list:
+              collapse_actions: true
+              actions: ['show', 'edit', 'delete']
+              batch_actions: ['delete']
 
 
         User:
             class : App\Entity\User
             label : 'Utilisateurs'
+            form:
+              fields:
+                - {type: 'group', icon: 'pencil', label: 'Client', css_class: 'col-lg-6'}
+                - name
+                - firstname
+                - {type: 'group', icon: 'pencil', label: 'Contacts', css_class: 'col-lg-6'}
+                - email
+                - number
+                - {type: 'group', icon: 'pencil', label: 'Adresse', css_class: 'col-lg-6 '}
+                - address
+                - {type: 'group', icon: 'pencil', label: 'Autres informations', css_class: 'col-lg-6'}
+                - applications
+                - requestProjects
+            list:
+              collapse_actions: true
+              actions: ['show', 'edit', 'delete']
+              batch_actions: ['delete']
 
 
 
@@ -85,30 +153,68 @@ easy_admin:
            label: 'Candidature'
            form:
              fields:
+              - {type: 'group', icon: 'pencil', label: 'Candidature'}
               - { property : 'cvFile', type: 'vich_file' }
               - { property : 'resumeFile', type: 'vich_file'}
               - { property : 'offer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
               - { property : 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
-
+           list:
+             collapse_actions: true
+             actions: ['show', 'edit', 'delete']
+             batch_actions: ['delete']
 
         OfferType:
            class: App\Entity\OfferType
            label: "Type de l'offre"
+           form:
+             fields:
+               - {type: 'group', icon: 'pencil', label: 'Type de contrat'}
+               - title
+               - offers
+           list:
+             collapse_actions: true
+             actions: ['show', 'edit', 'delete']
+             batch_actions: ['delete']
 
         Offer:
            class: App\Entity\Offer
            label: 'Offre'
            form:
              fields:
+               - {type: 'group', icon: 'pencil', label: 'Offre de travail'}
                - { property: 'title'}
-               - { property: 'content'}
-               - { property: 'beginAt'}
-               - { property: 'endAt'}
-               - { property: 'createdAt'}
                - { property: 'hourlyWage'}
                - { property: 'address'}
-
+               - { property: 'content', type: 'text-editor'}
+               - {type: 'group', icon: 'pencil', label: 'Durée du contrat', css_class: 'col-lg-6'}
+               - { property: 'beginAt'}
+               - { property: 'endAt'}
+               - {type: 'group', icon: 'pencil', label: 'Autres informations', css_class: 'col-lg-6'}
                - { property: 'offerType', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+           list:
+               fields:
+                 - id
+                 - title
+                 - accepted
+                 - hourlyWage
+                 - createdAt
+                 - address
+                 - offerType
+
+               collapse_actions: true
+               actions: ['show', 'edit', 'delete']
+               batch_actions: ['delete']
+           show:
+               fields:
+                 - title
+                 - { property: 'content', type: 'raw'}
+                 - beginAt
+                 - endAt
+                 - createdAt
+                 - hourlyWag
+                 - address
+                 - { property: 'offerType', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+
 
 
 
@@ -120,19 +226,51 @@ easy_admin:
            label: 'Demande de devis'
            form:
              fields:
+               - {type: 'group', icon: 'pencil', label: 'Demande de devis', css_class: 'col-lg-6'}
                - { property : 'title'}
                - { property : 'content'}
+               - {type: 'group', icon: 'pencil', label: 'Autres informations', css_class: 'col-lg-6'}
                - { property : 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
                - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
-               - {property : 'contacted'}
+
+           list:
+              collapse_actions: true
+              actions: ['show', 'edit', 'delete']
+              batch_actions: ['delete']
 
 
         AccueilImage:
           class: App\Entity\AccueilImage
+          form:
+            fields:
+              - {type: 'group', icon: 'pencil', label: 'Image de la page d accueil'}
+              - image
+          list:
+            collapse_actions: true
+            actions: ['show', 'edit', 'delete']
+            batch_actions: ['delete']
 
 
         BackgroundImage:
           class: App\Entity\BackgroundImage
+          form:
+            fields:
+              - {type: 'group', icon: 'pencil', label: 'Image en arrière plan'}
+              - image
+              - category
+          list:
+            collapse_actions: true
+            actions: ['show', 'edit', 'delete']
+            batch_actions: ['delete']
 
         ArticleImages:
           class: App\Entity\ArticleImages
+          form:
+            fields:
+              - {type: 'group', icon: 'pencil', label: 'Images des pages d articles'}
+              - article
+              - image
+          list:
+            collapse_actions: true
+            actions: ['show', 'edit', 'delete']
+            batch_actions: ['delete']
