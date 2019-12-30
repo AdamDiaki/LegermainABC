@@ -6,6 +6,7 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -34,6 +35,18 @@ class OfferFormType extends AbstractType
                 'label' => 'Addresse',
                 'attr' => array('style' => 'width: 400px')
             ))
+            ->add('cvFile', FileType::class,[
+                'label' => 'CV',
+                'mapped' => false
+            ])
+            ->add('resumeFile', FileType::class,[
+                'label' => 'Lettre de motivation',
+                'mapped' => false
+            ])
+            ->add('offerId', null,[
+                'label' => false,
+                'mapped' => false
+            ])
         ;
     }
 

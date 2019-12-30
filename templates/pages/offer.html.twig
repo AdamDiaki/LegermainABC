@@ -54,14 +54,12 @@
             <div id="CandidateModal" class="modal">
                 <div class="modal-content">
                     <h2 id="CandidateTitle" align="center"> Remplissez le formulaire pour l'offre !</h2>
+
                     {{ form_start(CandidateForm) }}
-                    {{ form_start(ApplicationForm) }}
                         {{ form_widget(CandidateForm) }}
-                        {{ form_widget(ApplicationForm) }}
-                        {{ form_row(ApplicationForm.offer, {'id' : 'offre', 'attr': {'class':'custom-class'}})}}
                         <button type="submit" class="btn btn-success">Postuler</button>
+                        {{ form_row(CandidateForm.offerId, {'id' : 'offre', 'attr':{'classe':'custom-class'}}) }}
                     {{ form_end(CandidateForm) }}
-                    {{ form_end(ApplicationForm) }}
                         </div>
                     </div>
                 </div>
@@ -96,9 +94,9 @@
              modal{{ loop.index }}.style.display = "none";
              modalCandidate.style.display = "block";
              document.getElementById("CandidateTitle").innerHTML="Remplissez le formulaire pour l'offre {{ offre.id }} !";
-             var offre = document.getElementById("application_offer").value;
-             document.getElementById("application_offer").value = {{ offre.id }};
-             document.getElementById("application_offer").style.display = "none";
+             document.getElementById("offer_form_offerId").value = {{ offre.id }};
+             document.getElementById("offer_form_offerId").style.display = "none";
+             var offre = document.getElementById("offer_form_offerId").value;
              console.log(offre);
          };
 
