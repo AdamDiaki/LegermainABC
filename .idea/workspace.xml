@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5e0a84ce4a2c3683188777.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5e0a84e82510a884276484.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5e0a84fb6cd97767743868.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5e0a91792213b406128564.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5e0a98968d4df136074565.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5e0a98a4bda73831186510.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/articles/5e0a98b5b5dc5866562147.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Listener/EasyAdminSuscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listener/EasyAdminSuscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/sign.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/sign.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/article_show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/article_show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/couverture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/couverture.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +270,7 @@
       <workItem from="1577460168296" duration="23004000" />
       <workItem from="1577535605050" duration="23868000" />
       <workItem from="1577633434299" duration="23935000" />
-      <workItem from="1577717593968" duration="14410000" />
+      <workItem from="1577717593968" duration="21087000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>

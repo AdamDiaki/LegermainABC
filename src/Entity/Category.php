@@ -195,9 +195,9 @@ class Category
 
     public function addBackgroundImage(BackgroundImage $backgroundImage): self
     {
-        if (!$this->backgroundImages->contains($backgroundImage)) {
+        if (!$this->backgroundImages->contains( $backgroundImage )) {
             $this->backgroundImages[] = $backgroundImage;
-            $backgroundImage->setCategory($this);
+            $backgroundImage->setCategory( $this );
         }
 
         return $this;
@@ -205,11 +205,11 @@ class Category
 
     public function removeBackgroundImage(BackgroundImage $backgroundImage): self
     {
-        if ($this->backgroundImages->contains($backgroundImage)) {
-            $this->backgroundImages->removeElement($backgroundImage);
+        if ($this->backgroundImages->contains( $backgroundImage )) {
+            $this->backgroundImages->removeElement( $backgroundImage );
             // set the owning side to null (unless already changed)
             if ($backgroundImage->getCategory() === $this) {
-                $backgroundImage->setCategory(null);
+                $backgroundImage->setCategory( null );
             }
         }
 

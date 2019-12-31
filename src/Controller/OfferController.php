@@ -4,9 +4,6 @@
 namespace App\Controller;
 
 
-use App\Entity\Application;
-use App\Entity\Offer;
-use App\Entity\User;
 use App\Form\ApplicationType;
 use App\Form\OfferFormType;
 use App\Repository\OfferRepository;
@@ -26,19 +23,18 @@ class OfferController extends AbstractController
      * @param OfferRepository $repository
      * @return Response
      */
-    public function Offer(OfferRepository $repository, Request $request, EntityManagerInterface $em) : Response
+    public function Offer(OfferRepository $repository, Request $request, EntityManagerInterface $em): Response
     {
 
-        $form = $this->createForm(OfferFormType::class);
-        $formApplication = $this->createForm(ApplicationType::class);
-        $offres = $repository->findBy(['accepted' => false]);
+        $form = $this->createForm( OfferFormType::class );
+        $formApplication = $this->createForm( ApplicationType::class );
+        $offres = $repository->findBy( ['accepted' => false] );
 
 
-
-        return $this->render('pages/offer.html.twig', [
+        return $this->render( 'pages/offer.html.twig', [
             'offres' => $offres,
             'CandidateForm' => $form->createView(),
             'ApplicationForm' => $formApplication->createView()
-        ]);
+        ] );
     }
 }

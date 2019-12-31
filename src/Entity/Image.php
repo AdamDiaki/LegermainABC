@@ -42,13 +42,10 @@ class Image
     private $actualities;
 
 
-
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\ArticleImages", mappedBy="image")
      */
     private $articleImages;
-
-
 
 
     public function __construct()
@@ -57,7 +54,6 @@ class Image
         $this->articles = new ArrayCollection();
         $this->articleImages = new ArrayCollection();
     }
-
 
 
     /**
@@ -88,9 +84,6 @@ class Image
     }
 
 
-
-
-
     /**
      * @return File
      */
@@ -116,7 +109,7 @@ class Image
      */
     public function __toString()
     {
-        return  "uploads/images/articles/$this->link";
+        return "uploads/images/articles/$this->link";
     }
 
     /**
@@ -148,9 +141,9 @@ class Image
 
     public function addActuality(Actuality $actuality): self
     {
-        if (!$this->actualities->contains($actuality)) {
+        if (!$this->actualities->contains( $actuality )) {
             $this->actualities[] = $actuality;
-            $actuality->setImage($this);
+            $actuality->setImage( $this );
         }
 
         return $this;
@@ -158,17 +151,16 @@ class Image
 
     public function removeActuality(Actuality $actuality): self
     {
-        if ($this->actualities->contains($actuality)) {
-            $this->actualities->removeElement($actuality);
+        if ($this->actualities->contains( $actuality )) {
+            $this->actualities->removeElement( $actuality );
             // set the owning side to null (unless already changed)
             if ($actuality->getImage() === $this) {
-                $actuality->setImage(null);
+                $actuality->setImage( null );
             }
         }
 
         return $this;
     }
-
 
 
     /**
@@ -181,9 +173,9 @@ class Image
 
     public function addArticleImage(ArticleImages $articleImage): self
     {
-        if (!$this->articleImages->contains($articleImage)) {
+        if (!$this->articleImages->contains( $articleImage )) {
             $this->articleImages[] = $articleImage;
-            $articleImage->setImage($this);
+            $articleImage->setImage( $this );
         }
 
         return $this;
@@ -191,18 +183,16 @@ class Image
 
     public function removeArticleImage(ArticleImages $articleImage): self
     {
-        if ($this->articleImages->contains($articleImage)) {
-            $this->articleImages->removeElement($articleImage);
+        if ($this->articleImages->contains( $articleImage )) {
+            $this->articleImages->removeElement( $articleImage );
             // set the owning side to null (unless already changed)
             if ($articleImage->getImage() === $this) {
-                $articleImage->setImage(null);
+                $articleImage->setImage( null );
             }
         }
 
         return $this;
     }
-
-
 
 
 }

@@ -27,7 +27,6 @@ class RequestProject
     private $content;
 
 
-
     /**
      * @ORM\Column(type="boolean")
      */
@@ -88,7 +87,6 @@ class RequestProject
 
         return $this;
     }
-
 
 
     /**

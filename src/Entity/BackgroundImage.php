@@ -2,8 +2,6 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -19,7 +17,6 @@ class BackgroundImage
     private $id;
 
 
-
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="backgroundImages")
      */
@@ -32,12 +29,10 @@ class BackgroundImage
     private $image;
 
 
-
     public function getId(): ?int
     {
         return $this->id;
     }
-
 
 
     public function getCategory(): ?Category
@@ -57,7 +52,7 @@ class BackgroundImage
      */
     public function __toString()
     {
-        return $this->id.'';
+        return $this->id . '';
     }
 
     public function getImage(): ?Image
