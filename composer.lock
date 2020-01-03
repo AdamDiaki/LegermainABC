@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4b7ff1926f66c9037a58b4263821b23",
+    "content-hash": "1249ae8a44c87cb478365f568848e0ec",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1419,6 +1419,88 @@
             "time": "2019-08-13T17:33:27+00:00"
         },
         {
+            "name": "gedmo/doctrine-extensions",
+            "version": "v2.4.38",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
+                "reference": "81681364331b131518060e4776300a5346df1eb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/81681364331b131518060e4776300a5346df1eb5",
+                "reference": "81681364331b131518060e4776300a5346df1eb5",
+                "shasum": ""
+            },
+            "require": {
+                "behat/transliterator": "~1.2",
+                "doctrine/common": "~2.4",
+                "php": ">=5.3.2"
+            },
+            "conflict": {
+                "doctrine/annotations": "<1.2",
+                "doctrine/mongodb-odm": ">=2.0"
+            },
+            "require-dev": {
+                "doctrine/common": ">=2.5.0",
+                "doctrine/mongodb-odm": ">=1.0.2 <2.0",
+                "doctrine/orm": ">=2.5.0",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5",
+                "symfony/yaml": "~2.6 || ~3.0 || ~4.0"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm": "to use the extensions with the MongoDB ODM",
+                "doctrine/orm": "to use the extensions with the ORM"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gedmo\\": "lib/Gedmo"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gediminas Morkevicius",
+                    "email": "gediminas.morkevicius@gmail.com"
+                },
+                {
+                    "name": "Gustavo Falco",
+                    "email": "comfortablynumb84@gmail.com"
+                },
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
+                }
+            ],
+            "description": "Doctrine2 behavioral extensions",
+            "homepage": "http://gediminasm.org/",
+            "keywords": [
+                "Blameable",
+                "behaviors",
+                "doctrine2",
+                "extensions",
+                "gedmo",
+                "loggable",
+                "nestedset",
+                "sluggable",
+                "sortable",
+                "timestampable",
+                "translatable",
+                "tree",
+                "uploadable"
+            ],
+            "time": "2019-11-08T22:33:07+00:00"
+        },
+        {
             "name": "imagine/imagine",
             "version": "1.2.3",
             "source": {
@@ -1951,6 +2033,53 @@
                 "paging"
             ],
             "time": "2019-07-17T20:56:16+00:00"
+        },
+        {
+            "name": "ph-7/qrcode-generator-php-class",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pH-7/QRCode-Generator-PHP-Class.git",
+                "reference": "e90c560c6b3d436cf2aa8bed377b72b45f943ee4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pH-7/QRCode-Generator-PHP-Class/zipball/e90c560c6b3d436cf2aa8bed377b72b45f943ee4",
+                "reference": "e90c560c6b3d436cf2aa8bed377b72b45f943ee4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "QRCode.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre-Henry Soria",
+                    "email": "phy@hizup.uk",
+                    "homepage": "http://hizup.uk",
+                    "role": "Web Engineer"
+                }
+            ],
+            "description": "Light QRCode PHP class (library). QR Code Generator using vCard 4.0 and the Google Chart AP",
+            "homepage": "http://hizup.uk",
+            "keywords": [
+                "class",
+                "library",
+                "qr code",
+                "qr code class",
+                "qr code library",
+                "vCard"
+            ],
+            "time": "2018-07-18T22:29:52+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -6493,6 +6622,50 @@
             "time": "2019-11-12T14:51:11+00:00"
         },
         {
+            "name": "treetop1500/easyadmin-dragndrop-sort",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ishapkin/easyadmin-dragndrop-sort.git",
+                "reference": "de5c065c0a21ffe79f319ba13966844bf768465e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ishapkin/easyadmin-dragndrop-sort/zipball/de5c065c0a21ffe79f319ba13966844bf768465e",
+                "reference": "de5c065c0a21ffe79f319ba13966844bf768465e",
+                "shasum": ""
+            },
+            "require": {
+                "easycorp/easyadmin-bundle": "~2.3",
+                "gedmo/doctrine-extensions": "^2.4",
+                "php": "^7.2",
+                "symfony/framework-bundle": "~4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Treetop1500\\EasyadminDragndropSortBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Wade",
+                    "email": "rwade@grayloon.com"
+                }
+            ],
+            "description": "A Symfony 4 bundle for allowing drag and drop sorting of entities in list views, incorporating the Sortable Doctrine Extension.",
+            "time": "2019-10-15T15:26:37+00:00"
+        },
+        {
             "name": "twig/extra-bundle",
             "version": "v3.0.0",
             "source": {
@@ -6809,6 +6982,7 @@
                 "code",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-code",
             "time": "2019-10-05T23:18:22+00:00"
         },
         {
@@ -6863,6 +7037,7 @@
                 "events",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
         }
     ],

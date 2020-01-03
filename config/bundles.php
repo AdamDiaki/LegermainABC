@@ -20,4 +20,5 @@ return [
     Captcha\Bundle\CaptchaBundle\CaptchaBundle::class => ['all' => true],
     Liip\ImagineBundle\LiipImagineBundle::class => ['all' => true],
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
+    Treetop1500\EasyadminDragndropSortBundle\Treetop1500EasyadminDragndropSortBundle::class => ['all' => true],
 ];

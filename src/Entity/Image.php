@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
@@ -14,6 +15,9 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class Image
 {
+
+
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -193,6 +197,7 @@ class Image
 
         return $this;
     }
+
 
 
 }

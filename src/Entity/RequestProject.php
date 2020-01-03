@@ -43,6 +43,11 @@ class RequestProject
     private $user;
 
     /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    /**
      * @return int|null
      */
     public function getId(): ?int
@@ -65,6 +70,7 @@ class RequestProject
     public function setTitle(string $title): self
     {
         $this->title = $title;
+        $this->createdAt = new \DateTime( 'now' );
 
         return $this;
     }
@@ -143,6 +149,18 @@ class RequestProject
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }

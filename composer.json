@@ -11,6 +11,7 @@
         "doctrine/annotations": "^1.8",
         "easycorp/easyadmin-bundle": "^2.3",
         "liip/imagine-bundle": "^2.2",
+        "ph-7/qrcode-generator-php-class": "^2.1",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/asset": "4.4.*",
         "symfony/console": "4.4.*",
@@ -36,6 +37,7 @@
         "symfony/web-link": "4.4.*",
         "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "4.4.*",
+        "treetop1500/easyadmin-dragndrop-sort": "^1.1",
         "vich/uploader-bundle": "^1.12"
     },
     "require-dev": {
