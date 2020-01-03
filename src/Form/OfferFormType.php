@@ -9,6 +9,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class OfferFormType extends AbstractType
 {
@@ -38,10 +39,31 @@ class OfferFormType extends AbstractType
             ->add('cvFile', FileType::class,[
                 'label' => 'CV',
                 'mapped' => false
+            /*
+                'constraints' => [
+                    new File([
+                        'mimeTypes' => [
+                            'application/pdf',
+                            'application/x-pdf',
+                        ],
+                        'mimeTypesMessage' => "Veuillez joindre une lettre de motivation sous format pdf",
+                    ])
+                ],
+            */
             ])
             ->add('resumeFile', FileType::class,[
                 'label' => 'Lettre de motivation',
                 'mapped' => false
+                /*
+                'constraints' => [
+                    new File([
+                        'mimeTypes' => [
+                            'application/pdf',
+                         ],
+                        'mimeTypesMessage' => "Veuillez joindre un cv sous format pdf",
+                    ])
+            ],
+                */
             ])
             ->add('offerId', null,[
                 'label' => false,
@@ -54,7 +76,8 @@ class OfferFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' =>
-                User::class
+                User::class,
+            'validation_groups' => false,
         ]);
     }
 }

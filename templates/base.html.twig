@@ -40,6 +40,7 @@
 
 
 
+
 <div class="Container">
     {% block body %}{% endblock %}
 </div>
@@ -156,6 +157,11 @@
     </footer>
     <!-- Footer -->
 </div>
+{% for message in app.flashes('failed') %}
+    <script>
+        window.alert("{{ message }}");
+    </script>
+{% endfor %}
 </body>
 
 </html>

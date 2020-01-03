@@ -10,6 +10,7 @@ use App\Entity\User;
 use App\Form\ApplicationType;
 use App\Form\OfferFormType;
 use App\Repository\OfferRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,7 +31,7 @@ class OfferController extends AbstractController
      * @param OfferRepository $repository
      * @return Response
      */
-    public function Offer(OfferRepository $repository, Request $request) : Response
+    public function Offer(OfferRepository $repository, Request $request, UserRepository $userRepository) : Response
     {
 
         $application = new Application();
@@ -41,65 +42,48 @@ class OfferController extends AbstractController
 
         if($form->isSubmitted())
         {
-            /*
-            $data = $form->getData();
-            $user = new User();
-            $user->setName($data['name']);
-            $user->setFirstname($data['firstname']);
-            $user->setAddress($data['address']);
-            $user->setNumber($data['number']);
-            $user->setEmail($data['email']);
-            */
-            $user = $form->getData();
-            $application = new Application();
-            $application->setUser($user);
-            $offer = $repository->findBy(['id' => $form->get('offerId')->getData()]);
-
-            $application = new Application();
-            $application->setUser($user);
-            $application->setOffer($offer[0]);
-            $application->setApplicationAt(new \DateTime());
-
-
             /** @var UploadedFile $cvFile */
             $cvFile = $form['cvFile']->getData();
-            $cvDirectory = $this->getParameter('app.path.application_cv');
-            $cvFileName = md5(uniqid()).'.'.$cvFile->guessExtension();
-            $cvFile->move($cvDirectory, $cvFileName);
-            $application->setLinkCV($cvDirectory.'/'.$cvFileName);
-
             /** @var UploadedFile $resumeFile */
             $resumeFile = $form['resumeFile']->getData();
-            $resumeDirectory = $this->getParameter('app.path.application_resume');
-            $resumeFileName = md5(uniqid().'.'.$resumeFile->guessExtension());
-            $resumeFile->move($resumeDirectory, $resumeFileName);
-            $application->setLinkResume($resumeDirectory.'/'.$resumeFileName);
+            if($cvFile->guessExtension() == "pdf" || $resumeFile->guessExtension() == "pdf" )
+            {
+                $entityManager = $this->getDoctrine()->getManager();
+                $userexist = $userRepository->findBy(['email' => $form->get('email')->getData()]);
+                $application = new Application();
+                if($userexist == null){
+                    $user = $form->getData();
+                    $application->setUser($user);
+                    $entityManager->persist($user);
+                } else{
+                    $application->setUser($userexist[0]);
+                }
 
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($user);
-            $entityManager->persist($application);
-            $entityManager->flush();
+                $offer = $repository->findBy(['id' => $form->get('offerId')->getData()]);
+
+                $application->setOffer($offer[0]);
+                $application->setApplicationAt(new \DateTime());
+
+                $cvDirectory = $this->getParameter('app.path.application_cv');
+                $cvFileName = md5(uniqid()).'.'.$cvFile->guessExtension();
+                $cvFile->move($cvDirectory, $cvFileName);
+                $application->setLinkCV($cvDirectory.'/'.$cvFileName);
+
+                $resumeDirectory = $this->getParameter('app.path.application_resume');
+                $resumeFileName = md5(uniqid()).'.'.$resumeFile->guessExtension();
+                $resumeFile->move($resumeDirectory, $resumeFileName);
+                $application->setLinkResume($resumeDirectory.'/'.$resumeFileName);
+
+                $entityManager->persist($application);
+                $entityManager->flush();
+            } else{
+                $this->addFlash('failed', "Candidature non pris en compte car vos fichiers ne sont pas au format pdf");
+
+            }
+
 
         }
-/*
-        $formApplication->handleRequest($request);
-        if($formApplication->isSubmitted() && $formApplication->isValid())
-        {
-            $cvFile = $request->files->get('post')['cv'];
-            echo "<pre>";
-            var_dump($request);
-            die;
-            $application = $formApplication->getData();
-            $cvFile = $formApplication['cvFile']->getData();
-            $resumeFile = $formApplication['resumeFile']->getData();
-            $cvFileName = md5(uniqid()).'.'.$cvFile->guessExtension();
-            $cvFile->move($this->getParameter('app.path.application_cv'), $cvFileName);
 
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($application);
-            $entityManager->flush();
-        }
-*/
         return $this->render('pages/offer.html.twig', [
             'offres' => $offres,
             'CandidateForm' => $form->createView(),

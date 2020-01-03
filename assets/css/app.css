@@ -44,3 +44,7 @@ p, h5{
     height: 5px;
 }
 
+.alert-danger{
+    background-color: #d98933;
+
+}
