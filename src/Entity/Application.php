@@ -43,7 +43,6 @@ class Application
     private $resumeFile;
 
 
-
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Offer", inversedBy="applications")
      */
@@ -104,7 +103,6 @@ class Application
 
         return $this;
     }
-
 
 
     /**
@@ -197,8 +195,6 @@ class Application
 
         return $this;
     }
-
-
 
 
 }

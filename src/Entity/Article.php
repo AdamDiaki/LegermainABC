@@ -49,10 +49,6 @@ class Article
     }
 
 
-
-
-
-
     /**
      * @return int|null
      */
@@ -76,6 +72,7 @@ class Article
     public function setTitle(string $title): self
     {
         $this->title = $title;
+        $this->createdAt = new \DateTime( 'now' );
 
         return $this;
     }
@@ -144,7 +141,7 @@ class Article
     public function __toString()
     {
 
-            return $this->id . ' : ' . $this->title.'';
+        return $this->id . ' : ' . $this->title . '';
 
 
     }
@@ -159,9 +156,9 @@ class Article
 
     public function addArticleImage(ArticleImages $articleImage): self
     {
-        if (!$this->articleImages->contains($articleImage)) {
+        if (!$this->articleImages->contains( $articleImage )) {
             $this->articleImages[] = $articleImage;
-            $articleImage->setArticle($this);
+            $articleImage->setArticle( $this );
         }
 
         return $this;
@@ -169,11 +166,11 @@ class Article
 
     public function removeArticleImage(ArticleImages $articleImage): self
     {
-        if ($this->articleImages->contains($articleImage)) {
-            $this->articleImages->removeElement($articleImage);
+        if ($this->articleImages->contains( $articleImage )) {
+            $this->articleImages->removeElement( $articleImage );
             // set the owning side to null (unless already changed)
             if ($articleImage->getArticle() === $this) {
-                $articleImage->setArticle(null);
+                $articleImage->setArticle( null );
             }
         }
 

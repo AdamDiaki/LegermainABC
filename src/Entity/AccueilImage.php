@@ -43,7 +43,7 @@ class AccueilImage
      */
     public function __toString()
     {
-       return $this->image.'' ;
+        return $this->image . '';
     }
 
 

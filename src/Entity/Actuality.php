@@ -77,7 +77,7 @@ class Actuality
      */
     public function __toString()
     {
-        return $this->id.' : '.$this->tilte;
+        return $this->id . ' : ' . $this->tilte;
     }
 
 

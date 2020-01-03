@@ -70,7 +70,6 @@ class Offer
     private $offerType;
 
 
-
     /**
      * Offer constructor.
      */
@@ -102,6 +101,7 @@ class Offer
     public function setTitle(string $title): self
     {
         $this->title = $title;
+        $this->createdAt = new \DateTime( 'now' );
 
         return $this;
     }

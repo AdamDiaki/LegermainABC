@@ -26,12 +26,13 @@ class EasyAdminSuscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-          EasyAdminEvents::PRE_UPDATE => array('preEdit'),
+          EasyAdminEvents::POST_SHOW => array('preEdit'),
         );
     }
 
     public function preEdit(GenericEvent $event){
         $entity = $event->getSubject();
+
 
         if (!($entity instanceof  RequestProject)){
             return;

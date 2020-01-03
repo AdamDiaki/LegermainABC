@@ -14,9 +14,9 @@ class MailerController extends AbstractController
     public function sendMailToCustomer(Application $application, \Swift_Mailer $mailer)
     {
 
-        $message = (new \Swift_Message('Hello Email'))
-            ->setFrom('legermainabc@gmail.com')
-            ->setTo($application->getUser()->getEmail())
+        $message = (new \Swift_Message( 'Hello Email' ))
+            ->setFrom( 'legermainabc@gmail.com' )
+            ->setTo( $application->getUser()->getEmail() )
             ->setBody(
                 $this->renderView(
                     'mailer/mailer.html.twig',
@@ -24,12 +24,11 @@ class MailerController extends AbstractController
                 ),
                 'text/plain'
 
-            )
-        ;
+            );
 
-        $mailer->send($message);
+        $mailer->send( $message );
         return $this->render( 'mailer.html.twig', [
             'controller_name' => 'MailerController',
-        ]);
+        ] );
     }
 }

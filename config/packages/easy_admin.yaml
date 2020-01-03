@@ -6,6 +6,7 @@ easy_admin:
       datetime: 'd/m/Y H:i:s'
 
     design:
+
       brand_color: '#1ABC9C'
       menu:
         - label: 'Home'
@@ -15,34 +16,35 @@ easy_admin:
           icon: 'images'
           children:
             - { entity: 'Image', icon : 'images'}
-            - {entity: 'AccueilImage', icon : 'image'}
-            - {entity: 'BackgroundImage',icon : 'image'}
-            - {entity: 'ArticleImages',icon: 'image'}
+            - {entity: 'Accueil_Images',icon: 'image'}
+            - {entity: 'Articles_Images', icon : 'image'}
+            - {entity: 'Articles_Accueil_Images',icon : 'image'}
+
 
         -  label: 'Articles'
            icon : 'newspaper-o'
            children:
-              - { entity: 'Article', icon : 'newspaper-o'}
-              - { entity: 'Category', icon : 'tag'}
+              - { entity: 'Articles', icon : 'newspaper-o'}
+              - { entity: 'Catégories', icon : 'tag'}
 
         -  label: 'Utilisateurs'
            icon :  'address-book'
            children:
-             - { entity: 'User', icon : 'users' }
+             - { entity: 'Utilisateurs', icon : 'users' }
 
         -  label: 'Demandes de devis'
            icon : 'envelope-square'
            children:
-              - { entity: 'RequestProject', icon : 'envelope-open-text'}
+              - { entity: 'Devis', icon : 'envelope-open-text'}
 
 
         -  label: 'Carrières'
            icon : 'briefcase'
            children:
-              - { entity: 'Offer', icon : 'business-time'}
-              - { entity: 'OfferType', icon : 'tag'}
+              - { entity: "Recrutements", icon : 'business-time'}
+              - { entity: 'Contrats', icon : 'tag'}
 
-              - { entity: 'Application', icon : 'business-time'}
+              - { entity: 'Candidatures', icon : 'business-time'}
 
 
 
@@ -60,79 +62,364 @@ easy_admin:
     site_name: 'ABC Legermain'
     entities:
         # List the entity class name you want to manage
-        Article:
+        Articles:
             class: App\Entity\Article
+            form:
+              fields:
+                - {type: 'group', icon: 'pencil', label: 'Editer les articles'}
+                - {property: 'title', label : 'Titre'}
+                - {property: 'content', type: 'text-editor', label: 'Contenu'}
+                - {type: 'group', icon: 'pencil', label: 'Autres informations'}
+                - {property: 'category', label : 'Catégorie'}
+                -  {type: 'group', icon: 'pencil', label: 'Option automatique'}
+                - {property: 'articleImages', label: 'Images'}
+            list:
+              fields:
+                - id
+                - { property: 'title', label: 'Titre'}
+                - { property: 'createdAt', label: 'Publié le'}
+                - { property: 'category', label: 'Catégorie'}
+                - { property: 'articleImages', label: 'Images'}
+
+              collapse_actions: true
+              actions:
+                - { name: 'edit', icon: 'pencil', css_class: 'btn btn-primary' }
+                - { name: 'show', icon: 'eye', css_class: 'btn btn-secondary' }
+                - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+              filters: ['category','createdAt']
+              batch_actions: ['delete']
+
+            show:
+              fields:
+                - id
+                -  {property: 'title', label: 'Titre'}
+                -  { property: 'content', type: 'raw', label: 'Contenu'}
+                -  {property: 'createdAt', label: 'Publié le'}
+                -  {property: 'category', label: 'Catégorie'}
+                -  {property: 'articleImages', label: 'Images'}
 
 
-        Category:
+
+
+        Catégories:
             class : App\Entity\Category
+            form:
+              fields:
+                - {type: 'group', icon: 'pencil', label: 'Editer les catégories'}
+                - {property: 'title', label: 'Titre'}
+                - {property: 'content', type: 'text-editor', label: 'contenu'}
+                - {type: 'group', icon: 'pencil', label: 'Options automatiques'}
+                - {property: 'requestProjects', label: 'Devis'}
+                - {property: 'articles', label: 'Articles'}
+                - {property: 'backgroundImages', label: 'Images de fond'}
+
+            list:
+              fields:
+                - {property: 'id'}
+                - {property: 'title', label : 'Titre'}
+                - {property: 'requestProjects', label : 'Devis'}
+                - {property: 'articles', label : 'Articles'}
+                - {property: 'backgroundImages', label : 'Images de fond'}
+              collapse_actions: true
+              actions:
+                - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+                - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+                - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+              batch_actions: ['delete']
+            show:
+              fields:
+                - {property: 'id'}
+                - {property: 'title', label: 'Titre'}
+                - {property: 'content', type: 'raw', label: 'Contenu'}
+                - {property: 'requestProjects',  label: 'Devis'}
+                - {property: 'articles',  label: 'Articles'}
+                - {property: 'backgroundImages', type: 'raw', label: 'Images de fond'}
+
+
 
         Image:
             class:  App\Entity\Image
             form:
               fields:
+                - {type: 'group', icon: 'pencil', label: 'Editer les images'}
                 - { property : 'imageFile', type: 'vich_image'}
+            list:
+              fields:
+                - { property : 'imageFile', type: 'vich_image'}
+              collapse_actions: true
+              actions:
+                - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+                - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+                - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+              batch_actions: ['delete']
 
 
-        User:
+        Utilisateurs:
             class : App\Entity\User
             label : 'Utilisateurs'
+            disabled_actions: ['new']
+            form:
+              fields:
+                - {type: 'group', icon: 'pencil', label: 'Client', css_class: 'col-lg-6'}
+                - { property: 'firstname', label: 'Nom'}
+                - {property: 'name', label: 'Prenom'}
+                - {type: 'group', icon: 'pencil', label: 'Contacts', css_class: 'col-lg-6'}
+                - { property: 'email',type: 'email' ,label: 'Email'}
+                - { property: 'number', type: 'tel', label: 'Numéro'}
+                - {type: 'group', icon: 'pencil', label: 'Adresse', css_class: 'col-lg-6 '}
+                - {property: 'address',  label: 'Adresse'}
+                - {type: 'group', icon: 'pencil', label: 'Autres informations', css_class: 'col-lg-6'}
+                - {property: 'applications',  label: 'Candidatures'}
+                - {property: 'requestProjects',  label: 'Devis'}
+            show:
+              - { property: 'firstname', label: 'Nom'}
+              - { property: 'name', label: 'Prénom'}
+              - { property: 'email',type: 'email' ,label: 'Email'}
+              - { property: 'number', type: 'tel', label: 'Numéro'}
+              - {property: 'address',  label: 'Adresse'}
+              - {property: 'applications',  label: 'Candidatures'}
+              - {property: 'requestProjects',  label: 'Devis'}
+
+            list:
+              fields:
+                - { property: 'firstname', label: 'Nom'}
+                - { property: 'name', label: 'Prénom'}
+                - { property: 'email',type: 'email' ,label: 'Email'}
+                - { property: 'number', type: 'tel', label: 'Numéro'}
+                - {property: 'address',  label: 'Adresse'}
+                - {property: 'applications',  label: 'Candidatures'}
+                - {property: 'requestProjects',  label: 'Devis'}
+
+              collapse_actions: true
+              actions:
+                - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+                - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+                - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+
+              batch_actions: ['delete']
 
 
 
-        Application:
+
+        Candidatures:
            class: App\Entity\Application
            label: 'Candidature'
+           disabled_actions: ['new']
            form:
              fields:
-              - { property : 'cvFile', type: 'vich_file' }
-              - { property : 'resumeFile', type: 'vich_file'}
-              - { property : 'offer', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
-              - { property : 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+              - {type: 'group', icon: 'pencil', label: 'Candidature'}
+              - { property : 'cvFile', type: 'vich_file', label: 'CV' }
+              - { property : 'resumeFile', type: 'vich_file', label: 'Lettre de motivation'}
+              - { property : 'offer', type: 'easyadmin_autocomplete', type_options: { multiple: false }, label: 'Offre'}
+              - { property : 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }, label: 'Postulant'}
+           show:
+             fields:
+               - { property: 'cvFile', label: 'CV'}
+               - { property: 'resumeFile', label: 'Lettre de motivation'}
+               - { property: 'offer', label: 'Offre'}
+               - { property: 'user', label: 'Postulant'}
 
+           list:
+             fields:
+               - { property: 'cvFile', label: 'CV'}
+               - { property: 'resumeFile', label: 'Lettre de motivation'}
+               - { property: 'offer', label: 'Offre'}
+               - { property: 'user', label: 'Postulant'}
+             collapse_actions: true
+             filters: ['offer','user']
+             actions:
+               - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+               - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+               - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+             batch_actions: ['delete']
 
-        OfferType:
+        Contrats:
            class: App\Entity\OfferType
            label: "Type de l'offre"
+           form:
+             fields:
+               - {type: 'group', icon: 'pencil', label: 'Type de contrat'}
+               -  { property: 'title', label : 'Type de contrat'}
+               - { property: 'offers', label : 'Offres'}
+           show:
+             fields:
+               - id
+               - { property: 'title', label: 'Type de contrat'}
+               - { property: 'offers', label: 'Offres'}
 
-        Offer:
+           list:
+             fields:
+               - id
+               - { property: 'title', label : 'Type de contrat'}
+               - { property: 'offers', label : 'Offres'}
+             collapse_actions: true
+             actions:
+               - { name: 'edit', icon: 'pencil', css_class: 'btn btn-primary' }
+               - { name: 'show', icon: 'eye', css_class: 'btn btn-secondary' }
+               - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+             batch_actions: ['delete']
+
+        Recrutements:
            class: App\Entity\Offer
            label: 'Offre'
            form:
              fields:
-               - { property: 'title'}
-               - { property: 'content'}
-               - { property: 'beginAt'}
-               - { property: 'endAt'}
-               - { property: 'createdAt'}
-               - { property: 'hourlyWage'}
-               - { property: 'address'}
+               - {type: 'group', icon: 'pencil', label: 'Offre de travail'}
+               - {property: 'title', label: 'Titre'}
+               - {property: 'hourlyWage', label: 'honoraire'}
+               - {property: 'address', label: 'adresse'}
+               - { property: 'content', type: 'text-editor', label: 'Contenu'}
+               - {type: 'group', icon: 'pencil', label: 'Durée du contrat', css_class: 'col-lg-6'}
+               - { property: 'beginAt',label: 'Début du contrat'}
+               - { property: 'endAt', label: 'Fin du contrat'}
+               - {type: 'group', icon: 'pencil', label: 'Autres informations', css_class: 'col-lg-6'}
+               - { property: 'offerType', type: 'easyadmin_autocomplete', type_options: { multiple: false }, label: 'Contrat'}
 
-               - { property: 'offerType', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
+           list:
+               fields:
+                 - {property: 'id'}
+                 - {property: 'title', label: 'Titre'}
+                 - {property: 'accepted', label: 'Trouvé'}
+                 - {property: 'hourlyWage', label: 'honoraire'}
+                 - {property: 'createdAt', label: 'Publiée le'}
+                 - {property: 'address', label: 'adresse'}
+                 - {property: 'offerType', label: 'Contrat'}
+
+
+               collapse_actions: true
+               filters: ['offerType','accepted']
+               actions:
+                 - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+                 - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+                 - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+               batch_actions: ['delete']
+           show:
+             fields:
+               - {property: 'id'}
+               - {property: 'title', label: 'Titre'}
+               - { property: 'content', type: 'raw', label: 'Contenu'}
+               - {property: 'accepted', label: 'Trouvé'}
+               - {property: 'hourlyWage', label: 'honoraire'}
+               - {property: 'createdAt', label: 'Publiée le'}
+               - {property: 'address', label: 'adresse'}
+               - { property: 'offerType', label : 'Contrat'}
 
 
 
 
 
 
-        RequestProject:
+
+        Devis:
            class: App\Entity\RequestProject
            label: 'Demande de devis'
+
            form:
              fields:
-               - { property : 'title'}
-               - { property : 'content'}
-               - { property : 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }}
-               - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false } }
-               - {property : 'contacted'}
+               - {type: 'group', icon: 'pencil', label: 'Demande de devis', css_class: 'col-lg-6'}
+               - { property : 'title', label: 'Titre'}
+               - { property : 'content', label: 'Contenu'}
+               - {type: 'group', icon: 'pencil', label: 'Autres informations', css_class: 'col-lg-6'}
+               - { property : 'user', type: 'easyadmin_autocomplete', type_options: { multiple: false }, lable: 'Client'}
+               - { property: 'category', type: 'easyadmin_autocomplete', type_options: { multiple: false },label: 'Catégorie' }
+           show:
+             fields:
+               - id
+               - { property: 'title', label: 'Titre'}
+               - { property: 'content', label: 'Contenu'}
+               - { property: 'user',  label: 'Client'}
+               - { property: 'category', label: 'Catégorie' }
+             actions:
+                - { name: 'export', icon: 'file-export' , css_class: 'btn btn-primary', type: 'method'}
 
 
-        AccueilImage:
+           list:
+              fields:
+               - id
+               - { property: 'title', label: 'Titre'}
+               - { property: 'createdAt', label: 'Envoyée le'}
+               - { property: 'user',  label: 'Client'}
+               - { property: 'category', label: 'Catégorie' }
+
+              collapse_actions: true
+              filters:
+                - {property: 'category', label: 'Catégorie'}
+                - {property: 'user', label: 'Client'}
+                - {property: 'createdAt', label: 'Date'}
+              actions:
+                - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+                - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+                - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+                - { name: 'export', icon: 'file-export' , css_class: 'btn btn-primary', type: 'route'}
+              batch_actions: ['delete']
+
+
+        Accueil_Images:
           class: App\Entity\AccueilImage
+          form:
+            fields:
+              - {type: 'group', icon: 'pencil', label: 'Image de la page d accueil'}
+              - image
+          list:
+            collapse_actions: true
+            actions:
+              - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+              - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+              - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+
+            batch_actions: ['delete']
 
 
-        BackgroundImage:
+        Articles_Accueil_Images:
           class: App\Entity\BackgroundImage
+          form:
+            fields:
+              - {type: 'group', icon: 'pencil', label: 'Image en arrière plan'}
+              - {property: 'image', label: 'Image'}
+              - {property: 'category', label: 'Catégorie'}
+          show:
+            fields:
+              - id
+              - {property: 'image', label: 'Image'}
+              - {property: 'category', label: 'Catégorie'}
 
-        ArticleImages:
+          list:
+            fields:
+              - id
+              - {property: 'image', label: 'Image'}
+              - {property: 'category', label: 'Catégorie'}
+
+            collapse_actions: true
+            filters:
+              - {property: 'category', label: 'Catégorie'}
+            actions:
+              - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+              - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+              - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+            batch_actions: ['delete']
+
+        Articles_Images:
           class: App\Entity\ArticleImages
+          form:
+            fields:
+              - {type: 'group', icon: 'pencil', label: 'Images des pages d articles'}
+              - {property: 'article', label: Article}
+              - {property: 'image', label: Image}
+          show:
+            fields:
+              - {property: 'article', label: Article}
+              - {property: 'image', label: Image}
+
+          list:
+            fields:
+              - {property: 'article', label: Article}
+              - {property: 'image', label: Image}
+            collapse_actions: true
+            filters:
+              - {property: 'article', label: 'Article'}
+            actions:
+              - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+              - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+              - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+
+            batch_actions: ['delete']

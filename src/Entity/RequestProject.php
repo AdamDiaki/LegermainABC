@@ -27,7 +27,6 @@ class RequestProject
     private $content;
 
 
-
     /**
      * @ORM\Column(type="boolean")
      */
@@ -42,6 +41,11 @@ class RequestProject
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="requestProjects")
      */
     private $user;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
 
     /**
      * @return int|null
@@ -66,6 +70,7 @@ class RequestProject
     public function setTitle(string $title): self
     {
         $this->title = $title;
+        $this->createdAt = new \DateTime( 'now' );
 
         return $this;
     }
@@ -88,7 +93,6 @@ class RequestProject
 
         return $this;
     }
-
 
 
     /**
@@ -145,6 +149,18 @@ class RequestProject
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }

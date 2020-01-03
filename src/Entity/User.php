@@ -194,9 +194,9 @@ class User
 
     public function addApplication(Application $application): self
     {
-        if (!$this->applications->contains($application)) {
+        if (!$this->applications->contains( $application )) {
             $this->applications[] = $application;
-            $application->setUser($this);
+            $application->setUser( $this );
         }
 
         return $this;
@@ -204,11 +204,11 @@ class User
 
     public function removeApplication(Application $application): self
     {
-        if ($this->applications->contains($application)) {
-            $this->applications->removeElement($application);
+        if ($this->applications->contains( $application )) {
+            $this->applications->removeElement( $application );
             // set the owning side to null (unless already changed)
             if ($application->getUser() === $this) {
-                $application->setUser(null);
+                $application->setUser( null );
             }
         }
 
@@ -225,9 +225,9 @@ class User
 
     public function addRequestProject(RequestProject $requestProject): self
     {
-        if (!$this->requestProjects->contains($requestProject)) {
+        if (!$this->requestProjects->contains( $requestProject )) {
             $this->requestProjects[] = $requestProject;
-            $requestProject->setUser($this);
+            $requestProject->setUser( $this );
         }
 
         return $this;
@@ -235,11 +235,11 @@ class User
 
     public function removeRequestProject(RequestProject $requestProject): self
     {
-        if ($this->requestProjects->contains($requestProject)) {
-            $this->requestProjects->removeElement($requestProject);
+        if ($this->requestProjects->contains( $requestProject )) {
+            $this->requestProjects->removeElement( $requestProject );
             // set the owning side to null (unless already changed)
             if ($requestProject->getUser() === $this) {
-                $requestProject->setUser(null);
+                $requestProject->setUser( null );
             }
         }
 
