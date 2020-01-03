@@ -26,11 +26,32 @@ class EasyAdminSuscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-          EasyAdminEvents::POST_SHOW => array('preEdit'),
+          EasyAdminEvents::POST_SHOW => array('preEdit'), EasyAdminEvents::PRE_UPDATE => array('preUpdate')
         );
     }
 
     public function preEdit(GenericEvent $event){
+        $entity = $event->getSubject();
+
+
+        if (!($entity instanceof  RequestProject)){
+            return;
+        }
+
+        $message = (new \Swift_Message("Votre de demande de devis a été lu par l'artisan"))
+            ->setFrom('legermainabc@gmail.com')
+            ->setTo($entity->getUser()->getEmail())
+            ->setBody("Bonjour M/Mme ". $entity->getUser()->getName()." ". $entity->getUser()->getFirstname().".". " L'artisan est  entrain d'examiné votre demande devis. Merci de votre confiance !"
+            )
+        ;
+        $this->mailer->send($message);
+
+
+
+
+    }
+
+    public function preUpdate(GenericEvent $event){
         $entity = $event->getSubject();
 
 
