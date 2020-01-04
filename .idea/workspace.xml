@@ -2,8 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
+      <change afterPath="$PROJECT_DIR$/ABCLegermain.skipper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/bc_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/bdwn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/closed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/doc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/doxygen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/doxygen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/dynsections.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/folderclosed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/folderopen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/menudata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/nav_f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/nav_g.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/nav_h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/mag_sel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/nomatches.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/search_l.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/search_m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/search_r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search/searchdata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/splitbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/sync_off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/sync_on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/tab_a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/tab_b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/tab_h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/tab_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex/doxygen.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex/longtable_doxygen.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex/make.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex/refman.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex/tabu_doxygen.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200104160259.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200104160828.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200104161510.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/AccueilImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ArticleImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ArticleImages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AccueilImageRepository.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +314,7 @@
       <workItem from="1577717593968" duration="21657000" />
       <workItem from="1577787758072" duration="5191000" />
       <workItem from="1578002180452" duration="28995000" />
-      <workItem from="1578152121822" duration="518000" />
+      <workItem from="1578152121822" duration="4799000" />
     </task>
     <task id="LOCAL-00001" summary="improve charpente">
       <created>1576484841550</created>

@@ -21,7 +21,7 @@ easy_admin:
           icon: 'images'
           children:
             - { entity: 'Image', icon : 'images'}
-            - {entity: 'Accueil_Images',icon: 'image'}
+
             - {entity: 'Articles_Images', icon : 'image'}
             - {entity: 'Articles_Accueil_Images',icon : 'image'}
 
@@ -148,10 +148,12 @@ easy_admin:
               fields:
                 - {type: 'group', icon: 'pencil', label: 'Editer les images'}
                 - { property : 'imageFile', type: 'vich_image'}
+                - {property: 'accueil', label: 'Accueil'}
             list:
               fields:
                 - id
                 - {property: 'link', label: 'Lien'}
+                - {property: 'accueil', label: 'Accueil'}
                 - {property: 'actualities', label: 'Actualité'}
                 - {property: 'articleImages', label: 'Image'}
 
@@ -365,20 +367,7 @@ easy_admin:
               batch_actions: ['delete']
 
 
-        Accueil_Images:
-          class: App\Entity\AccueilImage
-          form:
-            fields:
-              - {type: 'group', icon: 'pencil', label: 'Image de la page d accueil'}
-              - image
-          list:
-            collapse_actions: true
-            actions:
-              - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
-              - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
-              - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
 
-            batch_actions: ['delete']
 
 
         Articles_Accueil_Images:

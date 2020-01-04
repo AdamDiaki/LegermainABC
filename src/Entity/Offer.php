@@ -66,6 +66,7 @@ class Offer
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\OfferType", inversedBy="offers")
+     *
      */
     private $offerType;
 
