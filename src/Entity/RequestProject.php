@@ -34,11 +34,13 @@ class RequestProject
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="requestProjects")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="requestProjects")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $user;
 
