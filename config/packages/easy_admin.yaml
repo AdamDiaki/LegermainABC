@@ -6,6 +6,11 @@ easy_admin:
       datetime: 'd/m/Y H:i:s'
 
     design:
+      form_theme:
+        - '@EasyAdmin/form/bootstrap_4.html.twig'
+
+
+
 
       brand_color: '#1ABC9C'
       menu:
@@ -145,7 +150,13 @@ easy_admin:
                 - { property : 'imageFile', type: 'vich_image'}
             list:
               fields:
-                - { property : 'imageFile', type: 'vich_image'}
+                - id
+                - {property: 'link', label: 'Lien'}
+                - {property: 'actualities', label: 'Actualité'}
+                - {property: 'articleImages', label: 'Image'}
+
+
+
               collapse_actions: true
               actions:
                 - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
