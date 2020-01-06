@@ -2,6 +2,7 @@
 namespace App\Listener;
 
 use App\Entity\RequestProject;
+use Doctrine\Common\Persistence\ObjectManager;
 use EasyCorp\Bundle\EasyAdminBundle\Event\EasyAdminEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\EventDispatcher\GenericEvent;
@@ -26,16 +27,20 @@ class EasyAdminSuscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-          EasyAdminEvents::POST_SHOW => array('preEdit'), EasyAdminEvents::PRE_UPDATE => array('preUpdate')
+          EasyAdminEvents::POST_SHOW => array('preEdit'), EasyAdminEvents::PRE_UPDATE => array('preUpdate'),EasyAdminEvents::PRE_PERSIST =>array('prePersit')
         );
     }
 
-    public function preEdit(GenericEvent $event){
+
+    public function preEdit(GenericEvent $event ){
         $entity = $event->getSubject();
 
 
         if (!($entity instanceof  RequestProject)){
             return;
+        }
+        elseif ($entity->getSaw() == true){
+            return ;
         }
 
         $message = (new \Swift_Message("Votre de demande de devis a été lu par l'artisan"))
@@ -45,6 +50,10 @@ class EasyAdminSuscriber implements EventSubscriberInterface
             )
         ;
         $this->mailer->send($message);
+        $entity->setSaw(true);
+
+
+
 
 
 
@@ -58,6 +67,9 @@ class EasyAdminSuscriber implements EventSubscriberInterface
         if (!($entity instanceof  RequestProject)){
             return;
         }
+        elseif ($entity->getSaw() == 1){
+            return ;
+        }
 
         $message = (new \Swift_Message("Votre de demande de devis a été lu par l'artisan"))
             ->setFrom('legermainabc@gmail.com')
@@ -66,6 +78,7 @@ class EasyAdminSuscriber implements EventSubscriberInterface
             )
         ;
         $this->mailer->send($message);
+        $entity->setSaw(true);
 
 
 
