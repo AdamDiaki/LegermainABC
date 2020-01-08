@@ -19,15 +19,28 @@
         </div>
     </div>
     <div style="background-color: #eaeaea;padding: 50px">
-        <div style="margin-left: 300px">
-            {{ form_end(requestForm) }}
+        <div style="margin-left: 300px; margin-right: 300px">
 
             {{ form_start(requestForm) }}
+            <div class="row">
+                <div class="col-md-6">{{ form_row(requestForm.user.name) }}</div>
+                <div class="col-md-6">{{ form_row(requestForm.user.firstname) }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">{{ form_row(requestForm.user.number) }}</div>
+                <div class="col-md-6">{{ form_row(requestForm.user.address) }}</div>
+            </div>
+
+            {{ form_widget(requestForm) }}
+            <div align="center" style="margin-bottom: 50px">
+                <button type="submit" class="btn btn-success" ; style="background-color: #e7d2c4">Proposer un devis</button>
+            </div>
+
+            {{ form_end(requestForm) }}
         </div>
-        <div align="center" style="margin-bottom: 50px">
-            <button type="submit"; style="background-color: #e7d2c4">Proposer un devis</button>
-        </div>
+
+
     </div>
 
 {% endblock %}
-
