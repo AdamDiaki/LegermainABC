@@ -9,6 +9,8 @@ use App\Form\RequestForm;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use ReCaptcha\ReCaptcha;
+
 
 class RequestController extends AbstractController
 {
@@ -18,7 +20,7 @@ class RequestController extends AbstractController
      * @param \Swift_Mailer $mailer
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function newRequest(Request $request, \Swift_Mailer $mailer)
+    public function new(Request $request, \Swift_Mailer $mailer)
     {
         $user = new User();
         $userDetail = new RequestProject();
@@ -33,24 +35,31 @@ class RequestController extends AbstractController
 
             $form->handleRequest($request);
 
-            if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
+            $recaptcha = new ReCaptcha('6LfO380UAAAAADzUkyS7iWRBKtcfiSLRQl9YnMCa');
+            $resp = $recaptcha->verify($request->request->get('g-recaptcha-response'), $request->getClientIp());
 
-                $em->persist($user);
-                $em->flush();
+            if (!$resp->isSuccess()) {
+                $this->addFlash('fileFormat',"Problème au niveau du captcha veuillez rééssayer");
+            }else{
+                if ($form->isValid()) {
+                    $em = $this->getDoctrine()->getManager();
 
-                $em->persist($userDetail);
-                $em->flush();
+                    $em->persist($user);
+                    $em->flush();
 
-                $message = (new \Swift_Message("Nouvelle demande de devis"))
-                    ->setFrom('legermainabc@gmail.com')
-                    ->setTo('legermainabc@gmail.com')
-                    ->setBody("Vous avez reçu une nouvelle demande de devis de la part de  $user->getName(),  $user->getFirstname() ");
+                    $em->persist($userDetail);
+                    $em->flush();
 
-                $mailer->send($message);
-                return $this->render('mailer/mailerArt.html.twig', [
-                    'controller_name' => 'MailerArtisanController', 'name' => $user->getName(), 'firstname' => $user->getFirstname()
-                ]);
+                    $message = (new \Swift_Message("Nouvelle demande de devis"))
+                        ->setFrom('legermainabc@gmail.com')
+                        ->setTo('legermainabc@gmail.com')
+                        ->setBody("Vous avez reçu une nouvelle demande. ");
+
+                    $mailer->send($message);
+                    return $this->render('mailer/mailerArt.html.twig', [
+                        'controller_name' => 'MailerArtisanController', 'name' => $user->getName(), 'firstname' => $user->getFirstname()
+                    ]);
+                }
             }
         }
         return $this->render('form/requestForm.html.twig', [
