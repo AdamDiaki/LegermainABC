@@ -25,7 +25,7 @@
     <main role="main">
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <ol id="je" class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
 
-                            <p><a class="btn btn-lg btn-success" href="#" role="button">Lire plus</a></p>
+                            <p><a class="btn btn-lg btn-success" href="#je" role="button">Lire plus</a></p>
                         </div>
 
                     </div>
@@ -89,11 +89,12 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <br id="clearfix w-100 d-md-none">
 
 
         {% for article in articles %}
-            <div class="container-fluid mt-4">
-                <div class="card mb-4 embed-responsive " style="width: auto; height: 302px">
+            <div class="container-fluid mt-5">
+                <div class="card mb-4 embed-responsive mt-5" style="width: auto; height: 302px">
                     <div class="row no-gutters">
                         <div class="col-auto">
                             <a href="{{ path('article_show',{'id':article.id}) }}"><img

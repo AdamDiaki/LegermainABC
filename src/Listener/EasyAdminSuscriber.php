@@ -51,13 +51,6 @@ class EasyAdminSuscriber implements EventSubscriberInterface
         ;
         $this->mailer->send($message);
         $entity->setSaw(true);
-
-
-
-
-
-
-
     }
 
     public function preUpdate(GenericEvent $event){
