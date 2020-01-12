@@ -35,7 +35,7 @@ class ExportController  extends Controller
 
 
 
-          return $this->render('export/index.html.twig', [
+          return $this->render('/export/index.html.twig', [
               'controller_name' => 'ExportController', 'vCard'=> $vCard
           ]);
 

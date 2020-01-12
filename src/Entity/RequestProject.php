@@ -34,11 +34,13 @@ class RequestProject
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="requestProjects")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="requestProjects")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $user;
 
@@ -46,6 +48,11 @@ class RequestProject
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $saw;
 
     /**
      * @return int|null
@@ -161,6 +168,18 @@ class RequestProject
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getSaw(): ?bool
+    {
+        return $this->saw;
+    }
+
+    public function setSaw(bool $saw): self
+    {
+        $this->saw = $saw;
 
         return $this;
     }

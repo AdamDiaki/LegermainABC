@@ -55,6 +55,7 @@ class Application
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="applications")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $user;
 

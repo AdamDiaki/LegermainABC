@@ -23,10 +23,12 @@ class ArticleImages
     private $article;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="articleImages")
+     * @ORM\OneToOne(targetEntity="App\Entity\Image", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $image;
+
+
 
 
     public function getId(): ?int
@@ -46,17 +48,7 @@ class ArticleImages
         return $this;
     }
 
-    public function getImage(): ?Image
-    {
-        return $this->image;
-    }
 
-    public function setImage(?Image $image): self
-    {
-        $this->image = $image;
-
-        return $this;
-    }
 
     /**
      * @return string
@@ -64,6 +56,18 @@ class ArticleImages
     public function __toString()
     {
         return $this->image . '';
+    }
+
+    public function getImage(): ?Image
+    {
+        return $this->image;
+    }
+
+    public function setImage(Image $image): self
+    {
+        $this->image = $image;
+
+        return $this;
     }
 
 

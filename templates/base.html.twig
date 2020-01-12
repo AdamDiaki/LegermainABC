@@ -6,37 +6,46 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}
         <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
 
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="/">Legermain</a>
+<nav class="navbar  navbar-default navbar-fixed-top fixed-top  navbar-expand-lg navbar-dark bg-primary">
+
+
+
+    <a  class="navbar-brand " href="/">
+        <img  style="height: 30px" src="{{ asset('uploads/images/logos/Logocomplet.png') }}" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+        <ul class="navbar-nav mx-4">
+            <li class="nav-item mx-4">
                 <a class="nav-link" href="{{ path('charpente') }}">Charpente</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-4">
                 <a class="nav-link" href="{{ path('couverture') }}">Couverture</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-4">
                 <a class="nav-link" href="{{ path('ouvrage') }}">Ouvrages spécifiques</a>
             </li>
-            <li class="nav-item">
+
+
+        </ul>
+        <ul  class="navbar-nav  ml-4">
+            <li  class="nav-item mx-5">
                 <a class="nav-link" href="">Devis</a>
             </li>
-
         </ul>
 
     </div>
 </nav>
-<div class="sidebarre"></div>
+<div style="margin-top: 73px" class="sidebarre fixed-top"></div>
 
 
 
@@ -49,26 +58,26 @@
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
-<div class="card ">
+<div class="card">
     <div class="sidebarre"></div>
     <!-- Footer -->
     <footer class="page-footer font-small stylish-color-dark pt-4 ">
 
 
-        <div class="container text-center text-md-left">
+        <div style="height: 500px" class="container text-center text-md-left">
 
             <!-- Grid row -->
             <div class="row">
 
                 <!-- Grid column -->
-                <div class="col-md-4 mx-auto">
+                <div class="col-md-6 mx-auto">
 
                     <!-- Content -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Nous trouver!</h5>
                     <p class="lead">
 
                     <div class="mapouter" width="100%" position="right">
-                        <div class="gmap_canvas"><iframe width="500" height="200" id="gmap_canvas " position="center"
+                        <div class="gmap_canvas"><iframe width="520" height="370" id="gmap_canvas " position="center"
                                                          src="https://maps.google.com/maps?q=Universit%C3%A9%20de%20Tours&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                                          frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" marginleft="50">
                             </iframe><a href="https://www.couponflat.com"></a></div>
@@ -79,42 +88,47 @@
                     </p>
 
                 </div>
+                <!-- Grid column -->
 
                 <hr class="clearfix w-100 d-md-none">
 
+
                 <!-- Grid column -->
-                <div class="col-6 mx-auto">
+                <div style="font-size: 25px" class="col-md-6 mx-auto" >
 
-                    <h5> Nous contacter</h5>
-                    <p> <p>&copy; ABC_Legermain, Inc. Contactez nous.</p></p>
-                    <p>
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4"> Nous contacter</h5>
+                    <p>&copy; ABC_Legermain, Inc. Contactez nous.</p>
 
-                        <a class="social-icon mx-1" data-tooltip="email@gmail.com" href="mailto:email@gmail.com">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <p >
+
+
+
+
+
+                        <a class="btn1  mx-1" data-tooltip="LinkedIn" href="https://www.linkedin.com/company/colorlib">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
 
-                        <a class="social-icon mx-1" data-tooltip="GitHub" href="https://github.com/puikinsh">
-                            <i class="fa fa-github" aria-hidden="true"></i>
+                        <a class="btn1  mx-1" data-tooltip="Twitter" href="https://twitter.com/colorlib">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
                         </a>
 
-                        <a class="social-icon mx-1" data-tooltip="LinkedIn" href="https://www.linkedin.com/company/colorlib">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <a class="btn1  mx-1" data-tooltip="Facebook" href="https://www.facebook.com/colorlib">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
                         </a>
 
-                        <a class="social-icon mx-1" data-tooltip="Twitter" href="https://twitter.com/colorlib">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+
+                        <a class="btn1  mx-1" data-tooltip="Instagram" href="https://instagram.com/Colorlib">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a>
 
-                        <a class="social-icon mx-1" data-tooltip="Facebook" href="https://www.facebook.com/colorlib">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
 
-                        <a class="social-icon mx-1" data-tooltip="YouTube" href="https://www.youtube.com/c/Colorlib">
-                            <i class="fa fa-youtube" aria-hidden="true"></i>
-                        </a>
-                        <a class="social-icon mx-1" data-tooltip="YouTube" href="https://instagram.com/Colorlib">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
+
+
+
+
+                    </p>
 
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Adresse</h5>
@@ -126,27 +140,37 @@
                 </div>
                 <!-- Grid column -->
 
-                <hr class="clearfix w-100 d-md-none">
-
-                <!-- Grid column -->
-                <div class="col-md-2 mx-auto">
-
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Label</h5>
-
-
-
-                </div>
-                <!-- Grid column -->
-
             </div>
-            <!-- Grid row -->
 
+
+
+        </div>
+        <hr>
+
+        <div class="carrieres ">
+            <!-- Grid row -->
+            <p class="lead font-weight-bold text-uppercase"> Voulez-vous façonner à nos côtés des oeuvres artisanales ?</p>
+            <p >
+                <a class="btn btn-lg btn-success" href="#" class="btn btn-success">Postuler ></a>
+            </p>
         </div>
         <!-- Footer Links -->
 
 
+        <hr>
 
+        <!-- Social buttons -->
+        <!-- Social buttons -->
+        <div class="social" align="center"style="font-size: 40px">
+            <div class="container mb-3">
+                <img class="mx-4" src="{{ asset('uploads/images/logos/labels/logo-maitreartisan.png') | imagine_filter('thumb2') }}" alt="">
+                <img class="mx-4" src="{{ asset('uploads/images/logos/labels/fondation-du-patrimoine.jpg') | imagine_filter('thumb3') }}" alt="">
+                <img class="mx-4" src="{{ asset('uploads/images/logos/labels/logo_qualibat.png') | imagine_filter('thumb3') }}" alt="">
+
+            </div>
+
+        </div>
+        <!-- Social buttons -->
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2018 Copyright:

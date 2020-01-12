@@ -19,6 +19,7 @@ class BackgroundImage
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="backgroundImages")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 

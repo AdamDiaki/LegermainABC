@@ -51,6 +51,11 @@ class Image
      */
     private $articleImages;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $accueil;
+
 
     public function __construct()
     {
@@ -194,6 +199,18 @@ class Image
                 $articleImage->setImage( null );
             }
         }
+
+        return $this;
+    }
+
+    public function getAccueil(): ?bool
+    {
+        return $this->accueil;
+    }
+
+    public function setAccueil(bool $accueil): self
+    {
+        $this->accueil = $accueil;
 
         return $this;
     }

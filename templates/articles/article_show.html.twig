@@ -1,6 +1,18 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Article!{% endblock %}
+
 {% block body %}
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+
+        {{ encore_entry_link_tags('realisation') }}
+
+
+
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -85,7 +97,7 @@
 
             </div>
             <div class="card-text px-4 py-2">
-                <p style="text-align: justify">{{ article.content }}</p>
+               {{ article.content | raw }}
 
             </div>
             {% if article.category == '1 : Charpente' %}
@@ -98,6 +110,21 @@
             {% endif %}
 
         </div>
+        <p class="lead">Partagez les œuvres captivantes!</p>
+        <div class="middle mt-5">
+            <a class="btn1" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2AbcLegermain.fr%2Freseaux-sociaux-creer-vos-propres-liens-pour-partager-des-pages-web-42231.html">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn1" href=" https://twitter.com/intent/tweet?url=https%3A%2F%2www.AbcLegermain.fr%2F&text=La+solution+pour+vos+besoins+de+charpentes+de+couvertures+et+d'ouvrages+spécifiques&hashtags=AbcLegermain,ArtisanDuBois">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a class="btn1" href="https://www.instagram.com/share">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+        </div>
+
     </div>
 
     {% block javascripts %}

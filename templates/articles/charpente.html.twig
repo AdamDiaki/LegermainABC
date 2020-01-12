@@ -8,6 +8,10 @@
 
     {{ encore_entry_link_tags('realisation') }}
 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+
 
     <html lang="en">
     <head>
@@ -25,7 +29,7 @@
     <main role="main">
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <ol id="je" class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -38,7 +42,7 @@
                         <div class="carousel-caption text-left">
                             <div id="card">
                                 <div class="card-body my-4">
-                                    <div class="card-text">
+                                    <div id ="card-text">
                                         <h1>Charpentes</h1>
                                         <p>Les charpentes ABC Legermain couvrent une large gamme de produits (du hangar
                                             agricole aux monuments historiques en passant bien sur par la charpente
@@ -47,7 +51,7 @@
                                 </div>
                             </div>
 
-                            <p><a class="btn btn-lg btn-success" href="#" role="button">Lire plus</a></p>
+                            <p><a class="btn btn-lg btn-success" href="#je" role="button">Lire plus</a></p>
                         </div>
 
                     </div>
@@ -61,7 +65,7 @@
                                 <div class="carousel-caption">
                                     <div id="card">
                                         <div class="card-body my-4">
-                                            <div class="card-text">
+                                            <div id ="card-text">
                                                 <h1>Charpentes.</h1>
                                                 <p>Elles sont réalisées artisanalement en employant les assemblages
                                                     traditionnels correspondant aux style et à l’époque de l’ouvrage
@@ -88,12 +92,16 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+
         </div>
+
+        <br id="clearfix w-100 d-md-none">
+
 
 
         {% for article in articles %}
-            <div class="container-fluid mt-4">
-                <div class="card mb-4 embed-responsive " style="width: auto; height: 302px">
+            <div class="container-fluid mt-5">
+                <div class="card mb-4 embed-responsive mt-5 " style="width: auto; height: 302px">
                     <div class="row no-gutters">
                         <div class="col-auto">
                             <a href="{{ path('article_show',{'id':article.id}) }}"><img
@@ -107,8 +115,11 @@
                                 <h2 class="card-title" style="text-align: center">
                                     <a href="{{ path('article_show',{'id':article.id}) }}">{{ article.title }}</a>
                                 </h2>
-                                <p class="lead card-text" style="text-align: justify">{{ article.content }}</p>
-                                <div class="button">
+                                <div class="card-text test mx-4">
+                                {{ article.content | raw() }}
+
+                                </div>
+                                <div class="button mt-4">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>
                                 </div>
@@ -121,6 +132,7 @@
 
         {% endfor %}
 
+        <br id="clearfix w-100 d-md-none">
 
     </main>
 
