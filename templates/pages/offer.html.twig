@@ -1,8 +1,6 @@
 {% extends 'base.html.twig' %}
 {% form_theme CandidateForm 'bootstrap_4_layout.html.twig' %}
-{% form_theme ApplicationForm 'bootstrap_4_layout.html.twig' %}
 {% block title 'Nos Offres' %}
-
 {% block body %}
 
 {{ encore_entry_link_tags('offer') }}
@@ -57,6 +55,7 @@
 
                     {{ form_start(CandidateForm) }}
                         {{ form_widget(CandidateForm) }}
+                        <div class="g-recaptcha" data-sitekey="6LfO380UAAAAAJ1opTj7-misxt1aARAd5LO0ddjW"></div>
                         <button type="submit" class="btn btn-success">Postuler</button>
                         {{ form_row(CandidateForm.offerId, {'id' : 'offre', 'attr':{'classe':'custom-class'}}) }}
                     {{ form_end(CandidateForm) }}

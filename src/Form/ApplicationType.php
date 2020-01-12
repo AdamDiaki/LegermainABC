@@ -27,10 +27,6 @@ class ApplicationType extends AbstractType
                 'label' => 'Lettre de motivation',
                 //'attr' => array('style' => 'width: 200px')
             ))
-            ->add('cv', FileType::class,[
-                'label' => 'test',
-                'mapped' => false
-            ])
 
         ;
     }

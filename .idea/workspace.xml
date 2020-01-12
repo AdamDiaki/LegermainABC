@@ -2,19 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/packages/captcha.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/google_recaptcha.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/1d7bde99c63a51ee88b04bc0d9133a75.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/26da78d39999d12d342c782617d5cda8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/2a5c1090fb096899c4ab83a684c752e3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/31028724d02234dd5fcfc08a501820f2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/316719895b162d06e4f985455bc6ec40.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/343d277611cd8e3df3401022e4ee82e8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/497cbf0be1e6a9dc9361c6ad80b90e79.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/6663a4ed18c1ed89b3a550f73117fbcc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/7ae16cc120768b9cb046a1d2229f83af.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/7f42c927bb59010fb6fb7c0a94f56bd0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/9219466ec87f5467f2454c3761fd569c.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/9d57d1bef1b7e75454ad41492a8b61a8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/b710c84dadb9a27f485c419c4203c48f.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/c1f1ac8e4f9a2332ab16dd81fba3388d.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/c3f9261fd2ad3ed58b454452a7b93ea5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/cbf6d6836f8a74caf677e437c29c99b6.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/d275ea2fad34a5a88d7efd9cf5514e9c.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/dd719f4f92f489f6e92a386b7268bbf7.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/ecc9843006564473dbc5f454c1674095.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/php210F.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/php7367.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/phpA1A1.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/cv/phpEF4B.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/0e1e14b6183e8dbf58e6d3d7cec3b4ed.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/1d9a5d84a3d7c787e1a202fb25cf3427.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/266fbd46b2d7c2b7d07ed4b0ca92d982.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/29962037705d39f67465a7df4e1914ee.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/30c0f64e2e6b155c7c8abcbdef03769e.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/3c36bf4bab83e42bf9d494b5ec00bf53.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/4dc6219d8996174287cfeacb10347ce8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/54493d1f2191026d0ab3f0f8f58f0315.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/5d149632f5a5a3622faf58f4defb96fc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/7c427443dea91791d44adb11207b6453.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/8527f942b98325fdfd9fe45d2e17be56.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/8985c3db3d3cc8d167467e6e3cd4cea0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/9021e1b2a25585cfee4be4bc5634f054.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/993c1efbf909aac5488c17535a589864.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/9b5b15afb717db8a55c16d161eb0329a.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/a813c7fdaf88c9d71df2cc8ef7eba176.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/b1318b06fe85f375beef85ac4d024547.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/b916575c3adfb96af4b3e7b0002b2242.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/c0002effe82f42e6bdcdd519b323b806.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/d6d15bace8a3d61b0a111c8b0bfef1f8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/d90e34a9cdf538f186e10f8d656f9915.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/efae32b07b7571af1ad106dd5ee53c08.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/application/resume/f9fff03d4f51b6578c6d1506dd7fc48e.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ApplicationForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/offer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/offer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/realisation.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/realisation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RequestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/articles/article_show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/article_show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/articles/couverture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/couverture.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form/requestForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form/requestForm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ABC_Legermain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OfferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OfferController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Offer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Offer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ApplicationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ApplicationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/OfferFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/OfferFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/offer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/offer.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,15 +250,15 @@
       <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>

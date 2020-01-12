@@ -10,6 +10,7 @@
         "captcha-com/symfony-captcha-bundle": "^4.2",
         "doctrine/annotations": "^1.8",
         "easycorp/easyadmin-bundle": "^2.3",
+        "google/recaptcha": "~1.1",
         "liip/imagine-bundle": "^2.2",
         "ph-7/qrcode-generator-php-class": "^2.1",
         "sensio/framework-extra-bundle": "^5.5",
