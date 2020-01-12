@@ -57,11 +57,11 @@
                                     <div class="card-body my-4">
                                         <div class="card-text">
                                             {% if article.category == '1 : Charpente' %}
-                                                <h1>Charpentes</h1>
+                                                <h1 align="center">Charpentes</h1>
                                             {% elseif article.category == '2 : Couverture' %}
-                                                <h1>Couverture</h1>
+                                                <h1 align="center">Couverture</h1>
                                             {% else %}
-                                                <h1>Ouvrages spécifiques</h1>
+                                                <h1 align="center">Ouvrages spécifiques</h1>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -96,9 +96,8 @@
                 </h2>
 
             </div>
-            <div class="card-text px-4 py-2">
-                <p style="text-align: justify">{{ article.content }}</p>
-
+            <div class="view px-4 py-2">
+               {{ article.content | raw }}
             </div>
             {% if article.category == '1 : Charpente' %}
                 <p><a href="{{ path('charpente') }}" class="btn btn-success">Revenir aux articles de charpente</a></p>

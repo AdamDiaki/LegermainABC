@@ -42,7 +42,7 @@
                         <div class="carousel-caption text-left">
                             <div id="card">
                                 <div class="card-body my-4">
-                                    <div class="card-text">
+                                    <div id ="card-text">
                                         <h1>Charpentes</h1>
                                         <p>Les charpentes ABC Legermain couvrent une large gamme de produits (du hangar
                                             agricole aux monuments historiques en passant bien sur par la charpente
@@ -65,7 +65,7 @@
                                 <div class="carousel-caption">
                                     <div id="card">
                                         <div class="card-body my-4">
-                                            <div class="card-text">
+                                            <div id ="card-text">
                                                 <h1>Charpentes.</h1>
                                                 <p>Elles sont réalisées artisanalement en employant les assemblages
                                                     traditionnels correspondant aux style et à l’époque de l’ouvrage
@@ -115,11 +115,11 @@
                                 <h2 class="card-title" style="text-align: center">
                                     <a href="{{ path('article_show',{'id':article.id}) }}">{{ article.title }}</a>
                                 </h2>
-                                <div class="lead card-text">
-                                    <p class="lead card-text " style="text-align: justify">{{ article.content | raw() }}</p>
+                                <div class="card-text test mx-4">
+                                {{ article.content | raw() }}
 
                                 </div>
-                                <div class="button">
+                                <div class="button mt-4">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>
                                 </div>

@@ -1,0 +1,21 @@
+A faire:
+
+-Flash message si:
+		-> Candidature validé
+		-> Lettre de motivation/CV non conforme
+
+-Inspecter l'élément --> check la taille de la div
+
+
+<div class="alert alert-danger" style="padding: 20px; width: 150%">
+        {{ message }}
+    </div>
+
+{% for message in app.flashes('failed') %}
+    <script>
+        window.alert("{{ message }}");
+    </script>
+{% endfor %}
+
+    app.path.application_cv: '%kernel.project_dir%/public/uploads/application/cv'
+    app.path.application_resume: '%kernel.project_dir%/public/uploads/application/resume'

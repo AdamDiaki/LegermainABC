@@ -24,8 +24,10 @@ li{
 #card{
     position: relative;
     top: 20%;
+    font-size: 35px;
 
     text-align: center;
+
     height:auto;
     width: auto;
     background-color: rgba(0,0,0,0.6);
@@ -41,6 +43,10 @@ li{
 
 p, h5{
     color: #87724c;
+}
+h1{
+    text-align: center;
+    color: white;
 }
 
 p, h5{

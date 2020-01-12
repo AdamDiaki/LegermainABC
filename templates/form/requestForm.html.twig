@@ -8,26 +8,47 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="first-slide" style="width: 100%; height: 670px" src="{{ asset('https://i1.wp.com/handscollab.com/wp-content/uploads/2018/09/Artisan-ponce-tabouret.jpg?fit=1772%2C1181&ssl=1') }}" alt="First slide">
+            <img class="first-slide" style="width: 100%; height: 545px" src="{{ asset('https://i1.wp.com/handscollab.com/wp-content/uploads/2018/09/Artisan-ponce-tabouret.jpg?fit=1772%2C1181&ssl=1') }}" alt="First slide">
             <div class="container">
                 <div class="carousel-caption text-center" style="top : 110px;height: 60%;background-color: rgba(0,0,0,0.6)">
                     <div>
-                        <h1 style="font-size: 150px;color: rgba(255,168,74,1)">Vos demandes de devis</h1>
+                        <h1 >Vos demandes de devis</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+            <!-- Important to add the recaptcha api in your document -->
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+            {# or if you're using twig #}
+
     <div style="background-color: #eaeaea;padding: 50px">
-        <div style="margin-left: 300px">
-            {{ form_end(requestForm) }}
+        <div style="margin-left: 300px; margin-right: 300px">
 
             {{ form_start(requestForm) }}
+            <div class="row">
+                <div class="col-md-6">{{ form_row(requestForm.user.name) }}</div>
+                <div class="col-md-6">{{ form_row(requestForm.user.firstname) }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">{{ form_row(requestForm.user.number) }}</div>
+                <div class="col-md-6">{{ form_row(requestForm.user.address) }}</div>
+            </div>
+
+            {{ form_widget(requestForm) }}
+
+            <div class="g-recaptcha" data-sitekey="6LfO380UAAAAAJ1opTj7-misxt1aARAd5LO0ddjW"></div>
+
+            <div align="center" style="margin-bottom: 50px">
+                <button type="submit" class="btn btn-success" ; style="background-color: #e7d2c4">Proposer un devis</button>
+            </div>
+
+            {{ form_end(requestForm) }}
         </div>
-        <div align="center" style="margin-bottom: 50px">
-            <button type="submit"; style="background-color: #e7d2c4">Proposer un devis</button>
-        </div>
+
+
     </div>
 
 {% endblock %}
-

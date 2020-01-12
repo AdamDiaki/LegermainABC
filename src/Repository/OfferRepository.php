@@ -32,6 +32,18 @@ class OfferRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    /**
+     * @param $id
+     * @return array
+     */
+    public function findOfferByid ($id) : array
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.id = ?1')
+            ->setParameter('?1',$id)
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return Offer[] Returns an array of Offer objects
     //  */

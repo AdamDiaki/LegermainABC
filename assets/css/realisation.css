@@ -1,10 +1,20 @@
-.card-text{
+.card-text {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+    text-align: justify;
+    font-size: 18px;
+    color: #87724c;
 }
+
+.view{
+    text-align: justify;
+    font-size: 23px;
+    color: #87724c;
+}
+
 
 
 

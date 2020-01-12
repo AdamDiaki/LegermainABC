@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\OfferRepository")
  */
@@ -69,7 +70,6 @@ class Offer
      *@ORM\JoinColumn(nullable=false)
      */
     private $offerType;
-
 
     /**
      * Offer constructor.
@@ -300,5 +300,7 @@ class Offer
         return $this->id . ' : ' . $this->title;
 
     }
+
+
 
 }

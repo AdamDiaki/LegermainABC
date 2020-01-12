@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Confirmation {% endblock %}
+
+{% block body %}
+{% set bg_color = '#eaeaea' %}
+
+<div style="text-align: center;background-color: #eaeaea;padding: 50px; ">
+        <div style="margin-bottom: 180px; margin-top: 180px">
+                <h1 style="font-size: 70px;color: rgba(255,168,74,1)">Merci, {{ firstname }} {{ name }} </h1>
+                <p style="font-size: 30px">Votre demande a bien été envoyé, vous recevrez un mail pour vous informer qu'il est en cours de considération</p>
+        </div>
+</div>
+
+{% endblock %}
+

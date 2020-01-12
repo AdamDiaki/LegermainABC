@@ -7,13 +7,14 @@
     {% block stylesheets %}
         <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
 
 
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
 <body>
-<nav class="navbar  navbar-default navbar-fixed-top navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar  navbar-default navbar-fixed-top fixed-top  navbar-expand-lg navbar-dark bg-primary">
 
 
 
@@ -39,13 +40,14 @@
         </ul>
         <ul  class="navbar-nav  ml-4">
             <li  class="nav-item mx-5">
-                <a class="nav-link" href="">Devis</a>
+                <a class="nav-link" href="{{ path('requestCont') }}">Devis</a>
             </li>
         </ul>
 
     </div>
 </nav>
 <div style="margin-top: 73px" class="sidebarre fixed-top"></div>
+
 
 
 
@@ -180,6 +182,11 @@
     </footer>
     <!-- Footer -->
 </div>
+{% for message in app.flashes('fileFormat') %}
+    <script>
+        window.alert("{{ message }}");
+    </script>
+{% endfor %}
 </body>
 
 </html>

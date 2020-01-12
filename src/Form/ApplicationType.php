@@ -20,11 +20,12 @@ class ApplicationType extends AbstractType
             ))
             ->add('cvFile',FileType::class, array(
                 'label' => 'CV',
-                'attr' => array('style' => 'size: 1px')
+                // 'attr' => array('style' => 'size: 1px'),
+                'mapped' => false
             ))
             ->add('resumeFile',FileType::class, array(
                 'label' => 'Lettre de motivation',
-                'attr' => array('style' => 'width: 200px')
+                //'attr' => array('style' => 'width: 200px')
             ))
 
         ;

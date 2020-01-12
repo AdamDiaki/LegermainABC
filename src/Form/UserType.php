@@ -13,16 +13,19 @@ class UserType extends AbstractType
     {
         $builder
             ->add('name', null, array(
-                'label' => 'Nom',
-                'attr' => array('style' => 'width: 500px')
+                'label' => 'Nom'
             ))
             ->add('firstname', null, array(
-                'label' => 'Prénom',
-                'attr' => array('style' => 'width: 500px')
+                'label' => 'Prénom'
             ))
             ->add('email', null, array(
-                'label' => 'Email',
-                'attr' => array('style' => 'width: 500px')
+                'label' => 'Email'
+            ))
+            ->add('number', null, array(
+                'label' => 'Numéro de téléphone'
+            ))
+            ->add('address', null, array(
+                'label' => 'Adresse postale'
             ))
         ;
     }

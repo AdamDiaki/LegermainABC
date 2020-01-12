@@ -125,6 +125,8 @@
       <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
       <path value="$PROJECT_DIR$/vendor/treetop1500/easyadmin-dragndrop-sort" />
       <path value="$PROJECT_DIR$/vendor/ph-7/qrcode-generator-php-class" />
+      <path value="$PROJECT_DIR$/vendor/google/recaptcha" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
 </project>
