@@ -8,7 +8,6 @@
 
     {{ encore_entry_link_tags('realisation') }}
 
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
 
@@ -43,8 +42,8 @@
                             <div id="card">
                                 <div class="card-body my-4">
                                     <div id ="card-text">
-                                        <h1>Charpentes</h1>
-                                        <p>Les charpentes ABC Legermain couvrent une large gamme de produits (du hangar
+                                        <h1 >Charpentes</h1>
+                                        <p class="rose">Les charpentes ABC Legermain couvrent une large gamme de produits (du hangar
                                             agricole aux monuments historiques en passant bien sur par la charpente
                                             traditionnelle).</p>
                                     </div>
@@ -67,7 +66,7 @@
                                         <div class="card-body my-4">
                                             <div id ="card-text">
                                                 <h1>Charpentes.</h1>
-                                                <p>Elles sont réalisées artisanalement en employant les assemblages
+                                                <p class="rose">Elles sont réalisées artisanalement en employant les assemblages
                                                     traditionnels correspondant aux style et à l’époque de l’ouvrage
                                                     (tenons mortaise, chevilles en bois...) </p>
 
@@ -76,7 +75,7 @@
                                         </div>
 
                                     </div>
-                                    <p><a class="btn btn-lg btn-success" href="#" role="button">Demander un devis</a>
+                                    <p><a class="btn btn-lg btn-success" href="{{ path('requestCont') }}" role="button">Demander un devis</a>
                                     </p>
                                 </div>
                             </div>
@@ -115,11 +114,11 @@
                                 <h2 class="card-title" style="text-align: center">
                                     <a href="{{ path('article_show',{'id':article.id}) }}">{{ article.title }}</a>
                                 </h2>
-                                <div class="card-text test mx-4">
-                                {{ article.content | raw() }}
+                                <div class="card-text  mx-4">
+                                {{ article.content | raw}}
 
                                 </div>
-                                <div class="button mt-4">
+                                <div class="button mt-2">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>
                                 </div>

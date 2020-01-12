@@ -1,3 +1,15 @@
+.nav-link{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+
+
+
+}
+
+footer{
+    font-family: 'Varela Round', sans-serif;
+}
+
 
 .navbar-fixed-top {
     position: fixed;
@@ -6,6 +18,7 @@
     z-index: 9999;
     width: 100%;
     height: auto    ;
+
 
 
 }
@@ -134,5 +147,19 @@ img{
 
 .carousel-item{
 padding-top:75px ;
+
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    font-family: 'Quicksand', sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-y: hidden;
+    text-align: justify;
+    font-size: 20px;
+    color: #87724c;
 
 }

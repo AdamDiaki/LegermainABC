@@ -3,10 +3,16 @@
 {% block title %}Couverture!{% endblock %}
 
 
+
+
+
+
 {% block body %}
 
-
     {{ encore_entry_link_tags('realisation') }}
+
+
+
 
 
     <html lang="en">
@@ -38,9 +44,9 @@
                         <div class="carousel-caption text-left">
                             <div id="card">
                                 <div class="card-body my-4">
-                                    <div class="card-text">
-                                        <h1>Couvertures</h1>
-                                        <p>Nous sommes également en mesure de protéger vos demeures des intempéries.
+                                    <div id="card-text">
+                                        <h1 >Couvertures</h1>
+                                        <p class="rose">Nous sommes également en mesure de protéger vos demeures des intempéries.
                                             Utilisant autant la tuile que l’ardoise ou le bardeau de châtaignier.</p>
                                     </div>
                                 </div>
@@ -60,9 +66,9 @@
                                 <div class="carousel-caption">
                                     <div id="card">
                                         <div class="card-body my-4">
-                                            <div class="card-text">
+                                            <div id="card-text">
                                                 <h1>Couvertures.</h1>
-                                                <p>La société ABC Legermain réalisera la couverture de vos charpentes,
+                                                <p class="rose">La société ABC Legermain réalisera la couverture de vos charpentes,
                                                     en l'agrémentant, si vous le souhaitez de quelques éléments
                                                     décoratifs. </p>
 
@@ -70,7 +76,7 @@
                                         </div>
 
                                     </div>
-                                    <p><a class="btn btn-lg btn-success" href="#" role="button">Demander un devis</a>
+                                    <p><a class="btn btn-lg btn-success" href="{{ path('requestCont') }}" role="button">Demander un devis</a>
                                     </p>
                                 </div>
                             </div>
@@ -103,19 +109,19 @@
                                         alt="..."></a>
 
                         </div>
-                        <div class="col">
+                        <div class="col-auto">
                             <div class="card-body px-2 py-2">
                                 <h2 class="card-title" style="text-align: center">
                                     <a href="{{ path('article_show',{'id':article.id}) }}">{{ article.title }}</a>
                                 </h2>
-                                <div class="card-text">
-                                    {{ article.content | raw() }}
-
+                                <div class="card-text  mx-4">
+                                    {{ article.content | raw}}
                                 </div>
-                                <div class="button">
+                                <div class="button mt-2">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>

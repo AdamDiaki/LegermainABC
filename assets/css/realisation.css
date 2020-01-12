@@ -1,18 +1,14 @@
-.card-text {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    text-align: justify;
-    font-size: 18px;
-    color: #87724c;
+
+
+.rose{
+    color: #FFA84A;
 }
 
 .view{
     text-align: justify;
     font-size: 23px;
     color: #87724c;
+    font-family: 'Quicksand', sans-serif;
 }
 
 
