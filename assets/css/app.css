@@ -44,6 +44,10 @@ li{
 p, h5{
     color: #87724c;
 }
+h1{
+    text-align: center;
+    color: white;
+}
 
 p, h5{
     text-align: center;
