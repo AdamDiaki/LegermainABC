@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/mailer/mailerArt.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MailerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MailerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/offer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/offer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/realisation.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/realisation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RequestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/article_show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/article_show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/couverture.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/couverture.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/ouvrage.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form/requestForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form/requestForm.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,10 +305,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575925572766" />
-    <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1576488208215">
+    <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1578844214980">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="251" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1576488208215" />
+    <state x="251" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1578844214980" />
     <state x="309" y="139" width="661" height="481" key="EditFileWatcherDialog" timestamp="1576223885489">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -329,10 +337,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="142" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1576222725934" />
-    <state width="746" height="446" key="SwitcherDM" timestamp="1575415048823">
+    <state width="746" height="446" key="SwitcherDM" timestamp="1578843331738">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="746" height="446" key="SwitcherDM/0.0.1280.720@0.0.1280.720" timestamp="1575415048823" />
+    <state width="746" height="446" key="SwitcherDM/0.0.1280.720@0.0.1280.720" timestamp="1578843331738" />
     <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1576488275883">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

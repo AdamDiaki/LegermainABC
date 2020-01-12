@@ -113,7 +113,10 @@
                                 <h2 class="card-title" style="text-align: center">
                                     <a href="{{ path('article_show',{'id':article.id}) }}">{{ article.title }}</a>
                                 </h2>
-                                <p class="lead card-text" style="text-align: justify">{{ article.content }}</p>
+                                <div class="card-text">
+                                    {{ article.content | raw() }}
+
+                                </div>
                                 <div class="button">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>

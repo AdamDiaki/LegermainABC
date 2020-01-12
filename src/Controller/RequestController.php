@@ -18,7 +18,7 @@ class RequestController extends AbstractController
      * @param \Swift_Mailer $mailer
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function new(Request $request, \Swift_Mailer $mailer)
+    public function newRequest(Request $request, \Swift_Mailer $mailer)
     {
         $user = new User();
         $userDetail = new RequestProject();
@@ -45,7 +45,7 @@ class RequestController extends AbstractController
                 $message = (new \Swift_Message("Nouvelle demande de devis"))
                     ->setFrom('legermainabc@gmail.com')
                     ->setTo('legermainabc@gmail.com')
-                    ->setBody("Vous avez reçu une nouvelle demande. ");
+                    ->setBody("Vous avez reçu une nouvelle demande de devis de la part de  $user->getName(),  $user->getFirstname() ");
 
                 $mailer->send($message);
                 return $this->render('mailer/mailerArt.html.twig', [

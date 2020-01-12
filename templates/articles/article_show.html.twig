@@ -97,7 +97,7 @@
 
             </div>
             <div class="card-text px-4 py-2">
-                <p style="text-align: justify">{{ article.content }}</p>
+               {{ article.content | raw }}
 
             </div>
             {% if article.category == '1 : Charpente' %}
