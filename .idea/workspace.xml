@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RequestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form/requestForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form/requestForm.html.twig" afterDir="false" />
+=======
+    <list default="true" id="e7c4f02a-6827-4e0e-88bc-18ffa10acb87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +178,10 @@
       <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
       <path value="$PROJECT_DIR$/vendor/treetop1500/easyadmin-dragndrop-sort" />
       <path value="$PROJECT_DIR$/vendor/ph-7/qrcode-generator-php-class" />
+<<<<<<< Updated upstream
       <path value="$PROJECT_DIR$/vendor/google/recaptcha" />
+=======
+>>>>>>> Stashed changes
     </include_path>
   </component>
   <component name="ProjectId" id="1UQ2FN5sZwC5RRkzK3IA9f5cqzG" />
@@ -253,12 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576484841550</updated>
     </task>
+<<<<<<< Updated upstream
     <task id="LOCAL-00002" summary="Recaptcha">
       <created>1578845363786</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1578845363786</updated>
+=======
+    <task id="LOCAL-00002" summary="accueil new">
+      <created>1578833516182</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578833516182</updated>
+>>>>>>> Stashed changes
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -283,8 +303,13 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="improve charpente.html.twig" />
     <MESSAGE value="improve charpente" />
+<<<<<<< Updated upstream
     <MESSAGE value="Recaptcha" />
     <option name="LAST_COMMIT_MESSAGE" value="Recaptcha" />
+=======
+    <MESSAGE value="accueil new" />
+    <option name="LAST_COMMIT_MESSAGE" value="accueil new" />
+>>>>>>> Stashed changes
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="19" key="#File_Watchers" timestamp="1576223887943">

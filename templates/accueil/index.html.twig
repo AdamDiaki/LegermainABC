@@ -1,0 +1,268 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}ABC Legermain, une main d'oeuvre de qualité.{% endblock %}
+
+
+{% block body %}
+    {{ encore_entry_link_tags('accueil') }}
+
+
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Adam">
+        <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+        <title>ABC Legermain, une main d'oeuvre de qualité</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .box {
+                float: left;
+                width: 50%;
+                padding: 50px;
+                height: 400px;
+                color:#D98933
+            }
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: #ccc;
+                font-family: arial, verdana, tahoma;
+                width:100%;
+                height:100%;
+                overflow-x: hidden;
+                max-width:100%;o
+            overflow-x:hidden;
+            }
+
+
+            .accordian {
+                width: 805px; height: 320px;
+                overflow: hidden;
+
+                /*Time for some styling*/
+                margin: 100px auto;
+                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+                -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+                -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+            }
+
+
+            .accordian ul {
+                width: 1200px;
+            }
+
+            .accordian li {
+                position: relative;
+                display: block;
+                width: 160px;
+                float: left;
+
+                border-left: 1px solid #888;
+
+                box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+                -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+                -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+
+
+                transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+
+            }
+
+            /*Reduce with of un-hovered elements*/
+            .accordian ul:hover li {width: 40px;}
+            /*Lets apply hover effects now*/
+            /*The LI hover style should override the UL hover style*/
+            .accordian ul li:hover {width: 640px;}
+
+
+            .accordian li img {
+                display: block;
+            }
+
+            /*Image title styles*/
+            .image_title {
+                background: rgba(0, 0, 0, 0.5);
+
+                left: 0; bottom: 10;
+                width: 800px;
+                color:#D98933;
+
+            }
+            .image_title a {
+                display: block;
+                color: #D98933;
+                text-decoration: none;
+                padding: 20px;
+                font-size: 16px;
+            }
+
+        </style>
+    </head>
+    <body>
+    <div style="max-width:100%;verflow-x:hidden;">
+        <main role="main">
+
+            <div>   <img src="http://www.gsfdcy.com/data/img/34/1510311-furniture-wallpaper.jpg" width="100%" height="10%" />
+                <div style="position:absolute;top:160px; width:1500px; height:800px; z-index:2;font-size:100%;color:#00000;text-align:center">
+                    <div class="carousel-caption text-center" style="top : 110px;height: 25%;background-color: rgba(132,122,111,0.7)">
+                        <div>
+                            <h1 style="font-size: 50px;color: rgba(255,168,74)">ABC Legermain, un gage de qalité</h1>
+                            <div style="position:absolute;top:100px;font-size:100%;color:#FFD5A7;text-align:center">
+                                <p>Le Germain est au carrefour du meilleur de la rive gauche, entre les galeries de la rue de Seine, du marché de Buci, des cinémas d'Odéon, et des boutiques de Saint-Germain-des-Prés. Brassant les cultures comme l'architecte d'intérieur india Mahddavi a pu brasse les styles et les couleurs, créant un lieu atypique, affirmant haut et fort sa différence, avec également la grande statue signée par l'artiste Xavier Veilhan, qui traverse et illumine l'espace.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Carousel et Accordéon
+            ================================================== -->
+            <!-- Carousel -->
+
+            <div class="row featurette" style="background-color:#EAEAEA">
+
+
+            </div>
+            <!-- Accordéon -->
+
+            <div class="row featurette" style="background-color:#FFD5A7">
+
+                <div class="accordian" >
+                    <ul>
+                        <li>
+                            <div class="image_title">
+                                <a href="">Nos charpentes</a>
+                            </div>
+                            <a href="">
+                                <img src="https://images.squarespace-cdn.com/content/v1/52d35389e4b0ed895b7f88e6/1538612081207-LY4Z3OE58OSUUCMGQKZR/ke17ZwdGBToddI8pDm48kLlQSdggvCOv1JxHTELgzux7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UVmz9HMzy4m_uA2-FQHOSe3LFipN8ra6kuxeL-ggTvjXzhM-Sjnu6G9qv44EQ4jJbQ/A-Frame_2.jpg?format=1500w"/>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="image_title">
+                                <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">Nos couvertures</a>
+                            </div>
+                            <a href="">
+                                <img src=" https://www.residencestyle.com/wp-content/uploads/2018/12/image001.jpg"/>     </a>
+                        </li>
+                        <li>
+                            <div class="image_title">
+                                <a href="">Ouvrages spécifiques</a>
+                            </div>
+                            <a href="">
+                                <img src="https://s3-ap-southeast-2.amazonaws.com/ish-oncourse-scc/705e7bb7-b7ae-4c8c-946c-fa2fc322bfb2"/>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+
+            <!-- FOOTER-->
+
+
+            <body>
+
+            <div class="clearfix">
+                <div class="box" style="background-image: linear-gradient(#352F2A, #4C3D34);">
+                    <h2>Carte</h2>
+                    <div>
+                        <div class="gmap_canvas"><iframe width="500" height="200" id="gmap_canvas " position="center "
+                                                         src="https://maps.google.com/maps?q=Universit%C3%A9%20de%20Tours&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                                         frameborder="0">
+                            </iframe>
+                            <a href="https://www.couponflat.com"></a></div>
+
+                        <style>
+                            .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+                        </style>
+                    </div>
+                </div>
+                <div class="box" style="background-image: linear-gradient(#352F2A, #4C3D34);">
+                    <h2> Nous contacter</h2>
+                    <p> <p>&copy; ABC_Legermain, Inc. Contactez nous.</p></p>
+
+                    <p>
+
+                        <a class="btn btn-social-icon btn-twitter">
+                            <span class="fa fa-twitter"></span>
+                        </a>
+                        <a class="btn btn-social-icon btn-github">
+                            <span class="fa fa-github"></span>
+                        </a>
+                        <a class="btn btn-social-icon btn-facebook">
+                            <span class="fa fa-facebook"></span>
+                        </a>
+                        <a class="btn btn-social-icon btn-youtube">
+                            <span class="fa fa-youtube"></span>
+                        </a>
+                        <a class="btn btn-social-icon btn-linkedin">
+                            <span class="fa fa-linkedin"></span>
+                        </a>
+                        <a class="social-icon" data-tooltip="adam.diakite@etu.univ-tours.fr" >
+                            <i class="fa fa-envelope" ></i>
+                        </a>
+                    </p>
+
+                    <p>Zone artisanale</p>
+                    <p>72140 Rouez en Champagne</p>
+                    <p>02 47 36 70 34</p>
+
+                </div>
+            </div>
+            <div class="footer-copyright text-center py-3" style="background-color:black; height:200px" >© 2019 Copyright: Bob Morane Inc.
+                <a href="https://mdbootstrap.com/education/bootstrap/"></a>
+                <p>Développé par : Adam Diakité, Delal Seletli, Christian Mada-Mbari et Sidney Sargent</p>
+                <p></p>
+            </div>
+            <footer style="display:flex background-color:#3B2E25;">
+
+                <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+                <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+                <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <!------ Include the above in your HEAD tag ---------->
+
+                <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+                <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    </body>
+    </html>
+{% endblock %}
+
+ {% block javascripts %}
+     {{ encore_entry_script_tags('accueil') }}
+     <script>
+
+     </script>
+ {% endblock %}
