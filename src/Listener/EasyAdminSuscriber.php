@@ -27,7 +27,7 @@ class EasyAdminSuscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-          EasyAdminEvents::POST_SHOW => array('preEdit'), EasyAdminEvents::PRE_UPDATE => array('preUpdate'),EasyAdminEvents::PRE_PERSIST =>array('prePersit')
+          EasyAdminEvents::POST_SHOW => array('preEdit'), EasyAdminEvents::PRE_UPDATE => array('preUpdate')
         );
     }
 

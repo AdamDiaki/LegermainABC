@@ -1,5 +1,15 @@
 
+.card-text{
+    display: -webkit-box;
 
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+
+
+}
 .rose{
     color: #FFA84A;
 }
