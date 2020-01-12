@@ -8,6 +8,10 @@
 
     {{ encore_entry_link_tags('realisation') }}
 
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+
 
     <html lang="en">
     <head>
@@ -88,6 +92,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+
         </div>
 
 
@@ -107,7 +112,10 @@
                                 <h2 class="card-title" style="text-align: center">
                                     <a href="{{ path('article_show',{'id':article.id}) }}">{{ article.title }}</a>
                                 </h2>
-                                <p class="lead card-text" style="text-align: justify">{{ article.content }}</p>
+                                <div class="lead card-text">
+                                    <p class="lead card-text " style="text-align: justify">{{ article.content | raw() }}</p>
+
+                                </div>
                                 <div class="button">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>
@@ -120,7 +128,6 @@
             </div>
 
         {% endfor %}
-
 
     </main>
 
