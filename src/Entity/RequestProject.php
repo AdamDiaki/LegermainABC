@@ -27,21 +27,32 @@ class RequestProject
     private $content;
 
 
-
     /**
      * @ORM\Column(type="boolean")
      */
-    private $contacted;
+    private $contacted = false;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="requestProjects")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="requestProjects")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $user;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $saw;
 
     /**
      * @return int|null
@@ -66,6 +77,7 @@ class RequestProject
     public function setTitle(string $title): self
     {
         $this->title = $title;
+        $this->createdAt = new \DateTime( 'now' );
 
         return $this;
     }
@@ -88,7 +100,6 @@ class RequestProject
 
         return $this;
     }
-
 
 
     /**
@@ -145,6 +156,30 @@ class RequestProject
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getSaw(): ?bool
+    {
+        return $this->saw;
+    }
+
+    public function setSaw(bool $saw): self
+    {
+        $this->saw = $saw;
 
         return $this;
     }

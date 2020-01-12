@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\AccueilImage;
+use App\Entity\ArticleImages;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
- * @method AccueilImage|null find($id, $lockMode = null, $lockVersion = null)
- * @method AccueilImage|null findOneBy(array $criteria, array $orderBy = null)
- * @method AccueilImage[]    findAll()
- * @method AccueilImage[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method ArticleImages|null find($id, $lockMode = null, $lockVersion = null)
+ * @method ArticleImages|null findOneBy(array $criteria, array $orderBy = null)
+ * @method ArticleImages[]    findAll()
+ * @method ArticleImages[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AccueilImageRepository extends ServiceEntityRepository
+class ArticleImagesRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, AccueilImage::class);
+        parent::__construct($registry, ArticleImages::class);
     }
 
     // /**
-    //  * @return AccueilImage[] Returns an array of AccueilImage objects
+    //  * @return ArticleImages[] Returns an array of ArticleImages objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class AccueilImageRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?AccueilImage
+    public function findOneBySomeField($value): ?ArticleImages
     {
         return $this->createQueryBuilder('a')
             ->andWhere('a.exampleField = :val')

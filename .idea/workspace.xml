@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="">
+    <list default="true" id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="improve charpente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/charpente.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/charpente.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/charpente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/charpente.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/sign.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/sign.html.twig" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <phar pharPath="C:\composer\composer.phar" interpreterId="b2a77fd7-c784-4937-9a25-7258fde41787" />
     </execution>
   </component>
   <component name="DatabaseView">
@@ -30,8 +35,17 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -149,27 +163,46 @@
       <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
-      <path value="$PROJECT_DIR$/vendor/captcha-com/captcha" />
-      <path value="$PROJECT_DIR$/vendor/captcha-com/symfony-captcha-bundle" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1VFDcJ3RN9NHQEbqwhqPpmBQPM7" />
+  <component name="ProjectId" id="1UQ2FN5sZwC5RRkzK3IA9f5cqzG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="yarn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\public\uploads\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos\labels" />
+      <recent name="C:\Users\Christian Mada-Mbari\PhpstormProjects\ABC_Legermain\logos" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -179,19 +212,38 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5efebee3-93e6-4073-a9c0-9402d5ac8934" name="Default Changelist" comment="" />
-      <created>1576840027280</created>
+      <created>1575274393341</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576840027280</updated>
-      <workItem from="1576840028478" duration="790000" />
-      <workItem from="1578832356342" duration="494000" />
+      <updated>1575274393341</updated>
+      <workItem from="1575274476836" duration="12352000" />
+      <workItem from="1575357269461" duration="10282000" />
+      <workItem from="1575409582755" duration="2827000" />
+      <workItem from="1575412929991" duration="2807000" />
+      <workItem from="1575444342982" duration="31254000" />
+      <workItem from="1575619063984" duration="10696000" />
+      <workItem from="1575841554327" duration="4359000" />
+      <workItem from="1575875608974" duration="12813000" />
+      <workItem from="1575921231317" duration="8859000" />
+      <workItem from="1575972137727" duration="1117000" />
+      <workItem from="1575981496547" duration="4827000" />
+      <workItem from="1576064212671" duration="16255000" />
+      <workItem from="1576140307043" duration="22356000" />
+      <workItem from="1576221459673" duration="9668000" />
+      <workItem from="1576433426448" duration="8753000" />
+      <workItem from="1576481342445" duration="15603000" />
+      <workItem from="1576568774958" duration="8300000" />
+      <workItem from="1576614021120" duration="7828000" />
+      <workItem from="1576655843822" duration="21526000" />
+      <workItem from="1576768051317" duration="6124000" />
+      <workItem from="1576827908454" duration="371000" />
     </task>
-    <task id="LOCAL-00001" summary="jhojl">
-      <created>1576840557777</created>
+    <task id="LOCAL-00001" summary="improve charpente">
+      <created>1576484841550</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1576840557777</updated>
+      <updated>1576484841550</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -213,7 +265,99 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="jhojl" />
-    <option name="LAST_COMMIT_MESSAGE" value="jhojl" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="improve charpente.html.twig" />
+    <MESSAGE value="improve charpente" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve charpente" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="19" key="#File_Watchers" timestamp="1576223887943">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="233" y="19" key="#File_Watchers/0.0.1280.720@0.0.1280.720" timestamp="1576223887943" />
+    <state x="0" y="393" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1575413064519">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="0" y="393" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1280.720@0.0.1280.720" timestamp="1575413064519" />
+    <state x="420" y="85" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1576223107470">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="420" y="85" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.720@0.0.1280.720" timestamp="1576223107470" />
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1576678736528">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="416" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1576678736528" />
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575881455953">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="336" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.720@0.0.1280.720" timestamp="1575881455953" />
+    <state x="371" y="107" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576222170631">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="371" y="107" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.720@0.0.1280.720" timestamp="1576222170631" />
+    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575925572766">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="341" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575925572766" />
+    <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1576488208215">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="251" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1576488208215" />
+    <state x="309" y="139" width="661" height="481" key="EditFileWatcherDialog" timestamp="1576223885489">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="309" y="139" width="661" height="481" key="EditFileWatcherDialog/0.0.1280.720@0.0.1280.720" timestamp="1576223885489" />
+    <state x="391" y="172" key="FileChooserDialogImpl" timestamp="1576656302155">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="391" y="172" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1576656302155" />
+    <state width="1237" height="176" key="GridCell.Tab.0.bottom" timestamp="1576020460372">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="176" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1576020460372" />
+    <state width="1237" height="176" key="GridCell.Tab.0.center" timestamp="1576020460372">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="176" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1576020460372" />
+    <state width="1237" height="176" key="GridCell.Tab.0.left" timestamp="1576020460372">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="176" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1576020460372" />
+    <state width="1237" height="176" key="GridCell.Tab.0.right" timestamp="1576020460372">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="176" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1576020460372" />
+    <state x="142" y="3" key="SettingsEditor" timestamp="1576222725934">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="142" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1576222725934" />
+    <state width="746" height="446" key="SwitcherDM" timestamp="1575415048823">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="746" height="446" key="SwitcherDM/0.0.1280.720@0.0.1280.720" timestamp="1575415048823" />
+    <state x="233" y="93" key="Vcs.Push.Dialog.v2" timestamp="1576488275883">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="233" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1576488275883" />
+    <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1575410129065">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="93" y="93" width="1095" height="535" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575410129065" />
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1576827948035">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="337" y="184" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1576827948035" />
+    <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575902973096">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="450" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1575902973096" />
+    <state x="281" y="87" width="700" height="530" key="recent.locations.popup" timestamp="1575411601943">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="281" y="87" width="700" height="530" key="recent.locations.popup/0.0.1280.720@0.0.1280.720" timestamp="1575411601943" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1576678201156">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1576678201156" />
   </component>
 </project>

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExportController!{% endblock %}
+
+{% block body %}
+
+    <div align="center" class="container mt-4">
+        <div  style=" height: 300px; width: 300px" class="card mb-4">
+            <img class="card-img-top" src="{{ vCard.get(200) }}'" alt="QR Code" />
+        </div>
+        <div class="card-body">
+            <p><a class="btn btn-lg btn-success" href="/admin/?action=list&entity=Devis" role="button">Liste des devis</a></p>
+        </div>
+    </div>
+{% endblock %}

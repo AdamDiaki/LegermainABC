@@ -28,6 +28,7 @@ class Actuality
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="actualities")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $image;
 
@@ -77,7 +78,7 @@ class Actuality
      */
     public function __toString()
     {
-        return $this->id.' : '.$this->tilte;
+        return $this->id . ' : ' . $this->tilte;
     }
 
 

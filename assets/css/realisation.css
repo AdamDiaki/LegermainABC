@@ -1,0 +1,16 @@
+.card-text{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+
+
+.button {
+    text-align: right;
+}
+h2{
+    color: black;
+}

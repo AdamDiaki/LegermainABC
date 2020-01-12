@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
@@ -14,6 +15,9 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class Image
 {
+
+
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -41,22 +45,24 @@ class Image
      */
     private $actualities;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\BackgroundImage", inversedBy="images")
-     */
-    private $backgroundImage;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="image")
+     * @ORM\OneToMany(targetEntity="App\Entity\ArticleImages", mappedBy="image")
      */
-    private $articles;
+    private $articleImages;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $accueil;
+
 
     public function __construct()
     {
         $this->actualities = new ArrayCollection();
         $this->articles = new ArrayCollection();
+        $this->articleImages = new ArrayCollection();
     }
-
 
 
     /**
@@ -87,9 +93,6 @@ class Image
     }
 
 
-
-
-
     /**
      * @return File
      */
@@ -115,7 +118,7 @@ class Image
      */
     public function __toString()
     {
-        return $this->id . ' : ' . $this->getLink();
+        return "uploads/images/articles/$this->link";
     }
 
     /**
@@ -147,9 +150,9 @@ class Image
 
     public function addActuality(Actuality $actuality): self
     {
-        if (!$this->actualities->contains($actuality)) {
+        if (!$this->actualities->contains( $actuality )) {
             $this->actualities[] = $actuality;
-            $actuality->setImage($this);
+            $actuality->setImage( $this );
         }
 
         return $this;
@@ -157,60 +160,60 @@ class Image
 
     public function removeActuality(Actuality $actuality): self
     {
-        if ($this->actualities->contains($actuality)) {
-            $this->actualities->removeElement($actuality);
+        if ($this->actualities->contains( $actuality )) {
+            $this->actualities->removeElement( $actuality );
             // set the owning side to null (unless already changed)
             if ($actuality->getImage() === $this) {
-                $actuality->setImage(null);
+                $actuality->setImage( null );
             }
         }
 
         return $this;
     }
 
-    public function getBackgroundImage(): ?BackgroundImage
-    {
-        return $this->backgroundImage;
-    }
-
-    public function setBackgroundImage(?BackgroundImage $backgroundImage): self
-    {
-        $this->backgroundImage = $backgroundImage;
-
-        return $this;
-    }
 
     /**
-     * @return Collection|Article[]
+     * @return Collection|ArticleImages[]
      */
-    public function getArticles(): Collection
+    public function getArticleImages(): Collection
     {
-        return $this->articles;
+        return $this->articleImages;
     }
 
-    public function addArticle(Article $article): self
+    public function addArticleImage(ArticleImages $articleImage): self
     {
-        if (!$this->articles->contains($article)) {
-            $this->articles[] = $article;
-            $article->setImage($this);
+        if (!$this->articleImages->contains( $articleImage )) {
+            $this->articleImages[] = $articleImage;
+            $articleImage->setImage( $this );
         }
 
         return $this;
     }
 
-    public function removeArticle(Article $article): self
+    public function removeArticleImage(ArticleImages $articleImage): self
     {
-        if ($this->articles->contains($article)) {
-            $this->articles->removeElement($article);
+        if ($this->articleImages->contains( $articleImage )) {
+            $this->articleImages->removeElement( $articleImage );
             // set the owning side to null (unless already changed)
-            if ($article->getImage() === $this) {
-                $article->setImage(null);
+            if ($articleImage->getImage() === $this) {
+                $articleImage->setImage( null );
             }
         }
 
         return $this;
     }
 
+    public function getAccueil(): ?bool
+    {
+        return $this->accueil;
+    }
+
+    public function setAccueil(bool $accueil): self
+    {
+        $this->accueil = $accueil;
+
+        return $this;
+    }
 
 
 

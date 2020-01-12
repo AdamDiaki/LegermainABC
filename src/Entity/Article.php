@@ -35,15 +35,19 @@ class Article
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Image", inversedBy="articles")
+     * @ORM\OneToMany(targetEntity="App\Entity\ArticleImages", mappedBy="article")
      */
-    private $image;
+    private $articleImages;
 
-
+    public function __construct()
+    {
+        $this->articleImages = new ArrayCollection();
+    }
 
 
     /**
@@ -69,6 +73,7 @@ class Article
     public function setTitle(string $title): self
     {
         $this->title = $title;
+        $this->createdAt = new \DateTime( 'now' );
 
         return $this;
     }
@@ -136,18 +141,42 @@ class Article
      */
     public function __toString()
     {
-        return $this->id . ' : ' . $this->title;
+
+        return $this->id . ' : ' . $this->title . '';
+
+
     }
 
-    public function getImage(): ?Image
+    /**
+     * @return Collection|ArticleImages[]
+     */
+    public function getArticleImages(): Collection
     {
-        return $this->image;
+        return $this->articleImages;
     }
 
-    public function setImage(?Image $image): self
+    public function addArticleImage(ArticleImages $articleImage): self
     {
-        $this->image = $image;
+        if (!$this->articleImages->contains( $articleImage )) {
+            $this->articleImages[] = $articleImage;
+            $articleImage->setArticle( $this );
+        }
 
         return $this;
     }
+
+    public function removeArticleImage(ArticleImages $articleImage): self
+    {
+        if ($this->articleImages->contains( $articleImage )) {
+            $this->articleImages->removeElement( $articleImage );
+            // set the owning side to null (unless already changed)
+            if ($articleImage->getArticle() === $this) {
+                $articleImage->setArticle( null );
+            }
+        }
+
+        return $this;
+    }
+
+
 }
