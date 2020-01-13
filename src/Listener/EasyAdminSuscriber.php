@@ -8,9 +8,16 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\EventDispatcher\GenericEvent;
 
 
+/**
+ * Class EasyAdminSuscriber
+ * @package App\Listener
+ */
 class EasyAdminSuscriber implements EventSubscriberInterface
 {
 
+    /**
+     * @var \Swift_Mailer
+     */
     private $mailer;
 
     /**
@@ -22,8 +29,9 @@ class EasyAdminSuscriber implements EventSubscriberInterface
     }
 
 
-
-
+    /**
+     * @return array
+     */
     public static function getSubscribedEvents()
     {
         return array(
@@ -32,6 +40,10 @@ class EasyAdminSuscriber implements EventSubscriberInterface
     }
 
 
+    /**
+     * Permet d'envoyer un message au client quand l'arisan consulte sa demande
+     * @param GenericEvent $event
+     */
     public function preEdit(GenericEvent $event ){
         $entity = $event->getSubject();
 
@@ -53,6 +65,10 @@ class EasyAdminSuscriber implements EventSubscriberInterface
         $entity->setSaw(true);
     }
 
+    /**
+     * Permet d'envoyer un message au client quand l'arisan consulte sa demande  
+     * @param GenericEvent $event
+     */
     public function preUpdate(GenericEvent $event){
         $entity = $event->getSubject();
 

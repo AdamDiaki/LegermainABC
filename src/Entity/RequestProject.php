@@ -148,11 +148,18 @@ class RequestProject
         return $this->id . ' : ' . $this->title;
     }
 
+    /**
+     * @return User|null
+     */
     public function getUser(): ?User
     {
         return $this->user;
     }
 
+    /**
+     * @param User|null $user
+     * @return $this
+     */
     public function setUser(?User $user): self
     {
         $this->user = $user;
@@ -160,11 +167,18 @@ class RequestProject
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
     }
 
+    /**
+     * @param \DateTimeInterface $createdAt
+     * @return $this
+     */
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
@@ -172,11 +186,18 @@ class RequestProject
         return $this;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getSaw(): ?bool
     {
         return $this->saw;
     }
 
+    /**
+     * @param bool $saw
+     * @return $this
+     */
     public function setSaw(bool $saw): self
     {
         $this->saw = $saw;

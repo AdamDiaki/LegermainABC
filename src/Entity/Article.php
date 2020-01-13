@@ -44,6 +44,9 @@ class Article
      */
     private $articleImages;
 
+    /**
+     * Article constructor.
+     */
     public function __construct()
     {
         $this->articleImages = new ArrayCollection();
@@ -155,6 +158,10 @@ class Article
         return $this->articleImages;
     }
 
+    /**
+     * @param ArticleImages $articleImage
+     * @return $this
+     */
     public function addArticleImage(ArticleImages $articleImage): self
     {
         if (!$this->articleImages->contains( $articleImage )) {
@@ -165,6 +172,10 @@ class Article
         return $this;
     }
 
+    /**
+     * @param ArticleImages $articleImage
+     * @return $this
+     */
     public function removeArticleImage(ArticleImages $articleImage): self
     {
         if ($this->articleImages->contains( $articleImage )) {

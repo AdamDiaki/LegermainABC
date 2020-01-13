@@ -29,25 +29,32 @@ class ArticleImages
     private $image;
 
 
-
-
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return Article|null
+     */
     public function getArticle(): ?Article
     {
         return $this->article;
     }
 
+    /**
+     * @param Article|null $article
+     * @return $this
+     */
     public function setArticle(?Article $article): self
     {
         $this->article = $article;
 
         return $this;
     }
-
 
 
     /**
@@ -58,11 +65,18 @@ class ArticleImages
         return $this->image . '';
     }
 
+    /**
+     * @return Image|null
+     */
     public function getImage(): ?Image
     {
         return $this->image;
     }
 
+    /**
+     * @param Image $image
+     * @return $this
+     */
     public function setImage(Image $image): self
     {
         $this->image = $image;

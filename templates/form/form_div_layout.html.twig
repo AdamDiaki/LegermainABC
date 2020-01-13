@@ -78,7 +78,8 @@
 {%- block choice_widget_options -%}
     {% for group_label, choice in options %}
         {%- if choice is iterable -%}
-            <optgroup label="{{ choice_translation_domain is same as(false) ? group_label : group_label|trans({}, choice_translation_domain) }}">
+            <optgroup
+                    label="{{ choice_translation_domain is same as(false) ? group_label : group_label|trans({}, choice_translation_domain) }}">
                 {% set options = choice %}
                 {{- block('choice_widget_options') -}}
             </optgroup>
@@ -143,24 +144,38 @@
             <table class="{{ table_class|default('') }}" role="presentation">
                 <thead>
                 <tr>
-                    {%- if with_years %}<th>{{ form_label(form.years) }}</th>{% endif -%}
-                    {%- if with_months %}<th>{{ form_label(form.months) }}</th>{% endif -%}
-                    {%- if with_weeks %}<th>{{ form_label(form.weeks) }}</th>{% endif -%}
-                    {%- if with_days %}<th>{{ form_label(form.days) }}</th>{% endif -%}
-                    {%- if with_hours %}<th>{{ form_label(form.hours) }}</th>{% endif -%}
-                    {%- if with_minutes %}<th>{{ form_label(form.minutes) }}</th>{% endif -%}
-                    {%- if with_seconds %}<th>{{ form_label(form.seconds) }}</th>{% endif -%}
+                    {%- if with_years %}
+                        <th>{{ form_label(form.years) }}</th>{% endif -%}
+                    {%- if with_months %}
+                        <th>{{ form_label(form.months) }}</th>{% endif -%}
+                    {%- if with_weeks %}
+                        <th>{{ form_label(form.weeks) }}</th>{% endif -%}
+                    {%- if with_days %}
+                        <th>{{ form_label(form.days) }}</th>{% endif -%}
+                    {%- if with_hours %}
+                        <th>{{ form_label(form.hours) }}</th>{% endif -%}
+                    {%- if with_minutes %}
+                        <th>{{ form_label(form.minutes) }}</th>{% endif -%}
+                    {%- if with_seconds %}
+                        <th>{{ form_label(form.seconds) }}</th>{% endif -%}
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    {%- if with_years %}<td>{{ form_widget(form.years) }}</td>{% endif -%}
-                    {%- if with_months %}<td>{{ form_widget(form.months) }}</td>{% endif -%}
-                    {%- if with_weeks %}<td>{{ form_widget(form.weeks) }}</td>{% endif -%}
-                    {%- if with_days %}<td>{{ form_widget(form.days) }}</td>{% endif -%}
-                    {%- if with_hours %}<td>{{ form_widget(form.hours) }}</td>{% endif -%}
-                    {%- if with_minutes %}<td>{{ form_widget(form.minutes) }}</td>{% endif -%}
-                    {%- if with_seconds %}<td>{{ form_widget(form.seconds) }}</td>{% endif -%}
+                    {%- if with_years %}
+                        <td>{{ form_widget(form.years) }}</td>{% endif -%}
+                    {%- if with_months %}
+                        <td>{{ form_widget(form.months) }}</td>{% endif -%}
+                    {%- if with_weeks %}
+                        <td>{{ form_widget(form.weeks) }}</td>{% endif -%}
+                    {%- if with_days %}
+                        <td>{{ form_widget(form.days) }}</td>{% endif -%}
+                    {%- if with_hours %}
+                        <td>{{ form_widget(form.hours) }}</td>{% endif -%}
+                    {%- if with_minutes %}
+                        <td>{{ form_widget(form.minutes) }}</td>{% endif -%}
+                    {%- if with_seconds %}
+                        <td>{{ form_widget(form.seconds) }}</td>{% endif -%}
                 </tr>
                 </tbody>
             </table>
@@ -370,9 +385,10 @@
     {%- else -%}
         {% set form_method = "POST" %}
     {%- endif -%}
-<form{% if name != '' %} name="{{ name }}"{% endif %} method="{{ form_method|lower }}"{% if action != '' %} action="{{ action }}"{% endif %}{{ block('attributes') }}{% if multipart %} enctype="multipart/form-data"{% endif %}>
+<form{% if name != '' %} name="{{ name }}"{% endif %}
+        method="{{ form_method|lower }}"{% if action != '' %} action="{{ action }}"{% endif %}{{ block('attributes') }}{% if multipart %} enctype="multipart/form-data"{% endif %}>
     {%- if form_method != method -%}
-        <input type="hidden" name="_method" value="{{ method }}" />
+        <input type="hidden" name="_method" value="{{ method }}"/>
     {%- endif -%}
     {%- endblock form_start -%}
 
@@ -410,7 +426,7 @@
         {%- endif -%}
 
         {%- if form_method != method -%}
-            <input type="hidden" name="_method" value="{{ method }}" />
+            <input type="hidden" name="_method" value="{{ method }}"/>
         {%- endif -%}
     {% endif -%}
 {% endblock form_rest %}

@@ -193,6 +193,10 @@ class Category
         return $this->backgroundImages;
     }
 
+    /**
+     * @param BackgroundImage $backgroundImage
+     * @return $this
+     */
     public function addBackgroundImage(BackgroundImage $backgroundImage): self
     {
         if (!$this->backgroundImages->contains( $backgroundImage )) {
@@ -203,6 +207,10 @@ class Category
         return $this;
     }
 
+    /**
+     * @param BackgroundImage $backgroundImage
+     * @return $this
+     */
     public function removeBackgroundImage(BackgroundImage $backgroundImage): self
     {
         if ($this->backgroundImages->contains( $backgroundImage )) {

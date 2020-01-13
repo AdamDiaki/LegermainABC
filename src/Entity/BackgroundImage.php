@@ -30,17 +30,27 @@ class BackgroundImage
     private $image;
 
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
 
+    /**
+     * @return Category|null
+     */
     public function getCategory(): ?Category
     {
         return $this->category;
     }
 
+    /**
+     * @param Category|null $category
+     * @return $this
+     */
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
@@ -56,11 +66,18 @@ class BackgroundImage
         return $this->id . '';
     }
 
+    /**
+     * @return Image|null
+     */
     public function getImage(): ?Image
     {
         return $this->image;
     }
 
+    /**
+     * @param Image $image
+     * @return $this
+     */
     public function setImage(Image $image): self
     {
         $this->image = $image;

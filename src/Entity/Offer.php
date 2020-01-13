@@ -67,7 +67,7 @@ class Offer
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\OfferType", inversedBy="offers")
-     *@ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $offerType;
 
@@ -279,11 +279,18 @@ class Offer
         return $this;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getAccepted(): ?bool
     {
         return $this->accepted;
     }
 
+    /**
+     * @param bool $accepted
+     * @return $this
+     */
     public function setAccepted(bool $accepted): self
     {
         $this->accepted = $accepted;
@@ -300,7 +307,6 @@ class Offer
         return $this->id . ' : ' . $this->title;
 
     }
-
 
 
 }

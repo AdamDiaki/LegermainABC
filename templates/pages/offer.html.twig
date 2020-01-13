@@ -9,9 +9,11 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="first-slide" style="width: 100%; height: 670px" src="{{ asset('http://www.gsfdcy.com/data/img/34/1510311-furniture-wallpaper.jpg') }}" alt="Offres d'emplois">
+                <img class="first-slide" style="width: 100%; height: 670px;opacity: 0.8"
+                     src="{{ asset('uploads/images/articles/5ded79b4dea32143048959.jpg') }}" alt="Offres d'emplois">
                 <div class="container">
-                    <div class="carousel-caption text-center" style="top : 110px;height: 60%;background-color: rgba(0,0,0,0.6)">
+                    <div class="carousel-caption text-center"
+                         style="top : 110px;height: 60%;background-color: rgba(0,0,0,0.6)">
                         <div>
                             <h1 style="font-size: 150px;color: rgba(255,168,74,1)">Nos offres d'emplois</h1>
                         </div>
@@ -34,13 +36,16 @@
                                 <div id="OfferModal{{ loop.index }}" class="modal">
                                     <div class="modal-content">
                                         <p style="font-size: 200%">{{ offre.title }}</p>
-                                        <div id="OfferContent" class="card">{{ offre.content | raw}}</div>
+                                        <div id="OfferContent" class="card">{{ offre.content | raw }}</div>
                                         <br/>
-                                        <p align="left"> Addresse :{{ offre.address}}</p>
-                                        <p align="left"> Du :{{ offre.beginAt | date('d/m/Y')}} au :{{ offre.endAt | date('d/m/Y') }}</p>
-                                        <p align="left">Offre d'emploi créé le :{{ offre.createdAt | date('d/m/Y') }}</p>
+                                        <p align="left"> Addresse :{{ offre.address }}</p>
+                                        <p align="left"> Du :{{ offre.beginAt | date('d/m/Y') }} au
+                                            :{{ offre.endAt | date('d/m/Y') }}</p>
+                                        <p align="left">Offre d'emploi créé le
+                                            :{{ offre.createdAt | date('d/m/Y') }}</p>
                                         <p align="left">Salaire :{{ offre.hourlyWage }}</p>
-                                        <button id="BtnCandidate{{ loop.index }}" class="btn btn-success">Postuler</button>
+                                        <button id="BtnCandidate{{ loop.index }}" class="btn btn-success">Postuler
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -79,24 +84,24 @@
          btnCandidate{{ loop.index }}.onclick = function () {
              modal{{ loop.index }}.style.display = "none";
              modalCandidate.style.display = "block";
-             document.getElementById("CandidateTitle").innerHTML="Remplissez le formulaire pour l'offre :{{ offre.title }} !";
+             document.getElementById("CandidateTitle").innerHTML = "Remplissez le formulaire pour l'offre :{{ offre.title }} !";
              document.getElementById("offer_form_offerId").value = {{ offre.id }};
              document.getElementById("offer_form_offerId").style.display = "none";
              var offre = document.getElementById("offer_form_offerId").value;
              console.log(offre);
          };
-         document.onkeydown = function(event){
+         document.onkeydown = function (event) {
              console.log(event.key);
-             if(event.key === "Escape"){
+             if (event.key === "Escape") {
                  openModal.style.display = "none";
                  modalCandidate.style.display = "none";
              }
          }
-         window.onclick = function(event) {
+         window.onclick = function (event) {
              if (event.target === openModal) {
                  openModal.style.display = "none";
              }
-             if(event.target === modalCandidate) {
+             if (event.target === modalCandidate) {
                  modalCandidate.style.display = "none";
              }
          };

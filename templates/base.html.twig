@@ -19,38 +19,36 @@
 <nav class="navbar  navbar-default navbar-fixed-top fixed-top  navbar-expand-lg navbar-dark bg-primary">
 
 
-
-    <a  class="navbar-brand mt-1 " href="/">
-        <img  style="height: 100px" src="{{ asset('uploads/images/logos/Logocomplet.png') }}" alt="">
+    <a class="navbar-brand mt-1  " href="/">
+        <img style="height: 100px" src="{{ asset('uploads/images/logos/Logocomplet.png') }}" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mx-4">
             <li class="nav-item mx-4">
-                <a class="nav-link" href="{{ path('charpente') }}">Charpente|</a>
+                <a class="nav-link" href="{{ path('charpente') }}">Charpente</a>
             </li>
             <li class="nav-item mx-4">
-                <a class="nav-link" href="{{ path('couverture') }}">Couverture|</a>
+                <a class="nav-link" href="{{ path('couverture') }}">Couverture</a>
             </li>
             <li class="nav-item mx-4">
-                <a class="nav-link" href="{{ path('ouvrage') }}">Ouvrages spécifiques|</a>
+                <a class="nav-link" href="{{ path('ouvrage') }}">Ouvrages spécifiques</a>
             </li>
 
 
         </ul>
-        <ul  class="navbar-nav  ml-4">
-            <li  class="nav-item mx-5">
-                <a class="nav-link" href="{{ path('requestCont') }}">Devis|</a>
+        <ul class="navbar-nav  ml-4">
+            <li class="nav-item ml-5">
+                <a class="nav-link" href="{{ path('requestCont') }}">Devis</a>
             </li>
         </ul>
 
     </div>
 </nav>
 <div style="margin-top: 77px" class="sidebarre fixed-top"></div>
-
-
 
 
 <div class="Container">
@@ -80,12 +78,25 @@
                     <p class="lead">
 
                     <div class="mapouter" width="100%" position="right">
-                        <div class="gmap_canvas"><iframe width="520" height="370" id="gmap_canvas " position="center"
-                                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.2139544146044!2d-0.1192412844606115!3d48.14468027922399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4809d3c8d4f3a645%3A0x7fbb5592ea0f8ee7!2sABCLEROYER!5e0!3m2!1sfr!2sfr!4v1578918036373!5m2!1sfr!2sfr"
-                                                         frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" marginleft="50">
-                            </iframe><a href="https://www.couponflat.com"></a></div>
-                        <style>.mapouter{position:relative;text-align:left;height:400px;width:400px;}
-                            .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+                        <div class="gmap_canvas">
+                            <iframe width="520" height="370" id="gmap_canvas " position="center"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.2139544146044!2d-0.1192412844606115!3d48.14468027922399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4809d3c8d4f3a645%3A0x7fbb5592ea0f8ee7!2sABCLEROYER!5e0!3m2!1sfr!2sfr!4v1578918036373!5m2!1sfr!2sfr"
+                                    frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" marginleft="50">
+                            </iframe>
+                            <a href="https://www.couponflat.com"></a></div>
+                        <style>.mapouter {
+                                position: relative;
+                                text-align: left;
+                                height: 400px;
+                                width: 400px;
+                            }
+
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 500px;
+                                width: 600px;
+                            }
                         </style>
                     </div>
                     </p>
@@ -97,16 +108,13 @@
 
 
                 <!-- Grid column -->
-                <div style="font-size: 25px" class="col-md-6 mx-auto" >
+                <div style="font-size: 25px" class="col-md-6 mx-auto">
 
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4"> Nous contacter</h5>
                     <p>&copy; ABC_Legermain, Inc. Contactez nous.</p>
 
-                    <p >
-
-
-
+                    <p>
 
 
                         <a class="btn1  mx-1" data-tooltip="LinkedIn" href="https://www.linkedin.com/company/colorlib">
@@ -127,10 +135,6 @@
                         </a>
 
 
-
-
-
-
                     </p>
 
                     <!-- Links -->
@@ -146,14 +150,14 @@
             </div>
 
 
-
         </div>
         <hr>
 
         <div class="carrieres ">
             <!-- Grid row -->
-            <p class="lead font-weight-bold text-uppercase"> Voulez-vous façonner à nos côtés des oeuvres artisanales ?</p>
-            <p >
+            <p class="lead font-weight-bold text-uppercase"> Voulez-vous façonner à nos côtés des oeuvres artisanales
+                ?</p>
+            <p>
                 <a class="btn btn-lg btn-success" href="{{ path('offre') }}" class="btn btn-success">Postuler ></a>
             </p>
         </div>
@@ -164,11 +168,17 @@
 
         <!-- Social buttons -->
         <!-- Social buttons -->
-        <div class="social" align="center"style="font-size: 40px">
+        <div class="social" align="center" style="font-size: 40px">
             <div class="container mb-3">
-                <img class="mx-4" src="{{ asset('uploads/images/logos/labels/logo-maitreartisan.png') | imagine_filter('thumb2') }}" alt="">
-                <img class="mx-4" src="{{ asset('uploads/images/logos/labels/fondation-du-patrimoine.jpg') | imagine_filter('thumb3') }}" alt="">
-                <img class="mx-4" src="{{ asset('uploads/images/logos/labels/logo_qualibat.png') | imagine_filter('thumb3') }}" alt="">
+                <img class="mx-4"
+                     src="{{ asset('uploads/images/logos/labels/logo-maitreartisan.png') | imagine_filter('thumb2') }}"
+                     alt="">
+                <img class="mx-4"
+                     src="{{ asset('uploads/images/logos/labels/fondation-du-patrimoine.jpg') | imagine_filter('thumb3') }}"
+                     alt="">
+                <img class="mx-4"
+                     src="{{ asset('uploads/images/logos/labels/logo_qualibat.png') | imagine_filter('thumb3') }}"
+                     alt="">
 
             </div>
 

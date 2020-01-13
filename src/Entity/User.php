@@ -7,8 +7,6 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
-use Captcha\Bundle\CaptchaBundle\Validator\Constraints as CaptchaAssert;
-
 
 
 /**
@@ -69,8 +67,9 @@ class User
     private $requestProjects;
 
 
-
-
+    /**
+     * User constructor.
+     */
     public function __construct()
     {
         $this->applications = new ArrayCollection();
@@ -197,6 +196,10 @@ class User
         return $this->applications;
     }
 
+    /**
+     * @param Application $application
+     * @return $this
+     */
     public function addApplication(Application $application): self
     {
         if (!$this->applications->contains( $application )) {
@@ -207,6 +210,10 @@ class User
         return $this;
     }
 
+    /**
+     * @param Application $application
+     * @return $this
+     */
     public function removeApplication(Application $application): self
     {
         if ($this->applications->contains( $application )) {
@@ -228,6 +235,10 @@ class User
         return $this->requestProjects;
     }
 
+    /**
+     * @param RequestProject $requestProject
+     * @return $this
+     */
     public function addRequestProject(RequestProject $requestProject): self
     {
         if (!$this->requestProjects->contains( $requestProject )) {
@@ -238,6 +249,10 @@ class User
         return $this;
     }
 
+    /**
+     * @param RequestProject $requestProject
+     * @return $this
+     */
     public function removeRequestProject(RequestProject $requestProject): self
     {
         if ($this->requestProjects->contains( $requestProject )) {
@@ -250,7 +265,6 @@ class User
 
         return $this;
     }
-
 
 
 }

@@ -9,9 +9,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 
+/**
+ * Class ArticlesController
+ * @package App\Controller
+ */
 class ArticlesController extends AbstractController
 {
     /**
+     * Cette fonction permet d'accéder aux articles sur la chaprente
      * @Route("/charpente", name="charpente")
      */
     public function charpente(BackgroundImageRepository $image, ArticleRepository $repo)

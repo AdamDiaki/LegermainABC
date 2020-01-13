@@ -133,11 +133,18 @@ class Application
         return $this->id . ' : ' . $this->offer . ' : ' . $this->applicant;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getApplicationAt(): ?\DateTimeInterface
     {
         return $this->applicationAt;
     }
 
+    /**
+     * @param \DateTimeInterface $applicationAt
+     * @return $this
+     */
     public function setApplicationAt(\DateTimeInterface $applicationAt): self
     {
         $this->applicationAt = $applicationAt;
@@ -185,11 +192,18 @@ class Application
         }
     }
 
+    /**
+     * @return User|null
+     */
     public function getUser(): ?User
     {
         return $this->user;
     }
 
+    /**
+     * @param User|null $user
+     * @return $this
+     */
     public function setUser(?User $user): self
     {
         $this->user = $user;

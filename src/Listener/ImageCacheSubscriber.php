@@ -12,6 +12,10 @@ use Liip\ImagineBundle\Imagine\Cache\CacheManager;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
+/**
+ * Class ImageCacheSubscriber
+ * @package App\Listener
+ */
 class ImageCacheSubscriber implements EventSubscriber
 {
     /**
@@ -34,6 +38,10 @@ class ImageCacheSubscriber implements EventSubscriber
         $this->uploaderHelper = $uploaderHelper;
     }
 
+    /**
+     * Permet de supprimer les images en caches quand on supprime l'image
+     * @param LifecycleEventArgs $args
+     */
     public function preRemove(LifecycleEventArgs $args){
         $entity = $args->getEntity();
         if(!$entity instanceof Image){
@@ -45,6 +53,10 @@ class ImageCacheSubscriber implements EventSubscriber
 
 
     }
+
+    /** Permet de mettre à jour les images en cache quand on met à jour l'image
+     * @param PreUpdateEventArgs $args
+     */
     public function preUpdate(PreUpdateEventArgs $args){
         $entity = $args->getEntity();
         if(!$entity instanceof Image){

@@ -37,16 +37,27 @@ class Actuality
      */
     private $publishAt;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     * @return $this
+     * @throws \Exception
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -56,11 +67,18 @@ class Actuality
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getContent(): ?string
     {
         return $this->content;
     }
 
+    /**
+     * @param string $content
+     * @return $this
+     */
     public function setContent(string $content): self
     {
         $this->content = $content;
@@ -68,11 +86,18 @@ class Actuality
         return $this;
     }
 
+    /**
+     * @return Image|null
+     */
     public function getImage(): ?Image
     {
         return $this->image;
     }
 
+    /**
+     * @param Image|null $image
+     * @return $this
+     */
     public function setImage(?Image $image): self
     {
         $this->image = $image;
@@ -88,11 +113,18 @@ class Actuality
         return $this->id . ' : ' . $this->tilte;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getPublishAt(): ?\DateTimeInterface
     {
         return $this->publishAt;
     }
 
+    /**
+     * @param \DateTimeInterface $publishAt
+     * @return $this
+     */
     public function setPublishAt(\DateTimeInterface $publishAt): self
     {
         $this->publishAt = $publishAt;

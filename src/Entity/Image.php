@@ -6,8 +6,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
@@ -15,7 +15,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Image
 {
-
 
 
     /**
@@ -59,6 +58,9 @@ class Image
     private $accueil;
 
 
+    /**
+     * Image constructor.
+     */
     public function __construct()
     {
         $this->actualities = new ArrayCollection();
@@ -150,6 +152,10 @@ class Image
         return $this->actualities;
     }
 
+    /**
+     * @param Actuality $actuality
+     * @return $this
+     */
     public function addActuality(Actuality $actuality): self
     {
         if (!$this->actualities->contains( $actuality )) {
@@ -160,6 +166,10 @@ class Image
         return $this;
     }
 
+    /**
+     * @param Actuality $actuality
+     * @return $this
+     */
     public function removeActuality(Actuality $actuality): self
     {
         if ($this->actualities->contains( $actuality )) {
@@ -182,6 +192,10 @@ class Image
         return $this->articleImages;
     }
 
+    /**
+     * @param ArticleImages $articleImage
+     * @return $this
+     */
     public function addArticleImage(ArticleImages $articleImage): self
     {
         if (!$this->articleImages->contains( $articleImage )) {
@@ -192,6 +206,10 @@ class Image
         return $this;
     }
 
+    /**
+     * @param ArticleImages $articleImage
+     * @return $this
+     */
     public function removeArticleImage(ArticleImages $articleImage): self
     {
         if ($this->articleImages->contains( $articleImage )) {
@@ -205,18 +223,24 @@ class Image
         return $this;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getAccueil(): ?bool
     {
         return $this->accueil;
     }
 
+    /**
+     * @param bool $accueil
+     * @return $this
+     */
     public function setAccueil(bool $accueil): self
     {
         $this->accueil = $accueil;
 
         return $this;
     }
-
 
 
 }
