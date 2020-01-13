@@ -7,6 +7,7 @@
 
 
     {{ encore_entry_link_tags('realisation') }}
+    
 
 
 {% if articles %}
@@ -118,7 +119,7 @@
                                 {{ article.content | raw}}
 
                                 </div>
-                                <div class="button mt-2">
+                                <div class="button mt-2 mx-4">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>
                                 </div>

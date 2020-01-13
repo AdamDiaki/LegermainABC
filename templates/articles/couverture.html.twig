@@ -70,7 +70,7 @@
                                         </div>
 
                                     </div>
-                                    <p><a class="btn btn-lg btn-success" href="#" role="button">Demander un devis</a>
+                                    <p><a class="btn btn-lg btn-success" href="{{ path('requestCont') }}" role="button">Demander un devis</a>
                                     </p>
                                 </div>
                             </div>
@@ -108,11 +108,11 @@
                                 <h2 class="card-title" style="text-align: center">
                                     <a href="{{ path('article_show',{'id':article.id}) }}">{{ article.title }}</a>
                                 </h2>
-                                <div class="card-text">
+                                <div class="card-text mx-4">
                                     {{ article.content | raw }}
 
                                 </div>
-                                <div class="button mt-2">
+                                <div class="button mt-2 mx-4">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>
                                 </div>

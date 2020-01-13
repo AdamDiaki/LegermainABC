@@ -5,7 +5,6 @@
 {% block body %}
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
 
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 
 
@@ -28,19 +27,19 @@
                     <div class="carousel-caption text-left">
                         <div id="card">
                             <div class="card-body my-4">
-                                <div class="card-text">
+                                <div id="card-text ">
                                     {% if article.category == '1 : Charpente' %}
-                                        <h1>Charpentes</h1>
+                                        <h1 class="rose" style="font-size: 170px">Charpentes</h1>
                                     {% elseif article.category == '2 : Couverture' %}
-                                        <h1>Couverture</h1>
+                                        <h1 class="rose" style="font-size: 170px">Couverture</h1>
                                     {% else %}
-                                        <h1>Ouvrages spécifiques</h1>
+                                        <h1 class="rose" style="font-size: 170px">Ouvrages spécifiques</h1>
                                     {% endif %}
                                 </div>
                             </div>
                         </div>
 
-                        <p><a class="btn btn-lg btn-success" href="#" role="button">Demander un devis</a></p>
+                        <p><a class="btn btn-lg btn-success" href="{{ path('requestCont') }}" role="button">Demander un devis</a></p>
                     </div>
 
                 </div>
@@ -55,13 +54,13 @@
                             <div class="carousel-caption">
                                 <div id="card">
                                     <div class="card-body my-4">
-                                        <div class="card-text">
+                                        <div id="card-text">
                                             {% if article.category == '1 : Charpente' %}
-                                                <h1 align="center">Charpentes</h1>
+                                                <h1 class="rose" style="font-size: 170px" align="center">Charpentes</h1>
                                             {% elseif article.category == '2 : Couverture' %}
-                                                <h1 align="center">Couverture</h1>
+                                                <h1 class="rose" style="font-size: 170px" align="center">Couverture</h1>
                                             {% else %}
-                                                <h1 align="center">Ouvrages spécifiques</h1>
+                                                <h1 class="rose" style="font-size: 170px" align="center">Ouvrages spécifiques</h1>
                                             {% endif %}
                                         </div>
                                     </div>
@@ -96,15 +95,15 @@
                 </h2>
 
             </div>
-            <div class="view px-4 py-2">
+            <div class="view px-4 py-4 mx-4">
                {{ article.content | raw }}
             </div>
             {% if article.category == '1 : Charpente' %}
-                <p><a href="{{ path('charpente') }}" class="btn btn-success">Revenir aux articles de charpente</a></p>
+                <p><a href="{{ path('charpente') }}" class="btn btn-success mt-4">Revenir aux articles de charpente</a></p>
             {% elseif article.category == '2 : Couverture' %}
-                <p><a href="{{ path('couverture') }}" class="btn btn-success">Revenir aux articles de couverture</a></p>
+                <p><a href="{{ path('couverture') }}" class="btn btn-success mt-4">Revenir aux articles de couverture</a></p>
             {% else %}
-                <p><a href="{{ path('ouvrage') }}" class="btn btn-success">Revenir aux articles des ouvrages
+                <p><a href="{{ path('ouvrage') }}" class="btn btn-success mt-4">Revenir aux articles des ouvrages
                         spécifiques</a></p>
             {% endif %}
 

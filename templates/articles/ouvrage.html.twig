@@ -8,6 +8,8 @@
 
     {{ encore_entry_link_tags('realisation') }}
 
+    {% if articles %}
+
 
     <html lang="en">
     <head>
@@ -72,7 +74,7 @@
                                         </div>
 
                                     </div>
-                                    <p><a class="btn btn-lg btn-success" href="#" role="button">Demander un devis</a>
+                                    <p><a class="btn btn-lg btn-success" href="{{ path('requestCont') }}" role="button">Demander un devis</a>
                                     </p>
                                 </div>
                             </div>
@@ -93,7 +95,8 @@
             </a>
         </div>
 
-
+        <br id="clearfix w-100 d-md-none">
+        <br id="clearfix w-100 d-md-none">
 
 
 
@@ -113,11 +116,11 @@
                                 <h2 class="card-title" style="text-align: center">
                                     <a href="{{ path('article_show',{'id':article.id}) }}">{{ article.title }}</a>
                                 </h2>
-                                <div class="card-text">
+                                <div class="card-text mx-4">
                                     {{ article.content | raw() }}
 
                                 </div>
-                                <div class="button">
+                                <div class="button mt-2 mx-4">
                                     <a href="{{ path('article_show',{'id':article.id}) }}" class="btn btn-success">En
                                         savoir plus</a>
                                 </div>
@@ -138,7 +141,10 @@
 
     </html>
 
+    {% else %}
+        <h1>Désolé pour le désagrement la page n'a pas été mis à jour par l'administrateur, <strong> page indisponible </strong></h1>
 
+    {% endif %}
     {% block javascripts %}
         {{ encore_entry_script_tags('realisation') }}
     {% endblock %}
