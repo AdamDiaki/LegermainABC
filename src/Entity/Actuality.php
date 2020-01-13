@@ -32,6 +32,11 @@ class Actuality
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $publishAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -45,6 +50,8 @@ class Actuality
     public function setTitle(string $title): self
     {
         $this->title = $title;
+        $this->publishAt = new \DateTime( 'now' );
+
 
         return $this;
     }
@@ -79,6 +86,18 @@ class Actuality
     public function __toString()
     {
         return $this->id . ' : ' . $this->tilte;
+    }
+
+    public function getPublishAt(): ?\DateTimeInterface
+    {
+        return $this->publishAt;
+    }
+
+    public function setPublishAt(\DateTimeInterface $publishAt): self
+    {
+        $this->publishAt = $publishAt;
+
+        return $this;
     }
 
 

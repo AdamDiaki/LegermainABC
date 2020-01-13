@@ -27,6 +27,8 @@
         "mdb": "^0.1.0",
         "mdbootstrap": "^4.10.1",
         "modal": "^1.2.0",
+        "slick": "^1.12.2",
+        "slick-carousel": "^1.8.1",
         "util": "^0.12.1"
     }
 }

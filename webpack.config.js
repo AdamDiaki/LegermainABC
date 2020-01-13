@@ -28,6 +28,7 @@ Encore
     .addEntry('app', './assets/js/app.js')
     .addEntry('realisation', './assets/js/realisation.js')
     .addEntry('offer','./assets/js/offer.js')
+    .addEntry('accueil','./assets/js/accueil.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

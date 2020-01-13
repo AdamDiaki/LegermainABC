@@ -69,12 +69,7 @@ class User
     private $requestProjects;
 
 
-    /**
-     * @CaptchaAssert\ValidCaptcha(
-     *      message = "CAPTCHA validation failed, try again."
-     * )
-     */
-    protected $captchaCode;
+
 
     public function __construct()
     {
@@ -257,13 +252,5 @@ class User
     }
 
 
-    public function getCaptchaCode()
-    {
-        return $this->captchaCode;
-    }
 
-    public function setCaptchaCode($captchaCode)
-    {
-        $this->captchaCode = $captchaCode;
-    }
 }

@@ -51,6 +51,11 @@ easy_admin:
 
               - { entity: 'Candidatures', icon : 'business-time'}
 
+        - label: 'Actualités'
+          icon: 'newspaper'
+          children:
+            - { entity: 'Actualities', icon : 'newspaper'}
+
 
 
 
@@ -403,17 +408,17 @@ easy_admin:
           form:
             fields:
               - {type: 'group', icon: 'pencil', label: 'Images des pages d articles'}
-              - {property: 'article', label: Article}
-              - {property: 'image', label: Image}
+              - {property: 'article', label: 'Article'}
+              - {property: 'image', label: 'Image'}
           show:
             fields:
-              - {property: 'article', label: Article}
-              - {property: 'image', label: Image}
+              - {property: 'article', label: 'Article'}
+              - {property: 'image', label: 'Image'}
 
           list:
             fields:
-              - {property: 'article', label: Article}
-              - {property: 'image', label: Image}
+              - {property: 'article', label: 'Article'}
+              - {property: 'image', label: 'Image'}
             collapse_actions: true
             filters:
               - {property: 'article', label: 'Article'}
@@ -423,3 +428,35 @@ easy_admin:
               - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
 
             batch_actions: ['delete']
+
+
+        Actualities:
+          class:  App\Entity\Actuality
+          form:
+            fields:
+              - {type: 'group', icon: 'pencil', label: 'Actualités'}
+              - {property: 'title', label: 'Titre'}
+              - {property: 'content',type: 'text-editor', label: 'Image'}
+          show:
+            fields:
+              - id
+              - {property: 'title', label: 'Titre'}
+              - {property: 'content', label: 'Contenu'}
+
+          list:
+            fields:
+              - id
+              - {property: 'title', label: 'Titre'}
+              - {property: 'content', label: 'Contenu'}
+            collapse_actions: true
+            filters:
+                  - { property: 'publishAt', label: 'Publié le'}
+            actions:
+              - { name: 'edit', icon: 'pencil', css_class: 'btn btn-secondary' }
+              - { name: 'show', icon: 'eye', css_class: 'btn btn-primary' }
+              - { name: 'delete', icon: 'trash', css_class: 'btn btn-danger' }
+
+            batch_actions: ['delete']
+
+
+
