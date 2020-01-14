@@ -127,6 +127,9 @@
     "egulias/email-validator": {
         "version": "2.1.11"
     },
+    "fzaninotto/faker": {
+        "version": "v1.9.1"
+    },
     "gedmo/doctrine-extensions": {
         "version": "v2.4.38"
     },
@@ -163,6 +166,9 @@
             "./config/packages/liip_imagine.yaml",
             "./config/routes/liip_imagine.yaml"
         ]
+    },
+    "liip/test-fixtures-bundle": {
+        "version": "1.0.0"
     },
     "monolog/monolog": {
         "version": "1.25.2"

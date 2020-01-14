@@ -9,8 +9,8 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="first-slide" style="width: 100%; height: 670px;opacity: 0.8"
-                     src="{{ asset('uploads/images/articles/5ded79b4dea32143048959.jpg') }}" alt="Offres d'emplois">
+                <img class="first-slide" style="width: 100%; height: 570px"
+                     src="{{ asset('uploads/images/articles/5e1e392813029933820756.jpg') | imagine_filter('carousel') }}" alt="Offres d'emplois">
                 <div class="container">
                     <div class="carousel-caption text-center"
                          style="top : 110px;height: 60%;background-color: rgba(0,0,0,0.6)">
@@ -27,12 +27,12 @@
                     <div class="col-3">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 align="center" style="font-size: 25px;" class="card-title">
                                     <a href="#">{{ offre.title }}</a>
                                 </h5>
-                                <div class="card-text">{{ offre.content | raw }} </div>
+                                <div style="text-align: justify" class="card-text mb-4">{{ offre.content | raw }} </div>
                                 <div class="text-primary">{{ offre.createdAt|date('d/m/Y') }}</div>
-                                <button id="BtnInfo{{ loop.index }}" class="btn btn-success">Lire plus</button>
+                                <button id="BtnInfo{{ loop.index }}" class="btn btn-success mt-4">Lire plus</button>
                                 <div id="OfferModal{{ loop.index }}" class="modal">
                                     <div class="modal-content">
                                         <p style="font-size: 200%">{{ offre.title }}</p>
@@ -44,7 +44,7 @@
                                         <p align="left">Offre d'emploi créé le
                                             :{{ offre.createdAt | date('d/m/Y') }}</p>
                                         <p align="left">Salaire :{{ offre.hourlyWage }}</p>
-                                        <button id="BtnCandidate{{ loop.index }}" class="btn btn-success">Postuler
+                                        <button id="BtnCandidate{{ loop.index }}" class="btn btn-success mt-4">Postuler
                                         </button>
                                     </div>
                                 </div>

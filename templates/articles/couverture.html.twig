@@ -8,7 +8,7 @@
 
     {{ encore_entry_link_tags('realisation') }}
 
-    {% if articles %}
+    {% if images %}
         <html lang="en">
         <head>
             <meta charset="utf-8">
@@ -32,7 +32,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="first-slide" style="width: 100%; height:500px" src="{{ images[0].image }}"
+                        <img class="first-slide" style="width: 100%; height:500px" src="{{ images[0].image | imagine_filter('carousel')}}"
                              alt="First slide">
                         <div class="container">
                             <div class="carousel-caption text-left">
@@ -56,7 +56,7 @@
                     {% for image in images %}
                         {% if image != images[0] %}
                             <div class="carousel-item">
-                                <img class="second-slide" style="width: 100%; height: 500px" src="{{ image.image }}"
+                                <img class="second-slide" style="width: 100%; height: 500px" src="{{ image.image | imagine_filter('carousel') }}"
                                      alt="Second slide">
                                 <div class="container">
                                     <div class="carousel-caption">
@@ -93,8 +93,12 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <br id="clearfix w-100 d-md-none">
+    {% else %}
+        <h1 class="rose" style="margin-top: 120px" align="center">Il n'ya pas d'image dans la base de données</h1>
+    {% endif %}
+    <br id="clearfix w-100 d-md-none">
 
+    {% if articles %}
 
             {% for article in articles %}
                 <div class="container-fluid mt-5">
@@ -138,7 +142,7 @@
         </html>
 
     {% else %}
-        <h1>Désolé pour le désagrement la page n'a pas été mis à jour par l'administrateur, <strong> page
+        <h1 class="rose mb-4" style="margin-top: 120px" align="center">Désolé pour le désagrement la page n'a pas été mis à jour par l'administrateur, <strong> page
                 indisponible </strong></h1>
 
     {% endif %}

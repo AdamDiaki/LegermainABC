@@ -30,7 +30,7 @@ class Image
     private $link;
     /**
      * @Vich\UploadableField(mapping="article_images", fileNameProperty="link")
-     * @Assert\Image(mimeTypes= {"png","jpeg"})
+     * @Assert\Image(mimeTypes= {"image/png","image/jpeg","image/jpg"},mimeTypesMessage="le format de l'image n'est pas respecté, png, jpeg, jpg")
      *
      * @var File
      */
