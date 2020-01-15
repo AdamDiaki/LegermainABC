@@ -32,15 +32,6 @@ class RequestType extends AbstractType
                 'label' => 'Objet de la demande'
                 ))
 
-            /*->add('category', ChoiceType::class, array(
-                'choices' => array(
-                    'Charpente' => $cat = new Category(),
-                    'Couverture' => 2,
-                    'Ouvrages spcifiques'=> 3
-                ),
-                'label' => 'Catégories'
-            ))*/
-
             ->add('category', null, array(
                 'label' => 'Catégories',
                 'attr' => array('','style' => 'width: 500px')
