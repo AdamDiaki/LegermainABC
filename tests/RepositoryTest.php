@@ -1,14 +1,13 @@
 <?php
 namespace App\Tests;
 
-
 use App\DataFixtures\AdminFixtures;
 use App\Repository\AdminRepository;
 use App\Repository\CategoryRepository;
 use App\Repository\OfferTypeRepository;
 use App\Repository\OfferRepository;
 use App\Repository\ArticleRepository;
-use Liip\TestFixturesBundle\Test\FixturesTrait;
+
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use PHPUnit\Framework\TestCase;
 
