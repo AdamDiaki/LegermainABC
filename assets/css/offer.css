@@ -8,9 +8,12 @@
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
-    min-height: 177px;
+    height: 177px;
 }
 
+.card-body{
+    height: auto;
+}
 
 
 .modal-content {
@@ -68,6 +71,7 @@ button{
 
 #OfferContent{
     text-align: justify;
+    font-size: 20px;
 }
 
 #CandidateModal{

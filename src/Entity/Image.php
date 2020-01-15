@@ -8,10 +8,17 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
  * @Vich\Uploadable
+ * @UniqueEntity(
+ *     fields={"link"},
+ *     errorPath="link",
+ *     message="This link is already use"
+ * )
+ *
  */
 class Image
 {

@@ -5,10 +5,18 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\OfferRepository")
+ * @UniqueEntity(
+ *     fields={"title"},
+ *     errorPath="title",
+ *     message="This title is already use"
+ * )
  */
 class Offer
 {
@@ -22,6 +30,7 @@ class Offer
 
     /**
      * @ORM\Column(type="string", length=255)
+     *  @Assert\Length(min="2",max="34",minMessage="titre doit comporter aumoins deux caractères", maxMessage="titre doit comporter moins de 34 caractères")
      */
     private $title;
 

@@ -36,6 +36,7 @@
                                 <div id="OfferModal{{ loop.index }}" class="modal">
                                     <div class="modal-content">
                                         <p style="font-size: 200%">{{ offre.title }}</p>
+                                        <p align="left">Contrat : {{ offre.offerType }}</p>
                                         <div id="OfferContent" class="card">{{ offre.content | raw }}</div>
                                         <br/>
                                         <p align="left"> Addresse :{{ offre.address }}</p>
@@ -43,7 +44,7 @@
                                             :{{ offre.endAt | date('d/m/Y') }}</p>
                                         <p align="left">Offre d'emploi créé le
                                             :{{ offre.createdAt | date('d/m/Y') }}</p>
-                                        <p align="left">Salaire :{{ offre.hourlyWage }}</p>
+                                        <p align="left">Salaire :{{ offre.hourlyWage }} €/h brut</p>
                                         <button id="BtnCandidate{{ loop.index }}" class="btn btn-success mt-4">Postuler
                                         </button>
                                     </div>
