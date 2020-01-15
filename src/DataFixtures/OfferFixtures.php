@@ -33,9 +33,9 @@ class OfferFixtures extends Fixture
             for ($i = 1; $i <= 8; $i++) {
                 $offer = new Offer();
                 $offer->setBeginAt(new \DateTime('now'));
-                $offer->setTitle($faker->sentence($nbWords = 6, $variableNbWords = true));
+                $offer->setTitle($faker->sentence($nbWords = 4, $variableNbWords = true));
                 $offer->setHourlyWage($faker->numberBetween($min = 10, $max = 15));
-                $offer->setContent($faker->text($maxNbChars = 200));
+                $offer->setContent($faker->sentence($nbWords = 300, $variableNbWords = true));
                 $offer->setEndAt(new \DateTime('now'));
                 $offer->setAddress($faker->address);
 

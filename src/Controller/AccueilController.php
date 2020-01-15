@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\ActualityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -14,10 +15,13 @@ class AccueilController extends AbstractController
     /**
      * @Route("/", name="accueil")
      */
-    public function index()
+    public function index(ActualityRepository $repository)
     {
+        $actualites = $repository->findAll();
+
         return $this->render( 'accueil/index.html.twig', [
             'controller_name' => 'AccueilController',
+            'actualites' => $actualites,
         ] );
     }
 }

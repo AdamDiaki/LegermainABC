@@ -8,6 +8,7 @@
 {% block body %}
 
 {{ encore_entry_link_tags('accueil') }}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
     <div style="max-width:100%;overflow-x:hidden;">
@@ -36,45 +37,59 @@
     </div>
             <!-- Accordéon -->
 
-            <div class="row featurette" style="background-color:#FFD5A7">
+  <div class="card">
+      <div class="card-body">
 
-                <div class="accordian">
-                    <ul>
-                        <li>
-                            <div class="image_title">
-                                <a href="{{ path('charpente') }}">Nos charpentes</a>
-                            </div>
-                            <a href="{{ path('charpente') }}">
-                                <img src="https://images.squarespace-cdn.com/content/v1/52d35389e4b0ed895b7f88e6/1538612081207-LY4Z3OE58OSUUCMGQKZR/ke17ZwdGBToddI8pDm48kLlQSdggvCOv1JxHTELgzux7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UVmz9HMzy4m_uA2-FQHOSe3LFipN8ra6kuxeL-ggTvjXzhM-Sjnu6G9qv44EQ4jJbQ/A-Frame_2.jpg?format=1500w"/>
-                            </a>
-                        </li>
-                        <li>
-                            <div class="image_title">
-                                <a href="{{ path('couverture') }}">Nos couvertures</a>
-                            </div>
-                            <a href="{{ path('couverture') }}">
-                                <img href="href="{{ path('couverture') }}" src=" https://www.residencestyle.com/wp-content/uploads/2018/12/image001.jpg"/>
-                            </a>
-                        </li>
-                        <li>
-                            <div class="image_title">
-                                <a href="{{ path('ouvrage') }}">Ouvrages spécifiques</a>
-                            </div>
-                            <a href="{{ path('ouvrage') }}">
-                                <img src="https://s3-ap-southeast-2.amazonaws.com/ish-oncourse-scc/705e7bb7-b7ae-4c8c-946c-fa2fc322bfb2"/>
-                            </a>
-                        </li>
+              <div class="accordian">
+                  <ul>
+                      <li>
+                          <div class="image_title">
+                              <a href="{{ path('charpente') }}">Nos charpentes</a>
+                          </div>
+                          <a href="{{ path('charpente') }}">
+                              <img src="https://images.squarespace-cdn.com/content/v1/52d35389e4b0ed895b7f88e6/1538612081207-LY4Z3OE58OSUUCMGQKZR/ke17ZwdGBToddI8pDm48kLlQSdggvCOv1JxHTELgzux7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UVmz9HMzy4m_uA2-FQHOSe3LFipN8ra6kuxeL-ggTvjXzhM-Sjnu6G9qv44EQ4jJbQ/A-Frame_2.jpg?format=1500w"/>
+                          </a>
+                      </li>
+                      <li>
+                          <div class="image_title">
+                              <a href="{{ path('couverture') }}">Nos couvertures</a>
+                          </div>
+                          <a href="{{ path('couverture') }}">
+                              <img href="href="{{ path('couverture') }}" src=" https://www.residencestyle.com/wp-content/uploads/2018/12/image001.jpg"/>
+                          </a>
+                      </li>
+                      <li>
+                          <div class="image_title">
+                              <a href="{{ path('ouvrage') }}">Ouvrages spécifiques</a>
+                          </div>
+                          <a href="{{ path('ouvrage') }}">
+                              <img src="https://s3-ap-southeast-2.amazonaws.com/ish-oncourse-scc/705e7bb7-b7ae-4c8c-946c-fa2fc322bfb2"/>
+                          </a>
+                      </li>
 
-                    </ul>
+                  </ul>
+          </div>
+    {% for actualite in actualites %}
+        <div class="w3-container">
+            <div class="w3-card-4" style="width: 50%;margin-left: auto;margin-right: auto">
+                <header class="w3-container w3-red">
+                    <h1>{{ actualite.title }}</h1>
+                </header>
+                <div class="w3-container">
+                    <p> {{ actualite.content }}</p>
                 </div>
-
+                <footer class="w3-container w3-red">
+                    <h5> {{ actualite.publishAt | date('d/m/Y')}}</h5>
+                </footer>
 
             </div>
 
+        </div>
 
-
-
-
+        <br/>
+    {% endfor %}
+      </div>
+  </div>
 
 
 {% endblock %}
