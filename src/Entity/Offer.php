@@ -36,6 +36,7 @@ class Offer
 
     /**
      * @ORM\Column(type="text")
+     *  @Assert\Length(min="30",minMessage="le contenu doit comporter aumoins deux caractères")
      */
     private $content;
 
@@ -56,11 +57,13 @@ class Offer
 
     /**
      * @ORM\Column(type="decimal", precision=4, scale=2)
+     *  @Assert\Length(min="2",minMessage="le salaire doit comporter aumoins deux chiffres")
      */
     private $hourlyWage;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *  @Assert\Length(min="20",minMessage="l'adresse doit comporter aumoins deux caractères")
      */
     private $address;
 

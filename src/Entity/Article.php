@@ -5,9 +5,17 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
+ * @UniqueEntity(
+ *     fields={"title"},
+ *     errorPath="title",
+ *     message="This title is already use"
+ * )
  */
 class Article
 {
@@ -20,11 +28,14 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     *  @Assert\Length(min="2",minMessage="le titre doit comporter aumoins deux caractères")
+     *
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     *  @Assert\Length(min="20",minMessage="le contenu doit comporter aumoins deux caractères")
      */
     private $content;
 

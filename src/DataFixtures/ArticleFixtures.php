@@ -2,15 +2,17 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Article;
 use App\Entity\Category;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
+use Faker;
 
 /**
- * Class CategoryFixtures
+ * Class ArticleFixtures
  * @package App\DataFixtures
  */
-class CategoryFixtures extends Fixture
+class ArticleFixtures extends Fixture
 {
     /**
      * elle permet d'ajouter les différentes catégories dans la liste
@@ -18,8 +20,7 @@ class CategoryFixtures extends Fixture
      */
     public function load(ObjectManager $manager)
     {
-        // $product = new Product();
-        // $manager->persist($product);
+
         $category = new Category();
         $category1 = new Category();
         $category2 = new Category();
@@ -32,6 +33,33 @@ class CategoryFixtures extends Fixture
         $manager->persist($category);
         $manager->persist($category1);
         $manager->persist($category2);
+
+        $faker = Faker\Factory::create();
+        for ($i = 1; $i <= 3; $i++) {
+            $art = new Article();
+            $art->setTitle($faker->sentence( $nbWords = 3, $variableNbWords = true ));
+            $art->setContent($faker->sentence( $nbWords = 2000, $variableNbWords = true ));
+            $art->setCategory($category);
+
+            $manager->persist( $art );
+
+        } for ($i = 1; $i <= 3; $i++) {
+            $art = new Article();
+            $art->setTitle($faker->sentence( $nbWords = 3, $variableNbWords = true ));
+            $art->setContent($faker->sentence( $nbWords = 2000, $variableNbWords = true ));
+            $art->setCategory($category1);
+
+            $manager->persist( $art );
+
+        } for ($i = 1; $i <= 3; $i++) {
+            $art = new Article();
+            $art->setTitle($faker->sentence( $nbWords = 3, $variableNbWords = true ));
+            $art->setContent($faker->sentence( $nbWords = 2000, $variableNbWords = true ));
+            $art->setCategory($category2);
+
+            $manager->persist( $art );
+
+        }
 
         $manager->flush();
     }
