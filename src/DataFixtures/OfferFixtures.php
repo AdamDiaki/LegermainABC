@@ -21,36 +21,33 @@ class OfferFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
 
-        $info = array('CDI','CDD','STAGE','ALTERNANCE');
+        $info = array('CDI', 'CDD', 'STAGE', 'ALTERNANCE');
         $faker = Faker\Factory::create();
 
 
-        foreach ($info as $value){
+        foreach ($info as $value) {
             $cat = new OfferType();
-            $cat->setTitle($value);
-            $manager->persist($cat);
+            $cat->setTitle( $value );
+            $manager->persist( $cat );
 
             for ($i = 1; $i <= 8; $i++) {
                 $offer = new Offer();
-                $offer->setBeginAt(new \DateTime('now'));
-                $offer->setTitle($faker->sentence($nbWords = 6, $variableNbWords = true));
-                $offer->setHourlyWage($faker->numberBetween($min = 10, $max = 15));
-                $offer->setContent($faker->text($maxNbChars = 200));
-                $offer->setEndAt(new \DateTime('now'));
-                $offer->setAddress($faker->address);
+                $offer->setBeginAt( new \DateTime( 'now' ) );
+                $offer->setTitle( $faker->sentence( $nbWords = 3, $variableNbWords = true ) );
+                $offer->setHourlyWage( $faker->numberBetween( $min = 10, $max = 15 ) );
+                $offer->setContent( $faker->sentence( $nbWords = 2000, $variableNbWords = true ) );
+                $offer->setEndAt( new \DateTime( 'now' ) );
+                $offer->setAddress( $faker->address );
 
-                $offer->setOfferType($cat);
-                $manager->persist($offer);
+                $offer->setOfferType( $cat );
+                $manager->persist( $offer );
 
             }
         }
 
 
-
         // $product = new Product();
         // $manager->persist($product);
-
-
 
 
         $manager->flush();

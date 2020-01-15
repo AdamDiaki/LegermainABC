@@ -3,9 +3,16 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ActualityRepository")
+ * @UniqueEntity(
+ *     fields={"title"},
+ *     errorPath="title",
+ *     message="This title is already use"
+ * )
  */
 class Actuality
 {
@@ -18,11 +25,13 @@ class Actuality
 
     /**
      * @ORM\Column(type="string", length=255)
+     *  @Assert\Length(min="2",minMessage="le titre doit comporter aumoins deux caractères")
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     *  @Assert\Length(min="2",minMessage="le contenu doit comporter aumoins deux caractères", max="200", maxMessage="le contenu doit comporter aumoins deux caractères")
      */
     private $content;
 
