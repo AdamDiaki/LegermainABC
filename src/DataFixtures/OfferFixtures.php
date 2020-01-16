@@ -30,12 +30,12 @@ class OfferFixtures extends Fixture
             $cat->setTitle( $value );
             $manager->persist( $cat );
 
-            for ($i = 1; $i <= 8; $i++) {
+            for ($i = 1; $i <= 2; $i++) {
                 $offer = new Offer();
                 $offer->setBeginAt( new \DateTime( 'now' ) );
-                $offer->setTitle( $faker->sentence( $nbWords = 3, $variableNbWords = true ) );
+                $offer->setTitle( $faker->sentence( $nbWords = 2, $variableNbWords = true ) );
                 $offer->setHourlyWage( $faker->numberBetween( $min = 10, $max = 15 ) );
-                $offer->setContent( $faker->sentence( $nbWords = 2000, $variableNbWords = true ) );
+                $offer->setContent( $faker->sentence( $nbWords = 250, $variableNbWords = true ) );
                 $offer->setEndAt( new \DateTime( 'now' ) );
                 $offer->setAddress( $faker->address );
 

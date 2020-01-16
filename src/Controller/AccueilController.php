@@ -19,7 +19,7 @@ class AccueilController extends AbstractController
     {
         $actualites = $repository->findAll();
 
-        return $this->render( 'accueil/index.html.twig', [
+        return $this->render( 'accueil/accueil.html.twig', [
             'controller_name' => 'AccueilController',
             'actualites' => $actualites,
         ] );

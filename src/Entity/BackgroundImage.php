@@ -78,7 +78,7 @@ class BackgroundImage
      * @param Image $image
      * @return $this
      */
-    public function setImage(Image $image): self
+    public function setImage(?Image $image): self
     {
         $this->image = $image;
 

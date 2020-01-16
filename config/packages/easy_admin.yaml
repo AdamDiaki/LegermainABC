@@ -436,7 +436,8 @@ easy_admin:
             fields:
               - {type: 'group', icon: 'pencil', label: 'Actualités'}
               - {property: 'title', label: 'Titre'}
-              - {property: 'content',type: 'text-editor', label: 'Image'}
+              - {property: 'content',type: 'text-editor', label: 'Contenu'}
+              - {property: 'image', label: 'Image'}
           show:
             fields:
               - id

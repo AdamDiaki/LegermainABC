@@ -38,7 +38,7 @@ class ArticleFixtures extends Fixture
         for ($i = 1; $i <= 3; $i++) {
             $art = new Article();
             $art->setTitle($faker->sentence( $nbWords = 3, $variableNbWords = true ));
-            $art->setContent($faker->sentence( $nbWords = 2000, $variableNbWords = true ));
+            $art->setContent($faker->sentence( $nbWords = 1000, $variableNbWords = true ));
             $art->setCategory($category);
 
             $manager->persist( $art );
@@ -46,7 +46,7 @@ class ArticleFixtures extends Fixture
         } for ($i = 1; $i <= 3; $i++) {
             $art = new Article();
             $art->setTitle($faker->sentence( $nbWords = 3, $variableNbWords = true ));
-            $art->setContent($faker->sentence( $nbWords = 2000, $variableNbWords = true ));
+            $art->setContent($faker->sentence( $nbWords = 1000, $variableNbWords = true ));
             $art->setCategory($category1);
 
             $manager->persist( $art );
@@ -54,7 +54,7 @@ class ArticleFixtures extends Fixture
         } for ($i = 1; $i <= 3; $i++) {
             $art = new Article();
             $art->setTitle($faker->sentence( $nbWords = 3, $variableNbWords = true ));
-            $art->setContent($faker->sentence( $nbWords = 2000, $variableNbWords = true ));
+            $art->setContent($faker->sentence( $nbWords = 600, $variableNbWords = true ));
             $art->setCategory($category2);
 
             $manager->persist( $art );

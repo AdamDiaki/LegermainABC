@@ -2,6 +2,16 @@
     box-sizing: border-box;
 }
 
+.rose{
+    color: #FFA84A;
+    font-size: 23px;
+    text-align: justify;
+}
+
+.carousel-caption{
+    font-family: 'Quicksand', sans-serif;
+}
+
 .box {
     float: left;
     width: 50%;
